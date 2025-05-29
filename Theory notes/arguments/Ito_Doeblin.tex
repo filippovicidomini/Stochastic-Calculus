@@ -1,66 +1,97 @@
-\argomento{Itô–Doeblin Formula and Differences from Classical Calculus}
-
-\section{Itô–Doeblin Formula.}  
-Let \( f \in C^{1,2}([0,T] \times \mathbb{R}) \), and let \( (X_t)_{t \in [0,T]} \) be an Itô process:
+\section{It\^o--Doeblin Formula}
+Let $X_t$ be an It\^o process with dynamics 
 \[
-X_t = X_0 + \int_0^t \mu_s \, ds + \int_0^t \sigma_s \, dB_s.
+  dX_t = \mu_t\,dt + \sigma_t\,dB_t, \quad X_0 = x_0,
 \]
-Then the process \( Y_t := f(t, X_t) \) satisfies:
+where $(B_t)$ is Brownian motion.  For a twice-differentiable function $f(t,x)$ (with $\partial_t f$ continuous and $f$ of class $C^2$ in $x$), the {\em It\^o–Doeblin formula} (also known as It\^o's lemma) gives the stochastic chain rule.  In differential form it reads 
 \[
-\boxed{
-f(t, X_t) = f(0, X_0) + \int_0^t \frac{\partial f}{\partial t}(s, X_s) \, ds
-+ \int_0^t \frac{\partial f}{\partial x}(s, X_s) \, dX_s
-+ \frac{1}{2} \int_0^t \frac{\partial^2 f}{\partial x^2}(s, X_s) \, \sigma_s^2 \, ds
+  d\bigl[f(t,X_t)\bigr]
+  = \Bigl(f_t(t,X_t) + \mu_t\,f_x(t,X_t) + \tfrac12\sigma_t^2\,f_{xx}(t,X_t)\Bigr)\,dt 
+    \;+\;\sigma_t\,f_x(t,X_t)\,dB_t,
+\] 
+where subscripts denote partial derivatives.  Equivalently, in integral form: 
+{\small
+\[
+  f(t,X_t) - f(0,X_0)
+  = \int_0^t\bigl(f_s(s,X_s) + \mu_s f_x(s,X_s) + \tfrac{1}{2} \sigma_s^2 f_{xx}(s,X_s)\bigr)\,ds
+  + \int_0^t \sigma_s f_x(s,X_s)\,dB_s.
+\]
 }
-\]
+Here the extra term $\tfrac12\sigma_t^2 f_{xx}\,dt$ is the {\em It\^o correction} arising from the quadratic variation of $B_t$.  This formula is the stochastic analogue of the classical chain rule, with the additional $(dB_t)^2 = dt$ term.  It implies that $Y_t=f(t,X_t)$ is itself an It\^o process. In contrast to deterministic calculus (which would give $d f = f_t dt + f_x dX$), It\^o calculus requires $f$ to be $C^{1,2}$ (once in $t$, twice in $x$) and yields the extra second-derivative term.
 
-\subsection{Differential form:}
+\paragraph{Example 1: $f(x)=x^2$.}  As a simple illustration, let $Y_t=X_t^2$ with $dX_t=\mu_tdt+\sigma_t dB_t$.  We have $f'(x)=2x$, $f''(x)=2$.  By It\^o's formula,
 \[
-df(t, X_t) = \frac{\partial f}{\partial t}(t, X_t) \, dt
-+ \frac{\partial f}{\partial x}(t, X_t) \, dX_t
-+ \frac{1}{2} \frac{\partial^2 f}{\partial x^2}(t, X_t) \, \sigma_t^2 \, dt.
+  d(X_t^2) = 2X_t\,dX_t + d\langle X\rangle_t,
 \]
-
-In the special case \( X_t = B_t \), we have:
+and since $(dX_t)^2 = \sigma_t^2\,dt$, this becomes 
 \[
-df(t, B_t) = \frac{\partial f}{\partial t}(t, B_t) \, dt
-+ \frac{\partial f}{\partial x}(t, B_t) \, dB_t
-+ \frac{1}{2} \frac{\partial^2 f}{\partial x^2}(t, B_t) \, dt.
+  d(X_t^2) = 2X_t(\mu_tdt + \sigma_t dB_t) + \sigma_t^2 dt 
+           = \bigl(2X_t\mu_t + \sigma_t^2\bigr)\,dt + 2X_t\sigma_t\,dB_t.
 \]
-
-\vspace{1em}
-\subsection{Comparison with Classical Chain Rule}
-
-In classical calculus, for a differentiable function \( x(t) \), the chain rule gives:
+In other words, the {\em drift} part of $X_t^2$ is $2X_t\mu_t+\sigma_t^2$, not just $2X_t\mu_t$.  Integrating from $0$ to $t$ gives 
 \[
-\frac{d}{dt} f(t, x(t)) = \frac{\partial f}{\partial t}(t, x(t)) + \frac{\partial f}{\partial x}(t, x(t)) \frac{dx}{dt}.
+  X_t^2 = X_0^2 + \int_0^t(2X_s\mu_s + \sigma_s^2)\,ds + \int_0^t 2X_s\sigma_s\,dB_s.
 \]
 
-In stochastic calculus, the additional term involving the second derivative (the **Itô correction**) arises due to the non-negligible quadratic variation of Brownian motion:
+\paragraph{Example 2: $f(x)=\ln x$ for Geometric Brownian Motion.}  Consider a geometric Brownian motion $X_t$ solving 
 \[
-dB_t^2 = dt.
+  dX_t = \mu\,X_t\,dt + \sigma\,X_t\,dB_t,\quad X_0>0.
 \]
-
-\vspace{1em}
-\subsection{Why the Itô Integral is Not a Riemann or Lebesgue Integral}
-
-Let us consider the Itô integral:
+Take $Y_t = \ln X_t$.  Here $f'(x)=1/x,\ f''(x)=-1/x^2$.  It\^o's formula gives
 \[
-I(t) = \int_0^t B_s \, dB_s.
+  d(\ln X_t) = \frac{1}{X_t}\,dX_t - \frac{1}{2X_t^2}\,(dX_t)^2
+  = \frac{1}{X_t}(\mu X_t dt + \sigma X_t dB_t) - \frac12\frac{1}{X_t^2}(\sigma^2 X_t^2 dt).
 \]
-
-Using Itô’s formula with \( f(x) = \frac{1}{2}x^2 \), we get:
+Simplifying,
 \[
-\frac{1}{2}B_t^2 = \int_0^t B_s \, dB_s + \frac{1}{2}t.
+  d(\ln X_t) = \mu\,dt + \sigma\,dB_t \;-\; \tfrac12\sigma^2\,dt
+            = \Bigl(\mu - \tfrac12\sigma^2\Bigr)dt + \sigma\,dB_t.
 \]
-Hence:
+Thus 
 \[
-\int_0^t B_s \, dB_s = \frac{1}{2}B_t^2 - \frac{1}{2}t.
+  \ln X_t = \ln X_0 + \sigma B_t + \Bigl(\mu - \tfrac12\sigma^2\Bigr)t,
 \]
+and exponentiating yields the familiar solution 
+$X_t = X_0 \exp\bigl(\sigma B_t + (\mu-\tfrac12\sigma^2)t\bigr)$. 
 
-Compare this with the Riemann–Stieltjes or Lebesgue integrals: for a continuous function \( g \), the integral \( \int_0^t g(s) \, dg(s) \) would yield \( \frac{1}{2}g(t)^2 \), but Brownian motion is not of bounded variation, so the standard integral theory breaks down.
+\begin{figure}[ht]
+\centering
+\fbox{\begin{minipage}{0.8\textwidth}
+\begin{center}
+\textbf{Chain Rule Comparison}
+\[
+\begin{array}{ll}
+\text{Classical:} & df = f_x\,dX \\
+\text{It\^o:} & df = f_x\,dX + \tfrac12 f_{xx}\,(dX)^2
+\end{array}
+\]
+\end{center}
+\end{minipage}}
+\caption{In the stochastic setting, the differential of $f(X_t)$ includes a second-order correction term due to quadratic variation.}
+\end{figure}
 
-Thus, the term \( -\frac{1}{2}t \) shows the \textbf{difference} between Itô and classical integration. It arises precisely from the stochastic nature of \( B_t \) and its quadratic variation.
+\section{Comparison of Classical and It\^o Calculus}
+\begin{table}[ht]
+\centering
+\small
+\caption{Classico vs. It\^o}
+\begin{tabular}{p{3.2cm}p{4.1cm}p{4.1cm}}
+\hline
+\textbf{Aspetto} & \textbf{Calcolo classico} & \textbf{Calcolo di It\^o} \\
+\hline
+Regola catena & $df = f_x\,dX$ & $df = f_t dt + f_x dX + \frac12 f_{xx} (dX)^2$ \\
+Variazione quadr. & Trascurata & $(dB)^2 = dt$ \\
+Integrale & Riemann/Lebesgue & Integrale di It\^o (media quadratica) \\
+Reg. prodotto & $d(XY) = X\,dY + Y\,dX$ & $d(XY) = X\,dY + Y\,dX + d\langle X,Y\rangle$ \\
+Regolarità $f$ & $C^1$ & $C^{1,2}$ (1 in $t$, 2 in $x$) \\
+Contesto & Deterministico & Stocastico (con moto browniano) \\
+\hline
+\end{tabular}
+\end{table}
 
-\textbf{Conclusion:}  
-The Itô calculus generalizes classical calculus for stochastic processes, but introduces correction terms due to the rough nature of Brownian paths. This makes the Itô integral fundamentally different from Riemann or Lebesgue integrals.
+\section{Why the It\^o Integral is Different}
+Brownian motion paths are almost nowhere differentiable and have infinite variation, so standard Riemann (or Lebesgue) integration theory does not apply to $\int B_s\,dB_s$. Instead, the It\^o integral is defined via mean-square limits of adapted Riemann sums. This leads to martingale properties but also introduces extra terms. For example:
+\[
+  \int_0^t B_s\,dB_s \;=\; \tfrac12B_t^2 - \tfrac12 t,
+\]
+as can be derived from It\^o's formula applied to $f(x)=x^2$. The $-\tfrac12 t$ term reflects the It\^o correction.

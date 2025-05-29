@@ -176,12 +176,11 @@ dY(t) = \frac{3}{8} Y(t)\,dt + \frac{1}{2} Y(t)\,dW(t), \quad Y(0) = 1.
 \]
 
 This is a geometric Brownian motion with drift \( \mu = \frac{3}{8} \) and volatility \( \sigma = \frac{1}{2} \). The explicit solution is:
-\[
-Y(t) = \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W(t) \right)
-= \exp\left( \left( \frac{3}{8} - \frac{1}{8} \right)t + \frac{1}{2} W(t) \right)
-= \exp\left( \frac{1}{4}t + \frac{1}{2} W(t) \right).
-\]
-
+\begin{align*}
+Y(t) &= \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W(t) \right) \\
+     &= \exp\left( \left( \frac{3}{8} - \frac{1}{8} \right)t + \frac{1}{2} W(t) \right) \\
+     &= \exp\left( \frac{1}{4}t + \frac{1}{2} W(t) \right).
+\end{align*}
 Now compute the expected value:
 \[
 \mathbb{E}[Y(t)] = \mathbb{E}\left[ \exp\left( \frac{1}{4}t + \frac{1}{2} W(t) \right) \right]

@@ -1,68 +1,73 @@
 \argomento{Increments and Properties of the Symmetric and Scaled Random Walk}
 
 \textbf{Symmetric Random Walk.}  
-Let \( (X_i)_{i \geq 1} \) be a sequence of i.i.d. random variables such that:
+Let \( (X_i)_{i \geq 1} \) be a sequence of independent and identically distributed (i.i.d.) random variables defined by:
 \[
 \mathbb{P}(X_i = +1) = \mathbb{P}(X_i = -1) = \frac{1}{2}.
 \]
-Define the symmetric random walk:
+Define the symmetric random walk as the sequence of partial sums:
 \[
-S_n = \sum_{i=1}^n X_i.
+S_n := \sum_{i=1}^n X_i, \quad \text{for } n \in \mathbb{N}.
 \]
+
 \textit{Increments:}  
+The process has stationary and independent increments:
 \[
 S_{n} - S_{n-1} = X_n.
 \]
 
-\textit{Mean and Variance:}  
+\textit{Expectation and Variance:}  
+Since \( X_i \) is symmetric,
 \[
-\mathbb{E}[X_i] = (+1)\cdot\frac{1}{2} + (-1)\cdot\frac{1}{2} = 0, \quad \mathbb{V}ar(X_i) = \mathbb{E}[X_i^2] - (\mathbb{E}[X_i])^2 = 1 - 0 = 1.
+\mathbb{E}[X_i] = 0, \quad \mathbb{V}ar(X_i) = \mathbb{E}[X_i^2] - (\mathbb{E}[X_i])^2 = 1.
 \]
 Then:
 \[
-\mathbb{E}[S_n] = 0, \quad \mathbb{V}ar(S_n) = n.
+\mathbb{E}[S_n] = \sum_{i=1}^n \mathbb{E}[X_i] = 0, \quad \mathbb{V}ar(S_n) = \sum_{i=1}^n \mathbb{V}ar(X_i) = n.
 \]
 
-\textit{Quadratic variation:}  
-Let \( \Delta S_i = S_i - S_{i-1} = X_i \). Then:
+\textit{Quadratic Variation:}  
+Define \( \Delta S_i := S_i - S_{i-1} = X_i \). Then the discrete quadratic variation up to time \( n \) is:
 \[
-[S]_n := \sum_{i=1}^n (\Delta S_i)^2 = \sum_{i=1}^n X_i^2 = n.
+[S]_n := \sum_{i=1}^n (\Delta S_i)^2 = \sum_{i=1}^n X_i^2 = n \quad \text{almost surely}.
 \]
 
 \vspace{1em}
 \textbf{Scaled Random Walk.}  
-Define the scaled random walk:
+To approximate Brownian motion, we define the scaled random walk:
 \[
-W_n(t) = \frac{1}{\sqrt{n}} S_{\lfloor nt \rfloor}, \quad t \in [0,1].
+W_n(t) := \frac{1}{\sqrt{n}} S_{\lfloor nt \rfloor}, \quad t \in [0,1].
 \]
+This process resamples the symmetric walk over a finer and finer time grid and rescales the amplitude to ensure convergence.
 
 \textit{Increments:}  
 For \( 0 \leq s < t \leq 1 \),
 \[
-W_n(t) - W_n(s) = \frac{1}{\sqrt{n}} (S_{\lfloor nt \rfloor} - S_{\lfloor ns \rfloor}) = \frac{1}{\sqrt{n}} \sum_{i=\lfloor ns \rfloor + 1}^{\lfloor nt \rfloor} X_i.
+W_n(t) - W_n(s) = \frac{1}{\sqrt{n}} \left( S_{\lfloor nt \rfloor} - S_{\lfloor ns \rfloor} \right) = \frac{1}{\sqrt{n}} \sum_{i=\lfloor ns \rfloor + 1}^{\lfloor nt \rfloor} X_i.
 \]
+This is a normalized sum of \( k := \lfloor nt \rfloor - \lfloor ns \rfloor \) i.i.d. terms.
 
-\textit{Mean and Variance:}  
-The increment over \( [s, t] \) is the sum of \( k := \lfloor nt \rfloor - \lfloor ns \rfloor \) i.i.d. variables:
+\textit{Mean and Variance of Increments:}  
 \[
-\mathbb{E}[W_n(t) - W_n(s)] = 0, \quad \mathbb{V}ar(W_n(t) - W_n(s)) = \frac{1}{n} \cdot k \approx t - s.
+\mathbb{E}[W_n(t) - W_n(s)] = 0, \quad \mathbb{V}ar(W_n(t) - W_n(s)) = \frac{k}{n} \approx t - s.
 \]
+This shows that the variance of the scaled process mimics that of Brownian motion.
 
-\textit{Quadratic variation:}  
-Let \( 0 = t_0 < t_1 < \cdots < t_m = 1 \) be a partition. The quadratic variation is:
+\textit{Quadratic Variation:}  
+Let \( \Pi = \{0 = t_0 < t_1 < \cdots < t_m = 1\} \) be a partition of \([0,1]\). The quadratic variation of \( W_n \) over this partition is defined as:
 \[
-[W_n]_1 = \sum_{j=1}^m (W_n(t_j) - W_n(t_{j-1}))^2.
+[W_n]_1 := \sum_{j=1}^m \left( W_n(t_j) - W_n(t_{j-1}) \right)^2.
 \]
-Each increment is of the form:
+Each squared increment has expected value:
 \[
-\left( \frac{1}{\sqrt{n}} \sum X_i \right)^2 \quad \Rightarrow \quad \mathbb{E}[(W_n(t_j) - W_n(t_{j-1}))^2] \approx t_j - t_{j-1}.
+\mathbb{E}\left[ \left( W_n(t_j) - W_n(t_{j-1}) \right)^2 \right] \approx t_j - t_{j-1},
 \]
-Thus,
+so summing over all intervals:
 \[
-\mathbb{E}[ [W_n]_1 ] \approx \sum_{j=1}^m (t_j - t_{j-1}) = 1,
+\mathbb{E}[[W_n]_1] \approx \sum_{j=1}^m (t_j - t_{j-1}) = 1.
 \]
-which anticipates that as \( n \to \infty \), \( [W_n]_1 \to 1 \), consistent with Brownian motion.
+Thus, the expected quadratic variation over \([0,1]\) converges to 1, consistent with the pathwise properties of Brownian motion.
 
 \vspace{1em}
 \textbf{Conclusion:}  
-The symmetric random walk has linearly growing variance and discrete quadratic variation. The scaled random walk converges (in distribution) to Brownian motion, whose quadratic variation over \([0,1]\) is 1.
+The symmetric random walk has discrete time and linearly growing variance, with deterministic quadratic variation. When rescaled appropriately in time and space, the scaled random walk \( W_n(t) \) converges in distribution (by Donsker's theorem) to a standard Brownian motion. The convergence of mean, variance, and quadratic variation all reinforce this result and provide a rigorous bridge between discrete and continuous stochastic processes.
