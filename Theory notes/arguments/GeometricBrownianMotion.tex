@@ -1,0 +1,50 @@
+\argomento{Geometric Brownian Motion}
+
+The \textbf{Geometric Brownian Motion} (GBM) is a stochastic process commonly used in financial mathematics to model the evolution of asset prices.
+
+\textbf{Definition.} A process \( (S_t)_{t \geq 0} \) is said to follow a Geometric Brownian Motion if it satisfies the stochastic differential equation (SDE):
+\[
+dS_t = \mu S_t \, dt + \sigma S_t \, dB_t, \quad S_0 > 0,
+\]
+where:
+\begin{itemize}
+    \item \( \mu \in \mathbb{R} \) is the \textit{drift} coefficient,
+    \item \( \sigma > 0 \) is the \textit{volatility} coefficient,
+    \item \( (B_t)_{t \geq 0} \) is a standard Brownian motion.
+\end{itemize}
+
+\textbf{Solution.}  
+To solve the SDE, we apply Itô's formula to the function \( \log S_t \). Set \( X_t = \log S_t \), so that \( S_t = e^{X_t} \). Using Itô's lemma:
+\[
+dX_t = \frac{1}{S_t} dS_t - \frac{1}{2} \frac{1}{S_t^2} (dS_t)^2.
+\]
+Substituting \( dS_t \) from the original SDE:
+\[
+dX_t = \frac{1}{S_t}(\mu S_t \, dt + \sigma S_t \, dB_t) - \frac{1}{2} \sigma^2 \, dt = \left( \mu - \frac{1}{2} \sigma^2 \right) dt + \sigma dB_t.
+\]
+
+Thus:
+\[
+X_t = \log S_t = \log S_0 + \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma B_t,
+\]
+and exponentiating both sides yields the explicit solution:
+\[
+S_t = S_0 \exp \left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma B_t \right).
+\]
+
+\textbf{Mean and Variance.}  
+Since \( B_t \sim \mathcal{N}(0,t) \), then \( \sigma B_t \sim \mathcal{N}(0, \sigma^2 t) \), and thus \( \log S_t \sim \mathcal{N}(\log S_0 + (\mu - \frac{1}{2} \sigma^2)t, \sigma^2 t) \).
+
+Hence, using properties of the log-normal distribution:
+
+\[
+\mathbb{E}[S_t] = S_0 e^{\mu t},
+\]
+\[
+\text{Var}(S_t) = S_0^2 e^{2\mu t} \left( e^{\sigma^2 t} - 1 \right).
+\]
+
+These formulas show that the expected value of the asset grows exponentially at rate \( \mu \), and the variance increases both with time and volatility.
+
+\textbf{Interpretation.}  
+GBM ensures that \( S_t > 0 \) almost surely, making it a natural model for asset prices. The multiplicative noise models proportional random fluctuations, and the log-normal distribution is consistent with the empirical skewed distribution of returns.

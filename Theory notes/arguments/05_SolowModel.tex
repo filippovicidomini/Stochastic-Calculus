@@ -1,0 +1,128 @@
+\argomento{The Solow Model for Capital Accumulation}
+
+The \textbf{Solow model} describes the dynamics of capital accumulation in an economy over time. In its simplest form, without population or technological growth, the model assumes that the capital per worker \( k(t) \) evolves according to the ODE:
+\[
+\frac{dk}{dt} = s f(k) - \delta k,
+\]
+where:
+\begin{itemize}
+  \item \( k(t) \) is the capital per worker at time \( t \),
+  \item \( f(k) \) is the production function (output per worker as a function of capital),
+  \item \( s \in (0,1) \) is the constant savings rate,
+  \item \( \delta > 0 \) is the depreciation rate of capital.
+\end{itemize}
+
+\textbf{Interpretation:}
+- The term \( s f(k) \) represents the portion of output that is saved and reinvested as capital.
+- The term \( \delta k \) represents the loss of capital due to depreciation.
+- The difference \( s f(k) - \delta k \) gives the net rate of capital accumulation.
+
+\vspace{1em}
+\noindent
+\textbf{Example: Cobb–Douglas production function}
+
+A common assumption is the Cobb–Douglas production function:
+\[
+f(k) = k^\alpha, \quad \text{with } \alpha \in (0,1).
+\]
+Then the Solow equation becomes:
+\[
+\frac{dk}{dt} = s k^\alpha - \delta k.
+\]
+
+\vspace{1em}
+\noindent
+\textbf{Qualitative analysis:}
+
+We can analyze the behavior of solutions by studying the sign of \( \frac{dk}{dt} \):
+- If \( k = 0 \), then \( \frac{dk}{dt} = 0 \) (absorbing state).
+- If \( 0 < k < k^* \), then \( \frac{dk}{dt} > 0 \): capital increases.
+- If \( k > k^* \), then \( \frac{dk}{dt} < 0 \): capital decreases.
+
+The steady state (equilibrium) is given by:
+\[
+s k^{*\alpha} = \delta k^* \quad \Rightarrow \quad k^* = \left( \frac{s}{\delta} \right)^{\frac{1}{1 - \alpha}}.
+\]
+
+At the steady state \( k^* \), the capital per worker remains constant over time: the economy stabilizes.
+
+\vspace{1em}
+\noindent
+\textbf{Explicit solution:}
+
+We solve the equation:
+\[
+\frac{dk}{dt} = s k^\alpha - \delta k.
+\]
+
+This is a Bernoulli differential equation. Define:
+\[
+\frac{dk}{dt} + \delta k = s k^\alpha.
+\]
+
+Divide both sides by \( k^\alpha \):
+\[
+k^{-\alpha} \frac{dk}{dt} + \delta k^{1 - \alpha} = s.
+\]
+
+Let \( u = k^{1 - \alpha} \). Then:
+\[
+\frac{du}{dt} = (1 - \alpha) k^{-\alpha} \frac{dk}{dt}.
+\]
+
+Multiply both sides by \( \frac{1}{1 - \alpha} \):
+\[
+\frac{1}{1 - \alpha} \frac{du}{dt} = \frac{dk}{dt} k^{-\alpha}.
+\]
+
+From the original equation:
+\[
+\frac{1}{1 - \alpha} \frac{du}{dt} = s - \delta k^{1 - \alpha} = s - \delta u.
+\]
+
+So we obtain the linear ODE:
+\[
+\frac{du}{dt} + (1 - \alpha)\delta u = (1 - \alpha)s.
+\]
+
+This is a linear first-order ODE. The integrating factor is:
+\[
+\mu(t) = e^{(1 - \alpha)\delta t}.
+\]
+
+Multiplying both sides:
+\[
+\frac{d}{dt} \left( e^{(1 - \alpha)\delta t} u(t) \right) = (1 - \alpha)s e^{(1 - \alpha)\delta t}.
+\]
+
+Integrating both sides:
+\[
+e^{(1 - \alpha)\delta t} u(t) = \frac{s}{\delta} \left( e^{(1 - \alpha)\delta t} \right) + C.
+\]
+
+Solve for \( u(t) \):
+\[
+u(t) = \frac{s}{\delta} + C e^{-(1 - \alpha)\delta t}.
+\]
+
+Recall \( u(t) = k(t)^{1 - \alpha} \), so:
+\[
+k(t) = \left( \frac{s}{\delta} + C e^{-(1 - \alpha)\delta t} \right)^{\frac{1}{1 - \alpha}}.
+\]
+
+Using the initial condition \( k(0) = k_0 \), we find:
+\[
+C = k_0^{1 - \alpha} - \frac{s}{\delta}.
+\]
+
+\textbf{Final explicit solution:}
+\[
+k(t) = \left( \frac{s}{\delta} + \left( k_0^{1 - \alpha} - \frac{s}{\delta} \right) e^{-(1 - \alpha)\delta t} \right)^{\frac{1}{1 - \alpha}}.
+\]
+
+\vspace{1em}
+\noindent
+\textbf{Interpretation:}
+- If \( k_0 < k^* \), capital grows toward \( k^* \).
+- If \( k_0 > k^* \), capital decreases toward \( k^* \).
+- The economy converges to the steady state \( k^* = \left( \frac{s}{\delta} \right)^{1/(1 - \alpha)} \), regardless of the initial condition \( k_0 > 0 \).

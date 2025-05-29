@@ -1,0 +1,58 @@
+\argomento{Itô Process and Itô–Doeblin Formula}
+
+\subsection{Definition of an Itô Process.}  
+A stochastic process \( (X_t)_{t \geq 0} \) adapted to a filtration \( (\mathcal{F}_t) \) is said to be an \textbf{Itô process} if it can be written as:
+\[
+X_t = X_0 + \int_0^t \mu_s \, ds + \int_0^t \sigma_s \, dB_s,
+\]
+where:
+\begin{itemize}
+    \item \( \mu_t \) is an \( \mathcal{F}_t \)-adapted process (called the drift),
+    \item \( \sigma_t \) is an \( \mathcal{F}_t \)-adapted process (called the volatility),
+    \item \( B_t \) is a standard Brownian motion.
+\end{itemize}
+Both integrals must be well-defined in the Itô sense, typically assuming that \( \mu_t \) and \( \sigma_t \) are progressively measurable and satisfy:
+\[
+\mathbb{E} \left[ \int_0^T |\mu_s| \, ds \right] < \infty, \quad 
+\mathbb{E} \left[ \int_0^T |\sigma_s|^2 \, ds \right] < \infty.
+\]
+
+\textbf{Examples of Itô Processes:}
+\begin{itemize}
+    \item \textbf{Brownian motion:} \( X_t = B_t \) with \( \mu_t = 0 \), \( \sigma_t = 1 \).
+    \item \textbf{Ornstein–Uhlenbeck process:}  
+    \[
+    dX_t = \theta(\mu - X_t) \, dt + \sigma \, dB_t.
+    \]
+    \item \textbf{Geometric Brownian motion (Black–Scholes model):}  
+    \[
+    dX_t = \mu X_t \, dt + \sigma X_t \, dB_t.
+    \]
+\end{itemize}
+
+\textbf{Itô–Doeblin Formula for Itô Processes.}  
+Let \( f \in C^{1,2}([0,T] \times \mathbb{R}) \), and let \( X_t \) be an Itô process as above. Then:
+\[
+df(t, X_t) = \frac{\partial f}{\partial t}(t, X_t) \, dt + \frac{\partial f}{\partial x}(t, X_t) \, dX_t + \frac{1}{2} \frac{\partial^2 f}{\partial x^2}(t, X_t) \sigma_t^2 \, dt.
+\]
+
+\textbf{Application – Geometric Brownian Motion.}  
+Let \( X_t \) satisfy:
+\[
+dX_t = \mu X_t \, dt + \sigma X_t \, dB_t,
+\]
+and define \( Y_t = \log X_t \). Then applying Itô’s formula:
+\[
+\frac{d}{dt} \log X_t = \frac{1}{X_t} dX_t - \frac{1}{2 X_t^2} \sigma^2 X_t^2 \, dt = \left( \mu - \frac{\sigma^2}{2} \right) dt + \sigma \, dB_t.
+\]
+
+Hence:
+\[
+\log X_t = \log X_0 + \left( \mu - \frac{\sigma^2}{2} \right)t + \sigma B_t,
+\]
+which implies the explicit solution:
+\[
+X_t = X_0 \exp \left( \left( \mu - \frac{\sigma^2}{2} \right)t + \sigma B_t \right).
+\]
+
+This formula is fundamental in finance, as it models the evolution of asset prices under stochastic dynamics in the Black–Scholes framework.

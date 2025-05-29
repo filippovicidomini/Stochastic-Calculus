@@ -1,0 +1,190 @@
+\section{Introduction to Geometric Brownian Motion and Risk-Neutral Pricing}
+In the Black--Scholes framework, the price of a stock \(S_t\) is modeled as a \emph{geometric Brownian motion}, satisfying the stochastic differential equation
+\[
+dS_t = \mu S_t\,dt + \sigma S_t\,dW_t,
+\]
+with \(S_0\) given, where \(W_t\) is a standard Brownian motion, \(\mu\) is the (constant) drift rate, and \(\sigma\) is the (constant) volatility.  The solution of this SDE is 
+\[
+S_t = S_0 \exp\Bigl((\mu - \tfrac{1}{2}\sigma^2)t + \sigma W_t\Bigr),
+\]
+so that \(S_t\) is log-normally distributed.  In particular, \(\mathbb{E}[S_t] = S_0 e^{\mu t}\).  Under this real-world measure \(\mathbb{P}\), the drift \(\mu\) represents the expected return of the asset.
+
+For pricing derivatives, we work under a \emph{risk-neutral measure} \(\mathbb{Q}\).  In a no-arbitrage market with a constant risk-free rate \(r\), the discounted asset price is a martingale under \(\mathbb{Q}\).  Equivalently, under \(\mathbb{Q}\) the stock’s drift is \(r\) rather than \(\mu\).  Thus the risk-neutral dynamics of \(S_t\) are
+\[
+dS_t = r S_t\,dt + \sigma S_t\,dW_t^\mathbb{Q},
+\]
+where \(W_t^\mathbb{Q}\) is a Brownian motion under \(\mathbb{Q}\).  Then the (arbitrage-free) price \(V(S,t)\) of a derivative with payoff \(\Phi(S_T)\) at maturity \(T\) is given by the risk-neutral pricing formula
+\[
+V(S,t) = e^{-r (T-t)} \,\mathbb{E}^{\mathbb{Q}}[\Phi(S_T)\mid S_t = S].
+\]
+In other words, the price is the discounted expected payoff under the risk-neutral measure.  This expectation is equivalent to solving a partial differential equation, as described below.
+
+\section{The Black--Scholes PDE and Terminal Condition}
+By applying Itô's Lemma to \(V(S_t,t)\) under the risk-neutral dynamics \(dS_t = rS_t\,dt + \sigma S_t\,dW_t^\mathbb{Q}\), one obtains
+\[
+dV = \Bigl(\partial_t V + rS \,\partial_S V + \tfrac12\sigma^2 S^2 \,\partial_{SS}V\Bigr)\,dt + \sigma S\,\partial_S V\,dW_t^\mathbb{Q}.
+\]
+Set \(\Delta = \partial_S V\) and form the portfolio \(\Pi = V - \Delta S\).  Using \(d\Pi = dV - \Delta\,dS\), the stochastic terms cancel and one finds
+\[
+d\Pi = \Bigl(\partial_t V + \tfrac12\sigma^2 S^2 \partial_{SS}V\Bigr)\,dt.
+\]
+Since \(\Pi\) is riskless (no \(dW\) term), it must earn the risk-free rate \(r\): \(d\Pi = r\Pi\,dt = r(V - S\partial_S V)\,dt\).  Equating coefficients yields
+\[
+\partial_t V + \tfrac12\sigma^2 S^2 \partial_{SS}V = r(V - S\partial_S V).
+\]
+Rearranging gives the Black--Scholes partial differential equation (PDE):
+\[
+\frac{\partial V}{\partial t}
++ \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}
++ r S \frac{\partial V}{\partial S}
+- r V = 0
+\]
+or equivalently,
+\[
+\partial_t V
++ \frac{1}{2} \sigma^2 S^2 \, \partial_{SS} V
++ r S \, \partial_S V
+- r V = 0
+\]
+valid for \(0\le t< T\) and \(S>0\).  This PDE, together with the terminal (boundary) condition at maturity \(t=T\), fully characterizes the option price.  The terminal condition is simply the payoff of the derivative.  For a European call option with strike \(K\), for example,
+\[
+V(S,T) = \Phi(S) = \max\{S-K,0\}.
+\]
+For a put, \(\Phi(S)=\max\{K-S,0\}\). 
+
+Using the Feynman–Kac theorem or by change of variables, one can solve this PDE explicitly.  For a European call \(C(S,t)\) and put \(P(S,t)\), the closed-form Black–Scholes formulas are:
+\[
+C(S,t) = S\,\Phi(d_1) - K e^{-r (T-t)} \,\Phi(d_2), 
+\quad
+P(S,t) = K e^{-r (T-t)} \,\Phi(-d_2) - S\,\Phi(-d_1),
+\]
+where 
+\[
+d_{1,2} = \frac{\ln(S/K) + \bigl(r \pm \tfrac12\sigma^2\bigr)(T-t)}{\sigma \sqrt{T-t}},
+\]
+and \(\Phi(x)\) is the cumulative distribution function of a standard normal random variable.  These formulas depend on the model parameters \(r,\sigma\) and on time to maturity \(T-t\).  They form the basis for computing the \emph{Greeks}, as shown next.
+
+\section{The Greeks}
+The \emph{Greeks} are partial derivatives of the option price that measure its sensitivity to various parameters.  We denote by \(\Delta, \Gamma, \Theta, \mathrm{Vega}, \rho\) the most commonly used Greeks, defined as follows:
+\[
+\Delta = \frac{\partial V}{\partial S}, 
+\quad
+\Gamma = \frac{\partial^2 V}{\partial S^2},
+\quad
+\Theta = \frac{\partial V}{\partial t}, 
+\quad
+\mathrm{Vega} = \frac{\partial V}{\partial \sigma}, 
+\quad
+\rho = \frac{\partial V}{\partial r}.
+\]
+Each Greek has an intuitive financial interpretation:
+- \emph{Delta} (\(\Delta\)) measures the sensitivity of the option price to small changes in the underlying price.
+- \emph{Gamma} (\(\Gamma\)) measures the sensitivity of delta itself to changes in the underlying (the convexity).
+- \emph{Theta} (\(\Theta\)) measures the sensitivity to the passage of time (time decay).
+- \emph{Vega} measures the sensitivity to volatility \(\sigma\).
+- \(\rho\) measures the sensitivity to the interest rate \(r\). 
+
+Using the Black--Scholes formulas above, we can write explicit expressions for the Greeks of a European call (and similarly for a put).  Let \(\phi(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}\) denote the standard normal density, and define \(d_1,d_2\) as above.  Then:
+
+\subsection{Delta (\(\Delta\))}
+\[
+\Delta_C = \frac{\partial C}{\partial S} = \Phi(d_1), 
+\qquad
+\Delta_P = \frac{\partial P}{\partial S} = \Phi(d_1) - 1,
+\]
+for a call and put, respectively.  Note that \(0<\Phi(d_1)<1\), so \(\Delta_C\in(0,1)\) and \(\Delta_P\in(-1,0)\).  Intuitively, \(\Delta\) is the hedge ratio: owning one call is roughly equivalent to holding \(\Delta_C\) shares of stock.  Key points:
+\begin{itemize}
+    \item For a call, \(\Delta_C = \Phi(d_1)\) is positive and increases with \(S\); deep in-the-money calls have \(\Delta\) near 1.
+    \item For a put, \(\Delta_P = \Phi(d_1)-1\) is negative (in \((-1,0)\)); deep in-the-money puts have \(\Delta\) near \(-1\).
+    \item A \emph{delta-neutral} position has total \(\Delta = 0\), meaning its first-order sensitivity to small moves in \(S\) is zero.
+\end{itemize}
+
+\subsection{Gamma (\(\Gamma\))}
+\[
+\Gamma = \frac{\partial^2 V}{\partial S^2} 
+= \frac{\phi(d_1)}{S \sigma \sqrt{T-t}},
+\]
+which is the same for calls and puts.  Gamma is always positive and measures the curvature of \(V\) with respect to \(S\).  Important facts:
+\begin{itemize}
+    \item \(\Gamma > 0\) for both calls and puts, reflecting the convexity of option prices in \(S\).
+    \item A large \(\Gamma\) means the option's delta will change rapidly for small moves in \(S\); it indicates higher curvature.
+    \item Gamma is highest when the option is at-the-money and when time to maturity is short; it decreases for deep in/out-of-the-money options or long-dated options.
+\end{itemize}
+
+\subsection{Theta (\(\Theta\))}
+Theta measures the sensitivity to time (how the option price decays as \(t\) increases).  For a European call,
+\[
+\Theta_C = \frac{\partial C}{\partial t}
+= -\frac{S\sigma\phi(d_1)}{2\sqrt{T-t}} - rK e^{-r(T-t)}\Phi(d_2).
+\]
+Similarly, for a European put,
+\[
+\Theta_P = -\frac{S\sigma\phi(d_1)}{2\sqrt{T-t}} + rK e^{-r(T-t)}\Phi(-d_2).
+\]
+Typically, \(\Theta\) is negative, reflecting that as time passes (with everything else fixed), the option loses value (time decay).  Key observations:
+\begin{itemize}
+    \item Long options (calls or puts) have \(\Theta < 0\) in most cases: they lose value as expiration approaches.
+    \item The first term \(-\frac{S\sigma\phi(d_1)}{2\sqrt{T-t}}\) represents decay due to the underlying's volatility and time; the second term involves interest and time-to-maturity.
+    \item Near expiration, theta can become large in magnitude for at-the-money options, meaning very rapid decay of value.
+\end{itemize}
+
+\subsection{Vega}
+Vega measures sensitivity to volatility \(\sigma\).  For both calls and puts,
+\[
+\mathrm{Vega} = \frac{\partial V}{\partial \sigma} = S\,\phi(d_1)\,\sqrt{T-t}.
+\]
+Thus Vega is positive: an increase in volatility always raises the value of (European) options.  It is largest when the option is at-the-money and when time to maturity is moderate.  Key points:
+\begin{itemize}
+    \item \(\mathrm{Vega} > 0\) for both calls and puts.
+    \item Options with longer time to maturity have larger Vega (more exposure to volatility).
+    \item Traders monitor Vega because volatility is a key input; changes in implied volatility move option prices through Vega.
+\end{itemize}
+
+\subsection{Rho (\(\rho\))}
+Rho measures sensitivity to the interest rate \(r\).  For a call,
+\[
+\rho_C = \frac{\partial C}{\partial r} = K(T-t)e^{-r(T-t)}\Phi(d_2),
+\]
+which is positive since higher rates increase the call value.  For a put,
+\[
+\rho_P = \frac{\partial P}{\partial r} = -K(T-t)e^{-r(T-t)}\Phi(-d_2),
+\]
+which is negative (higher rates decrease put values).  Rho is usually small compared to other Greeks for short maturities or at-the-money options, but can be significant for long-dated or deeply in/out-of-the-money options.  In summary:
+\begin{itemize}
+    \item \(\rho_C > 0\), \(\rho_P < 0\).
+    \item Longer time to maturity amplifies \(|\rho|\).
+    \item Typically, Rho is less critical than Delta, Gamma, Vega, Theta, except in interest-rate-sensitive contexts.
+\end{itemize}
+
+\section{Delta-Neutral and Long-Gamma Strategies}
+A \emph{delta-neutral} portfolio has total delta zero.  For example, if a trader is long one call (with \(\Delta_C\)) and wants to hedge against small moves in \(S\), they would short \(\Delta_C\) shares of stock, making the combined delta zero.  Key ideas of delta-neutral and gamma-related strategies:
+\begin{itemize}
+    \item \textbf{Delta-neutral hedging:}  By rebalancing the stock position to offset the option's delta, a trader eliminates first-order price risk. This requires continuous (or frequent) rebalancing since \(\Delta\) changes with \(S\) and \(t\).
+    \item \textbf{Long gamma:} Holding options (long calls or puts) gives positive gamma. A delta-neutral long-gamma position profits if the underlying moves (because you buy low and sell high while re-hedging). In effect, frequent re-hedging ``captures'' volatility: large moves generate gains.
+    \item \textbf{Long gamma vs short gamma:} A \emph{short-gamma} position (e.g.\ short options) will lose money if realized volatility exceeds the implied volatility, since one must re-hedge at an unfavorable price. Conversely, a long-gamma (long volatility) strategy profits from realized volatility above the market's expectations.
+    \item \textbf{Gamma scalping:}  This is a strategy where a trader maintains a delta-neutral position while being long gamma. When the underlying price moves, the trader adjusts the hedge and locks in small gains. Over time, if movements are sufficient, the accumulated gains exceed hedging costs.
+    \item \textbf{Trade-off with Theta:} Long-gamma strategies benefit from volatility but suffer from negative theta (time decay). Traders must consider both effects: they earn from volatility while paying a cost each day as the option loses time value.
+\end{itemize}
+
+\section{Model Assumptions and Practical Behavior}
+The Black--Scholes model is based on several key assumptions.  Understanding these assumptions and how real markets deviate from them is crucial:
+
+\begin{itemize}
+    \item \textbf{Lognormal returns:}  The model assumes the underlying asset price is continuous and log-normally distributed, with constant volatility \(\sigma\). 
+    \item \textbf{No arbitrage, frictionless markets:}  Trading is continuous, there are no transaction costs or taxes, and one can borrow and lend unlimited amounts at the constant risk-free rate \(r\).
+    \item \textbf{No dividends:}  The basic model assumes the stock pays no dividends during the option's life (or a known continuous yield).
+    \item \textbf{Continuous hedging:}  It assumes one can continuously rebalance the hedge portfolio. 
+    \item \textbf{Constant parameters:}  The volatility \(\sigma\) and interest rate \(r\) are taken as constant.
+\end{itemize}
+
+In practice, these assumptions are idealizations, and market behavior often departs from the model:
+
+\begin{itemize}
+    \item \textbf{Volatility smiles/skews:} Empirical option prices imply that volatility is not constant across strikes. At-the-money options often have lower implied volatilities than deep in/out-of-the-money options, producing a volatility ``smile'' or ``skew.'' This contradicts the model's assumption of constant \(\sigma\).
+    \item \textbf{Stochastic volatility and jumps:}  Real asset prices can exhibit volatility that changes over time (stochastic volatility) and can experience jumps or discontinuities. Models like Heston or Merton jump-diffusions extend Black--Scholes to handle these.
+    \item \textbf{Fat tails and kurtosis:}  Actual return distributions typically have heavier tails than the log-normal, meaning extreme moves are more likely than the model predicts.
+    \item \textbf{Discrete hedging and costs:}  In reality, hedging must be done in discrete time and incurs transaction costs. Continuous rebalancing is impossible; thus, perfect delta-hedging is only an approximation.  
+    \item \textbf{Parameter estimation:}  The model requires inputs (volatility, interest rate) which must be estimated or implied from market prices. Misestimation can lead to pricing or hedging errors.
+\end{itemize}
+
+Despite these limitations, the Black--Scholes model serves as a fundamental benchmark. Traders often quote and interpret option prices in terms of \emph{implied volatility}: the value of \(\sigma\) that, plugged into the Black--Scholes formula, matches the market price. Observed patterns in implied volatilities then guide adjustments or the use of more advanced models.  Understanding the Black--Scholes assumptions and Greeks provides essential insight into option behavior, hedging, and risk management in financial markets.

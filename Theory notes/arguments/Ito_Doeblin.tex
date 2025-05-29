@@ -1,0 +1,66 @@
+\argomento{Itô–Doeblin Formula and Differences from Classical Calculus}
+
+\section{Itô–Doeblin Formula.}  
+Let \( f \in C^{1,2}([0,T] \times \mathbb{R}) \), and let \( (X_t)_{t \in [0,T]} \) be an Itô process:
+\[
+X_t = X_0 + \int_0^t \mu_s \, ds + \int_0^t \sigma_s \, dB_s.
+\]
+Then the process \( Y_t := f(t, X_t) \) satisfies:
+\[
+\boxed{
+f(t, X_t) = f(0, X_0) + \int_0^t \frac{\partial f}{\partial t}(s, X_s) \, ds
++ \int_0^t \frac{\partial f}{\partial x}(s, X_s) \, dX_s
++ \frac{1}{2} \int_0^t \frac{\partial^2 f}{\partial x^2}(s, X_s) \, \sigma_s^2 \, ds
+}
+\]
+
+\subsection{Differential form:}
+\[
+df(t, X_t) = \frac{\partial f}{\partial t}(t, X_t) \, dt
++ \frac{\partial f}{\partial x}(t, X_t) \, dX_t
++ \frac{1}{2} \frac{\partial^2 f}{\partial x^2}(t, X_t) \, \sigma_t^2 \, dt.
+\]
+
+In the special case \( X_t = B_t \), we have:
+\[
+df(t, B_t) = \frac{\partial f}{\partial t}(t, B_t) \, dt
++ \frac{\partial f}{\partial x}(t, B_t) \, dB_t
++ \frac{1}{2} \frac{\partial^2 f}{\partial x^2}(t, B_t) \, dt.
+\]
+
+\vspace{1em}
+\subsection{Comparison with Classical Chain Rule}
+
+In classical calculus, for a differentiable function \( x(t) \), the chain rule gives:
+\[
+\frac{d}{dt} f(t, x(t)) = \frac{\partial f}{\partial t}(t, x(t)) + \frac{\partial f}{\partial x}(t, x(t)) \frac{dx}{dt}.
+\]
+
+In stochastic calculus, the additional term involving the second derivative (the **Itô correction**) arises due to the non-negligible quadratic variation of Brownian motion:
+\[
+dB_t^2 = dt.
+\]
+
+\vspace{1em}
+\subsection{Why the Itô Integral is Not a Riemann or Lebesgue Integral}
+
+Let us consider the Itô integral:
+\[
+I(t) = \int_0^t B_s \, dB_s.
+\]
+
+Using Itô’s formula with \( f(x) = \frac{1}{2}x^2 \), we get:
+\[
+\frac{1}{2}B_t^2 = \int_0^t B_s \, dB_s + \frac{1}{2}t.
+\]
+Hence:
+\[
+\int_0^t B_s \, dB_s = \frac{1}{2}B_t^2 - \frac{1}{2}t.
+\]
+
+Compare this with the Riemann–Stieltjes or Lebesgue integrals: for a continuous function \( g \), the integral \( \int_0^t g(s) \, dg(s) \) would yield \( \frac{1}{2}g(t)^2 \), but Brownian motion is not of bounded variation, so the standard integral theory breaks down.
+
+Thus, the term \( -\frac{1}{2}t \) shows the \textbf{difference} between Itô and classical integration. It arises precisely from the stochastic nature of \( B_t \) and its quadratic variation.
+
+\textbf{Conclusion:}  
+The Itô calculus generalizes classical calculus for stochastic processes, but introduces correction terms due to the rough nature of Brownian paths. This makes the Itô integral fundamentally different from Riemann or Lebesgue integrals.

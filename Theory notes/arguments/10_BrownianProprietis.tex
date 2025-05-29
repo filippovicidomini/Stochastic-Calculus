@@ -1,0 +1,41 @@
+\argomento{Properties of Brownian Motion}
+
+\textbf{Definition Recap.}  
+A stochastic process \( (B_t)_{t \geq 0} \) is a \textbf{standard Brownian motion} if:
+\begin{enumerate}
+  \item \( B_0 = 0 \) almost surely;
+  \item \( B_t \) has \textbf{independent increments};
+  \item \( B_t - B_s \sim \mathcal{N}(0, t - s) \) for all \( 0 \leq s < t \);
+  \item Paths \( t \mapsto B_t \) are continuous almost surely.
+\end{enumerate}
+
+\vspace{1em}
+\textbf{Main Properties of Brownian Motion:}
+\begin{itemize}
+  \item \textbf{Gaussian increments:} All finite-dimensional distributions are multivariate normal.
+  \item \textbf{Stationary increments:} The law of \( B_{t+h} - B_t \) depends only on \( h \).
+  \item \textbf{Independent increments:} For \( 0 \leq t_1 < t_2 < \cdots < t_n \), the increments \( B_{t_2} - B_{t_1}, \dots, B_{t_n} - B_{t_{n-1}} \) are independent.
+  \item \textbf{Martingale property:} \( \mathbb{E}[B_t \mid \mathcal{F}_s] = B_s \) for \( s \leq t \), where \( \mathcal{F}_t \) is the natural filtration.
+  \item \textbf{Scaling invariance:} For any \( c > 0 \), \( (B_{ct}) \overset{d}{=} (\sqrt{c} B_t) \).
+  \item \textbf{Time-homogeneity:} The process \( (B_{t+s} - B_s) \) is again a Brownian motion independent of \( \mathcal{F}_s \).
+  \item \textbf{Nowhere differentiable paths:} With probability 1, the sample paths \( t \mapsto B_t \) are continuous but nowhere differentiable.
+  \item \textbf{Quadratic variation:} \( [B]_t = t \), i.e., the quadratic variation grows linearly with time.
+\end{itemize}
+
+\vspace{1em}
+\textbf{Comments and Applications:}
+
+\textbf{1. Martingale Property.}  
+This property implies that Brownian motion is a fair game: its expected future value, given the past, equals the current value. This underpins the concept of \textit{no arbitrage} in financial mathematics.  
+\textit{Example:} In the Black-Scholes model, discounted asset prices (under the risk-neutral measure) are modeled as martingales.
+
+\textbf{2. Nowhere Differentiability.}  
+Although Brownian paths are continuous, they are highly irregular and not smooth. This motivates the use of \textbf{Itô calculus}, which handles integration with respect to such rough paths.  
+\textit{Example:} In stochastic differential equations (SDEs), we use Itô integrals instead of classical integrals.
+
+\textbf{3. Independent Increments.}  
+This property ensures that future movements of the process are unaffected by the past, making Brownian motion a natural model for unpredictable phenomena.  
+\textit{Example:} In modeling noise in physical systems or stock price fluctuations.
+
+\textbf{4. Scaling Property.}  
+Brownian motion is self-similar. This is useful in studying fractals and in multi-scale modeling in physics and finance.

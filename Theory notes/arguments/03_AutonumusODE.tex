@@ -1,0 +1,59 @@
+\argomento{Autonomous Ordinary Differential Equations}
+
+An \textbf{autonomous ODE} is a differential equation of the form:
+\[
+\frac{dx}{dt} = f(x),
+\]
+where the right-hand side \( f(x) \) depends only on the dependent variable \( x \), not explicitly on time \( t \).
+
+We assume \( f(x) \) is continuous and locally Lipschitz, ensuring the existence and uniqueness of solutions to the Cauchy problem:
+\[
+\frac{dx}{dt} = f(x), \quad x(t_0) = x_0.
+\]
+
+\vspace{1em}
+\noindent
+\textbf{(a) Every solution is monotonic}
+
+Let \( x(t) \) be a solution of the autonomous ODE. Then:
+\[
+\frac{dx}{dt} = f(x(t)).
+\]
+
+Since the sign of \( \frac{dx}{dt} \) depends only on \( x(t) \), and the function \( f \) does not explicitly depend on \( t \), we have:
+
+- If \( f(x(t)) > 0 \) on an interval, then \( x(t) \) is strictly increasing on that interval.
+- If \( f(x(t)) < 0 \), then \( x(t) \) is strictly decreasing.
+- If \( f(x(t)) = 0 \), then \( x(t) \) is constant.
+
+Thus, as long as \( f(x(t)) \neq 0 \), the sign of the derivative does not change, and \( x(t) \) is strictly monotonic (either increasing or decreasing) on its interval of definition.
+
+\textbf{Example:}  
+Consider \( \frac{dx}{dt} = x^2 \), with initial condition \( x(0) = 1 \).  
+Then \( x(t) = \frac{1}{1 - t} \), which is increasing on \( (-\infty, 1) \).
+
+\vspace{1em}
+\noindent
+\textbf{(b) Convergence implies stationary point}
+
+Assume that \( \displaystyle \lim_{t \to \infty} x(t) = C \) for some real number \( C \).  
+We want to prove that \( C \) must be a stationary point of the ODE, i.e., a solution of:
+\[
+\frac{dx}{dt} = f(x) = 0.
+\]
+
+\textbf{Proof:}  
+Suppose, for contradiction, that \( f(C) \neq 0 \).  
+Then by continuity of \( f \), there exists a neighborhood of \( C \), say \( (C - \delta, C + \delta) \), where \( f(x) \) keeps the same sign and is bounded away from 0.
+
+Since \( x(t) \to C \), there exists \( T > 0 \) such that \( x(t) \in (C - \delta, C + \delta) \) for all \( t > T \).  
+But then \( \frac{dx}{dt} = f(x(t)) \) has constant sign and magnitude bounded away from 0, which implies that \( x(t) \) continues to grow or decrease indefinitely — contradicting the assumption that \( x(t) \to C \).
+
+Hence, we must have:
+\[
+f(C) = 0,
+\]
+which means that \( x(t) \equiv C \) is a stationary solution of the ODE.
+
+\textbf{Conclusion:}  
+If a solution of an autonomous ODE converges to a value \( C \), then \( C \) must be an equilibrium point (also called a fixed point or stationary solution).

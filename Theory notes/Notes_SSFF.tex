@@ -1,0 +1,96 @@
+\documentclass[a5paper,9pt]{book}
+
+% --- Comando argomento per sezioni nei file inclusi ---
+\newcommand{\argomento}[1]{\section{#1}}
+
+
+% --- Pacchetti base ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{inner=1.5cm, outer=1.5cm, top=1.5cm, bottom=1.5cm}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+% --- Impaginazione ---
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot[C]{\thepage}
+%\fancyhead[LE,RO]{\nouppercase{\leftmark}}
+\fancyhead[RE,LO]{\nouppercase{\rightmark}}
+
+% --- Titolo elegante ---
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\Huge}
+  {\filright\Large\chaptertitlename~\thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filright}
+  [\vspace{1ex}\titlerule]
+
+% --- Titolo ---
+\title{\Huge\textbf{Notes od Stochastic Calculus}\\\Large Sottotitolo Elegante}
+\author{Filippo Vicidomini}
+\date{\today}
+
+\begin{document}
+
+% --- Copertina ---
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\Huge\bfseries Notes of Stochastic Calculus\par}
+    \vspace{0.5cm}
+    {\Large A brief introduction to stochastic calculus and its applications in finance\par}
+    \vspace{2cm}
+    {\large Filippo Vicidomini\par}
+    \vfill
+    {\large May 2025\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% --- Capitoli (argomenti principali) ---
+\chapter{Deterministic Models and ODEs}
+\input{arguments/01_ODE}
+\input{arguments/02_ODE}
+\input{arguments/03_AutonumusODE}
+\input{arguments/BernoulliCauchyProblem}
+\input{arguments/04_LogisticEquation}
+\input{arguments/05_SolowModel}
+
+\chapter{Foundations of Probability and Stochastic Processes}
+\input{arguments/06_BasicDefinition}
+\input{arguments/07_Martingales}
+
+\chapter{Brownian Motion and Random Walks}
+\input{arguments/08_BrownianConstruction}
+\input{arguments/09_RandomWalks}
+\input{arguments/10_BrownianProprietis}
+
+\chapter{Itô Calculus}
+\input{arguments/11_DiffusionProcesses}
+\input{arguments/ItoIntegralConstruction}
+\input{arguments/ItoIntegralProperties}
+\input{arguments/ExpectationItoIntegral}
+\input{arguments/ItoIsometri_Verisek}
+\input{arguments/Ito_Doeblin}
+\input{arguments/ItoProcess}
+
+\chapter{Stochastic Differential Equations}
+\input{arguments/SDE}
+\input{arguments/ExistenceUniquenessSDE}
+\input{arguments/GeometricBrownianMotion}
+\input{arguments/ExpectedExponential}
+\input{arguments/interestRateModel}
+\input{arguments/FeynmanKac}
+
+\chapter{Financial Applications}
+\input{arguments/BlackSholesModel}
+\end{document}

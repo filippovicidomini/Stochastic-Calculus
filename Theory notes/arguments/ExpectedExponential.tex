@@ -1,0 +1,49 @@
+\section{Expected Value of the Exponential of an Itô Process}
+
+Consider the Itô process
+\[
+dY(t) = \left( \alpha - \frac{1}{2} \sigma^2 \right) dt + \sigma\, dW(t), \quad Y(0) = 0.
+\]
+Define the process
+\[
+X(t) = e^{Y(t)}.
+\]
+
+\subsection*{Characterization of \( X(t) \)}
+We apply Itô's formula to the function \( f(Y) = e^Y \), which yields:
+\[
+dX(t) = f'(Y(t))\, dY(t) + \frac{1}{2} f''(Y(t))\, (dY(t))^2.
+\]
+Since \( f'(y) = e^y \) and \( f''(y) = e^y \), we obtain:
+\[
+\begin{aligned}
+dX(t) &= e^{Y(t)} \left( \left( \alpha - \frac{1}{2} \sigma^2 \right) dt + \sigma\, dW(t) \right) + \frac{1}{2} e^{Y(t)} \sigma^2\, dt \\
+&= X(t) \left( \left( \alpha - \frac{1}{2} \sigma^2 + \frac{1}{2} \sigma^2 \right) dt + \sigma\, dW(t) \right) \\
+&= X(t) \left( \alpha\, dt + \sigma\, dW(t) \right).
+\end{aligned}
+\]
+Therefore, \( X(t) \) satisfies the stochastic differential equation
+\[
+dX(t) = \alpha X(t)\, dt + \sigma X(t)\, dW(t), \quad X(0) = 1,
+\]
+which is the defining equation for a \emph{Geometric Brownian Motion (GBM)}.
+
+\subsection*{Expected Value of \( X(t) \)}
+Note that \( Y(t) \sim \mathcal{N}\left( \left( \alpha - \frac{1}{2} \sigma^2 \right)t,\, \sigma^2 t \right) \). Then the expectation of \( X(t) = e^{Y(t)} \) is given by
+\[
+\mathbb{E}[X(t)] = \mathbb{E}[e^{Y(t)}] = \exp\left( \mu_Y + \frac{1}{2} \text{Var}(Y(t)) \right),
+\]
+where
+\[
+\mu_Y = \left( \alpha - \frac{1}{2} \sigma^2 \right)t, \quad \text{Var}(Y(t)) = \sigma^2 t.
+\]
+Hence,
+\[
+\mathbb{E}[X(t)] = \exp\left( \left( \alpha - \frac{1}{2} \sigma^2 \right)t + \frac{1}{2} \sigma^2 t \right) = e^{\alpha t}.
+\]
+
+\subsection*{Conclusion}
+The process \( X(t) = e^{Y(t)} \) is a geometric Brownian motion with drift \( \alpha \) and volatility \( \sigma \), and satisfies
+\[
+\mathbb{E}[X(t)] = e^{\alpha t}.
+\]

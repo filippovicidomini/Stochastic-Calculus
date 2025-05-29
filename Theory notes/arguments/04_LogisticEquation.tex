@@ -1,0 +1,97 @@
+\argomento{The Logistic Equation}
+
+The \textbf{logistic equation} is a classical model for population growth that includes the effect of limited resources. It is given by:
+\[
+\frac{dx}{dt} = rx\left(1 - \frac{x}{K}\right),
+\]
+where:
+- \( x(t) \) is the population at time \( t \),
+- \( r > 0 \) is the intrinsic growth rate,
+- \( K > 0 \) is the carrying capacity of the environment.
+
+\vspace{1em}
+\noindent
+\textbf{Interpretation:}
+- For small \( x \), the term \( \left(1 - \frac{x}{K}\right) \approx 1 \), so the equation behaves like exponential growth: \( \frac{dx}{dt} \approx rx \).
+- As \( x \to K \), \( \frac{dx}{dt} \to 0 \): growth slows down and the population stabilizes at the carrying capacity.
+- If \( x > K \), the growth rate becomes negative: the population decreases back toward \( K \).
+
+The logistic model captures the idea that growth is self-limiting due to competition for resources.
+
+\vspace{1em}
+\noindent
+\textbf{Qualitative analysis:}
+The equilibria are found by solving \( \frac{dx}{dt} = 0 \), which yields:
+\[
+x = 0 \quad \text{and} \quad x = K.
+\]
+- \( x = 0 \) is an unstable equilibrium (any small positive population grows away from zero).
+- \( x = K \) is a stable equilibrium (the population stabilizes at \( K \)).
+
+We can also analyze the sign of the derivative:
+- If \( 0 < x < K \), then \( \frac{dx}{dt} > 0 \): population increases.
+- If \( x > K \), then \( \frac{dx}{dt} < 0 \): population decreases.
+
+\vspace{1em}
+\noindent
+\textbf{Explicit solution:}
+
+To solve the logistic equation:
+\[
+\frac{dx}{dt} = rx\left(1 - \frac{x}{K}\right),
+\]
+we separate variables:
+\[
+\frac{dx}{x(1 - x/K)} = r\,dt.
+\]
+
+We use partial fractions:
+\[
+\frac{1}{x(1 - x/K)} = \frac{1}{x} + \frac{1}{K - x} \cdot \frac{1}{K}.
+\]
+
+Actually, it's better to write:
+\[
+\frac{1}{x(1 - x/K)} = \frac{1}{K} \left( \frac{1}{x} + \frac{1}{K - x} \right).
+\]
+
+Then integrate both sides:
+\[
+\int \left( \frac{1}{x} + \frac{1}{K - x} \right) dx = \int r\,dt.
+\]
+
+\[
+\ln|x| - \ln|K - x| = rK t + C.
+\]
+
+This simplifies to:
+\[
+\ln\left(\frac{x}{K - x}\right) = rK t + C.
+\]
+
+Exponentiating both sides:
+\[
+\frac{x}{K - x} = A e^{rK t}, \quad \text{where } A = e^C.
+\]
+
+Solving for \( x(t) \):
+\[
+x(t) = \frac{K A e^{rK t}}{1 + A e^{rK t}} = \frac{K}{1 + B e^{-rK t}}, \quad \text{where } B = \frac{1}{A}.
+\]
+
+Determine \( B \) using the initial condition \( x(0) = x_0 \):
+\[
+x_0 = \frac{K}{1 + B}, \quad \Rightarrow B = \frac{K - x_0}{x_0}.
+\]
+
+\textbf{Final explicit solution:}
+\[
+x(t) = \frac{K}{1 + \left( \frac{K - x_0}{x_0} \right) e^{-rK t}}.
+\]
+
+\vspace{1em}
+\noindent
+\textbf{Conclusion:}
+- The population grows toward the carrying capacity \( K \).
+- The growth is initially exponential, then slows down due to competition.
+- The logistic equation models self-limited growth more realistically than exponential models.

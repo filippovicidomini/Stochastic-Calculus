@@ -1,0 +1,74 @@
+\argomento{Linear Ordinary Differential Equations}
+
+A \textbf{linear ordinary differential equation (ODE)} of first order has the form:
+\[
+\frac{dx}{dt} + a(t)x(t) = b(t),
+\]
+where \( a(t) \) and \( b(t) \) are given functions (typically continuous), and \( x(t) \) is the unknown function.
+
+A \textbf{Cauchy problem} for a linear ODE consists in solving:
+\[
+\frac{dx}{dt} + a(t)x(t) = b(t), \quad x(t_0) = x_0.
+\]
+
+\textbf{Theorem (Existence and Uniqueness):}  
+If \( a(t) \) and \( b(t) \) are continuous on an open interval \( I \) containing \( t_0 \), then the Cauchy problem has a unique solution defined on all of \( I \).
+
+\textbf{Proof (Sketch):}  
+We rewrite the equation in standard form:
+\[
+\frac{dx}{dt} = -a(t)x(t) + b(t),
+\]
+and observe that the right-hand side is continuous and Lipschitz in \( x \) (since it is linear in \( x \)), satisfying the hypotheses of the Picard–Lindelöf theorem. Hence, the solution exists and is unique.
+
+\textbf{General Solution Formula:}  
+We can solve the linear ODE using an integrating factor. Define:
+\[
+\mu(t) := e^{\int_{t_0}^t a(s)\,ds},
+\]
+which is always positive since the exponential of a continuous function is continuous and never zero.
+
+Multiplying both sides of the ODE by \( \mu(t) \), we get:
+\[
+\mu(t) \frac{dx}{dt} + \mu(t)a(t)x(t) = \mu(t)b(t).
+\]
+
+Using the product rule:
+\[
+\frac{d}{dt}[\mu(t)x(t)] = \mu(t)b(t).
+\]
+
+Integrating both sides from \( t_0 \) to \( t \):
+\[
+\mu(t)x(t) - \mu(t_0)x_0 = \int_{t_0}^{t} \mu(s)b(s)\,ds.
+\]
+
+Solving for \( x(t) \):
+\[
+x(t) = \frac{1}{\mu(t)}\left( \mu(t_0)x_0 + \int_{t_0}^{t} \mu(s)b(s)\,ds \right).
+\]
+
+\textbf{Example:} Solve
+\[
+\frac{dx}{dt} + 2x = \sin(t), \quad x(0) = 0.
+\]
+
+Here, \( a(t) = 2 \), \( b(t) = \sin(t) \), so:
+\[
+\mu(t) = e^{\int_0^t 2\,ds} = e^{2t}.
+\]
+
+Then:
+\[
+\frac{d}{dt}[e^{2t}x(t)] = e^{2t}\sin(t),
+\]
+\[
+e^{2t}x(t) = \int_0^t e^{2s}\sin(s)\,ds.
+\]
+
+Finally:
+\[
+x(t) = e^{-2t} \int_0^t e^{2s} \sin(s)\,ds.
+\]
+
+This expresses the unique solution.

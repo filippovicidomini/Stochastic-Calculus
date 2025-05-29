@@ -1,0 +1,67 @@
+
+\argomento{Properties of the Itô Integral}
+
+\textbf{Let} \( H = (H_t)_{t \geq 0} \) be an \( \mathcal{F}_t \)-adapted process satisfying:
+\[
+\mathbb{E} \left[ \int_0^T H_s^2 \, ds \right] < \infty
+\quad \text{for some fixed } T > 0.
+\]
+Then the Itô integral \( \int_0^t H_s \, dB_s \) is well-defined for all \( t \in [0,T] \), and satisfies the following fundamental properties:
+
+\vspace{1em}
+\textbf{1. Linearity.}  
+For any two integrable adapted processes \( H_t \) and \( G_t \), and constants \( a, b \in \mathbb{R} \),
+\[
+\int_0^t (aH_s + bG_s) \, dB_s = a \int_0^t H_s \, dB_s + b \int_0^t G_s \, dB_s.
+\]
+
+\vspace{1em}
+\textbf{2. Itô Isometry.}  
+\[
+\mathbb{E} \left[ \left( \int_0^t H_s \, dB_s \right)^2 \right] = \mathbb{E} \left[ \int_0^t H_s^2 \, ds \right].
+\]
+\textit{Interpretation:} The Itô integral preserves the \( L^2 \) norm up to a change of domain: the "variance" of the integral equals the expected "energy" of the integrand.
+
+\vspace{1em}
+\textbf{3. Martingale Property.}  
+If \( H_t \) is adapted and square-integrable, then:
+\[
+M_t := \int_0^t H_s \, dB_s
+\quad \text{is a martingale}.
+\]
+Moreover,
+\[
+\mathbb{E}[M_t \mid \mathcal{F}_s] = M_s, \quad \text{for } 0 \leq s \leq t.
+\]
+
+\vspace{1em}
+\textbf{4. Non-anticipativity.}  
+The value of the integral up to time \( t \) only depends on the values of \( H_s \) for \( s \leq t \). This reflects the causal nature of the integral: future information is not used.
+
+\vspace{1em}
+\textbf{5. Continuity.}  
+The process \( \left( \int_0^t H_s \, dB_s \right)_{t \in [0,T]} \) has continuous paths almost surely.
+
+\vspace{1em}
+\textbf{6. Quadratic Variation.}  
+If \( M_t = \int_0^t H_s \, dB_s \), then:
+\[
+[M]_t = \int_0^t H_s^2 \, ds.
+\]
+\textit{Interpretation:} The quadratic variation of a stochastic integral reflects the instantaneous variance of the integrand. This is essential in stochastic calculus.
+
+\vspace{1em}
+\textbf{Application: Solving an SDE.}  
+Consider the stochastic differential equation:
+\[
+dX_t = \mu X_t \, dt + \sigma X_t \, dB_t, \quad X_0 = x_0.
+\]
+Using Itô's formula for \( \log X_t \), we can compute the explicit solution:
+\[
+X_t = x_0 \exp\left( \left( \mu - \frac{\sigma^2}{2} \right)t + \sigma B_t \right).
+\]
+\textit{This shows how the Itô integral provides a fundamental tool to express and solve stochastic differential equations.}
+
+\vspace{1em}
+\textbf{Conclusion.}  
+The Itô integral is not only a mathematically rigorous generalization of classical integration, but also a cornerstone of stochastic calculus. Its properties enable the development of a rich theory for modeling randomness in time-dependent systems.

@@ -1,0 +1,49 @@
+\argomento{Existence and Uniqueness Theorem for SDEs}
+
+\subsection{Theorem (Existence and Uniqueness of Strong Solutions).}  
+Let \( \mu(t, x) \) and \( \sigma(t, x) \) be measurable functions such that:
+\begin{itemize}
+    \item (Local Lipschitz condition) For every \( R > 0 \), there exists a constant \( L_R > 0 \) such that for all \( x, y \in \mathbb{R} \) with \( |x|, |y| \leq R \),
+    \[
+    |\mu(t,x) - \mu(t,y)| + |\sigma(t,x) - \sigma(t,y)| \leq L_R |x - y|;
+    \]
+    \item (Linear growth condition) There exists a constant \( C > 0 \) such that for all \( x \in \mathbb{R} \),
+    \[
+    |\mu(t,x)|^2 + |\sigma(t,x)|^2 \leq C(1 + x^2).
+    \]
+\end{itemize}
+Then, for every initial condition \( X_0 = x_0 \), the stochastic differential equation
+\[
+dX_t = \mu(t, X_t) \, dt + \sigma(t, X_t) \, dB_t
+\]
+has a unique strong solution defined on some filtered probability space \( (\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, \mathbb{P}) \), adapted to the Brownian motion \( B_t \).
+
+\vspace{0.5em}
+\subsection{Applications of the Theorem}
+
+\textbf{(a) Geometric Brownian Motion (GBM):}
+\[
+dS_t = \mu S_t \, dt + \sigma S_t \, dB_t
+\]
+Here, \( \mu(t,x) = \mu x \) and \( \sigma(t,x) = \sigma x \) are both globally Lipschitz and satisfy the linear growth condition:
+\[
+|\mu x - \mu y| = |\mu||x - y|, \quad |\sigma x - \sigma y| = |\sigma||x - y|,
+\]
+and
+\[
+|\mu x|^2 + |\sigma x|^2 \leq C(1 + x^2),
+\]
+for some constant \( C > 0 \). Hence, the existence and uniqueness theorem applies and guarantees a unique strong solution. The explicit solution is:
+\[
+S_t = S_0 \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma B_t \right).
+\]
+
+\textbf{(b) Linear SDEs:}
+\[
+dX_t = (a(t) X_t + b(t)) \, dt + (c(t) X_t + d(t)) \, dB_t
+\]
+Assume \( a(t), b(t), c(t), d(t) \) are bounded and continuous on \( [0,T] \). Then the drift and diffusion functions
+\[
+\mu(t,x) = a(t)x + b(t), \quad \sigma(t,x) = c(t)x + d(t)
+\]
+are globally Lipschitz in \( x \) (with time-dependent coefficients), and satisfy the linear growth condition. Hence, the existence and uniqueness theorem applies, and there exists a unique strong solution to the linear SDE.

@@ -1,0 +1,200 @@
+\argomento{Expectation of an Itô Integral and Application}
+
+Let \( I(t) = \int_0^t H_s \, dB_s \) be an Itô integral, where \( (H_t)_{t \geq 0} \) is an adapted process such that
+\[
+\mathbb{E} \left[ \int_0^t H_s^2 \, ds \right] < \infty.
+\]
+Then:
+
+\[
+\mathbb{E}[I(t)] = \mathbb{E} \left[ \int_0^t H_s \, dB_s \right] = 0.
+\]
+
+\textbf{Reason:}  
+The Itô integral is a martingale with zero initial condition, and martingales have constant expectation over time. Since \( I(0) = 0 \), the expected value remains zero:
+\[
+\mathbb{E}[I(t)] = \mathbb{E}[I(0)] = 0.
+\]
+
+\vspace{1em}
+\textbf{Application: No-Arbitrage in Finance}
+
+In the Black–Scholes model, the price of a financial asset \( S_t \) is modeled as:
+\[
+dS_t = \mu S_t \, dt + \sigma S_t \, dB_t.
+\]
+To evaluate the fair price of a contingent claim (e.g. an option), one works under the risk-neutral measure \( \mathbb{Q} \), under which the discounted asset price:
+\[
+\tilde{S}_t = e^{-rt} S_t
+\]
+satisfies the SDE:
+\[
+d\tilde{S}_t = \sigma \tilde{S}_t \, dW_t,
+\]
+where \( W_t \) is a \( \mathbb{Q} \)-Brownian motion.
+
+Then, the expected discounted price is:
+\[
+\mathbb{E}^{\mathbb{Q}}[\tilde{S}_t] = \tilde{S}_0.
+\]
+This is because the stochastic integral \( \int_0^t \sigma \tilde{S}_s \, dW_s \) has zero expectation.
+
+\textbf{Conclusion:}  
+
+
+The fact that the Itô integral has zero expectation underlies the pricing of financial derivatives and the no-arbitrage principle in modern financial mathematics.
+
+\argomento{Expected Value of a Stochastic Process – Worked Example}
+
+\textbf{Example:} Let \( X_t \) follow a Geometric Brownian Motion defined by the SDE:
+\[
+dX_t = \mu X_t\,dt + \sigma X_t\,dW_t, \quad X_0 = x > 0,
+\]
+with constants \( \mu, \sigma \in \mathbb{R} \), and \( (W_t)_{t \ge 0} \) a standard Brownian motion.
+
+We want to compute:
+\[
+\mathbb{E}[X_t].
+\]
+
+\subsection*{Step 1 – Solve the SDE}
+
+Divide both sides by \( X_t \neq 0 \):
+\[
+\frac{dX_t}{X_t} = \mu\,dt + \sigma\,dW_t.
+\]
+
+This is the logarithmic derivative of \( X_t \), so we consider:
+\[
+Y_t = \ln X_t.
+\]
+
+By Itô’s formula:
+\[
+dY_t = \left(\mu - \frac{1}{2}\sigma^2\right)dt + \sigma\,dW_t.
+\]
+
+Now integrate both sides from 0 to \( t \):
+\[
+Y_t = \ln X_t = \ln x + \left(\mu - \frac{1}{2}\sigma^2\right)t + \sigma W_t.
+\]
+
+Exponentiating:
+\[
+X_t = x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right).
+\]
+
+\subsection*{Step 2 – Compute the Expected Value}
+
+We now compute:
+\[
+\mathbb{E}[X_t] = \mathbb{E}\left[ x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right) \right].
+\]
+
+Factor out constants:
+\[
+= x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t \right) \mathbb{E}\left[ \exp( \sigma W_t ) \right].
+\]
+
+Since \( W_t \sim \mathcal{N}(0, t) \), we know:
+\[
+\mathbb{E}\left[ \exp( \sigma W_t ) \right] = \exp\left( \frac{1}{2} \sigma^2 t \right).
+\]
+
+Therefore:
+\[
+\mathbb{E}[X_t] = x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t \right) \exp\left( \frac{1}{2} \sigma^2 t \right)
+= x \exp(\mu t).
+\]
+
+\subsection*{Final Answer}
+
+\[
+\boxed{ \mathbb{E}[X_t] = x\,e^{\mu t} }
+\]
+
+This shows that the expected value of a geometric Brownian motion grows exponentially at rate \( \mu \), independently of \( \sigma \).
+%%%
+\argomento{A Transformation of GBM and Its Expected Value}
+
+Let \( X(t) \) be a geometric Brownian motion with drift \( \mu = 1 \), volatility \( \sigma = 1 \), and initial condition \( X(0) = 1 \). That is, \( X(t) \) satisfies the SDE:
+\[
+dX(t) = X(t)\,dt + X(t)\,dW(t).
+\]
+
+Define a new process:
+\[
+Y(t) = \sqrt{X(t)} = X(t)^{1/2}.
+\]
+
+\subsection*{Step 1 – Apply Itô's Formula}
+
+We apply Itô's formula to the function \( f(x) = x^{1/2} \). We compute:
+\[
+f'(x) = \frac{1}{2} x^{-1/2}, \quad f''(x) = -\frac{1}{4} x^{-3/2}.
+\]
+
+Then:
+\[
+\begin{aligned}
+dY(t) &= f'(X(t))\,dX(t) + \frac{1}{2} f''(X(t)) (dX(t))^2 \\
+&= \frac{1}{2} X(t)^{-1/2} \left( X(t)\,dt + X(t)\,dW(t) \right) 
++ \frac{1}{2} \left( -\frac{1}{4} X(t)^{-3/2} \right) X(t)^2\,dt \\
+&= \frac{1}{2} \sqrt{X(t)}\,dt + \frac{1}{2} \sqrt{X(t)}\,dW(t) 
+- \frac{1}{8} \sqrt{X(t)}\,dt \\
+&= \left( \frac{3}{8} \right) Y(t)\,dt + \left( \frac{1}{2} \right) Y(t)\,dW(t).
+\end{aligned}
+\]
+
+\subsection*{Step 2 – Identify the Process}
+
+We conclude that \( Y(t) \) satisfies the SDE:
+\[
+dY(t) = \frac{3}{8} Y(t)\,dt + \frac{1}{2} Y(t)\,dW(t), \quad Y(0) = 1,
+\]
+which is again a geometric Brownian motion, with:
+\[
+\mu_Y = \frac{3}{8}, \quad \sigma_Y = \frac{1}{2}.
+\]
+
+\subsection*{Step 3 – Compute the Expected Value}
+
+The expected value of a GBM is given by:
+\[
+\mathbb{E}[Y(t)] = Y(0)\,e^{\mu_Y t} = e^{(3/8)t}.
+\]
+
+\textbf{Final Result:}
+\[
+\boxed{ \mathbb{E}[Y(t)] = e^{\frac{3}{8} t} }
+\]
+\subsection*{Why the Expected Value of \( Y(t) \) is \( e^{\frac{3}{8}t} \)}
+
+We showed that \( Y(t) \) satisfies the SDE:
+\[
+dY(t) = \frac{3}{8} Y(t)\,dt + \frac{1}{2} Y(t)\,dW(t), \quad Y(0) = 1.
+\]
+
+This is a geometric Brownian motion with drift \( \mu = \frac{3}{8} \) and volatility \( \sigma = \frac{1}{2} \). The explicit solution is:
+\[
+Y(t) = \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W(t) \right)
+= \exp\left( \left( \frac{3}{8} - \frac{1}{8} \right)t + \frac{1}{2} W(t) \right)
+= \exp\left( \frac{1}{4}t + \frac{1}{2} W(t) \right).
+\]
+
+Now compute the expected value:
+\[
+\mathbb{E}[Y(t)] = \mathbb{E}\left[ \exp\left( \frac{1}{4}t + \frac{1}{2} W(t) \right) \right]
+= \exp\left( \frac{1}{4}t \right) \cdot \mathbb{E}\left[ e^{\frac{1}{2} W(t)} \right].
+\]
+
+Since \( W(t) \sim \mathcal{N}(0, t) \), we know:
+\[
+\mathbb{E}[e^{a W(t)}] = e^{\frac{1}{2} a^2 t},
+\quad \text{so } \mathbb{E}[e^{\frac{1}{2} W(t)}] = e^{\frac{1}{8} t}.
+\]
+
+Thus:
+\[
+\mathbb{E}[Y(t)] = e^{\frac{1}{4}t} \cdot e^{\frac{1}{8}t} = \boxed{e^{\frac{3}{8}t}}.
+\]

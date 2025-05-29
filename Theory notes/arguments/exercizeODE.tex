@@ -1,0 +1,124 @@
+
+\subsection{Non-uniqueness for the Cauchy Problem \( x' = x^{1/3} \)}
+
+Consider the Cauchy problem:
+\[
+\begin{cases}
+x'(t) = x(t)^{1/3}, \\
+x(0) = 0.
+\end{cases}
+\]
+
+\subsection*{(a) Stationary solution and failure of uniqueness conditions}
+
+A \emph{stationary solution} is a constant function \( x(t) \equiv c \). Substituting into the equation:
+\[
+x'(t) = 0 = c^{1/3} \quad \Rightarrow \quad c = 0.
+\]
+So, \( x(t) \equiv 0 \) is a stationary solution.
+
+To verify whether the conditions for uniqueness are satisfied, we observe that the right-hand side \( f(x) = x^{1/3} \) is continuous but not Lipschitz continuous near \( x = 0 \), since
+\[
+f'(x) = \frac{1}{3}x^{-2/3}
+\]
+is unbounded as \( x \to 0 \). Hence, the hypotheses of the Picard--Lindelöf theorem are not satisfied, and uniqueness is not guaranteed.
+
+\subsection*{(b) Existence and uniqueness theorem and failure of uniqueness}
+
+\textbf{Theorem (Picard--Lindelöf).} \emph{Let \( x'(t) = f(t,x) \), with initial condition \( x(t_0) = x_0 \). If \( f \) is continuous in a neighborhood of \( (t_0, x_0) \) and Lipschitz continuous in \( x \), then there exists a unique local solution.}
+
+In our case, the function \( f(x) = x^{1/3} \) is not Lipschitz at \( x = 0 \), so uniqueness may fail.
+
+We now construct a non-stationary solution.
+
+Separating variables:
+\[
+\frac{dx}{dt} = x^{1/3} \quad \Rightarrow \quad \int x^{-1/3} dx = \int dt \quad \Rightarrow \quad \frac{3}{2} x^{2/3} = t + C.
+\]
+Solving for \( x(t) \):
+\[
+x(t) = \left( \frac{2}{3}(t + C) \right)^{3/2}.
+\]
+Imposing the initial condition \( x(0) = 0 \), we find \( C = 0 \), so:
+\[
+x(t) = \left( \frac{2}{3} t \right)^{3/2}.
+\]
+This is a valid solution that differs from the stationary one \( x(t) \equiv 0 \), hence \emph{uniqueness fails}.
+
+\subsection*{Conclusion}
+
+The Cauchy problem admits infinitely many solutions, including:
+\[
+x(t) \equiv 0 \quad \text{and} \quad x(t) = \left( \frac{2}{3} t \right)^{3/2}.
+\]
+The failure of the Lipschitz condition for \( f(x) = x^{1/3} \) at \( x = 0 \) allows for non-uniqueness, despite the existence of solutions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exercise: ODE with logarithmic coefficient}
+
+Consider the ODE
+\[
+x'(t) = (\ln t) \cdot x(t)
+\]
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{(3 pt)} Find all constant solutions.
+
+A constant function \( x(t) = c \) satisfies \( x'(t) = 0 \). Substituting into the ODE:
+\[
+0 = (\ln t) \cdot c \quad \text{for all } t > 0.
+\]
+Since \( \ln t \neq 0 \) for \( t \neq 1 \), the only constant solution is:
+\[
+\boxed{x(t) = 0}.
+\]
+
+\item \textbf{(3 pt)} Establish if the solution exists and is unique (locally or globally?) for \( t \geq 1 \), using a suitable theorem.
+
+We observe that the ODE is linear:
+\[
+x'(t) = a(t) \cdot x(t), \quad \text{with } a(t) = \ln t.
+\]
+The function \( \ln t \) is continuous on \( (0, \infty) \), and in particular on \( [1, \infty) \). Therefore, by the \textbf{Picard–Lindelöf Theorem}, the initial value problem has a unique solution for any initial condition at \( t \geq 1 \). Hence:
+\[
+\boxed{\text{There is a unique global solution for } t \geq 1.}
+\]
+
+\item \textbf{(5 pt)} Calculate an analytic formula for the solution when \( x(1) = 1 \). (Hint: compute by parts \( \int \ln t \, dt \)).
+
+This ODE is separable or solvable via an integrating factor. Let's use the integrating factor method.
+
+Given:
+\[
+x'(t) = (\ln t) \cdot x(t),
+\]
+we define:
+\[
+\mu(t) = \exp\left(-\int \ln t \, dt\right).
+\]
+Compute the integral by parts:
+\[
+\int \ln t \, dt = t \ln t - t.
+\]
+Thus:
+\[
+\mu(t) = e^{-(t \ln t - t)} = t^{-t} \cdot e^{t}.
+\]
+
+Multiplying the equation by \( \mu(t) \):
+\[
+\frac{d}{dt}[\mu(t) x(t)] = 0 \quad \Rightarrow \quad \mu(t) x(t) = C \quad \Rightarrow \quad x(t) = \frac{C}{\mu(t)} = C \cdot t^t e^{-t}.
+\]
+
+Using the initial condition \( x(1) = 1 \):
+\[
+x(1) = C \cdot 1^1 \cdot e^{-1} = C \cdot e^{-1} = 1 \quad \Rightarrow \quad C = e.
+\]
+
+Therefore, the explicit solution is:
+\[
+\boxed{x(t) = t^t}.
+\]
+
+\end{enumerate}

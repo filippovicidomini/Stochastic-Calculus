@@ -1,0 +1,99 @@
+
+\section{Applications of Linear SDEs: Interest Rate Models}
+
+In this section, we discuss two classical models for the evolution of interest rates, both based on linear stochastic differential equations (SDEs): the \textbf{Vasicek model} and the \textbf{Cox–Ingersoll–Ross (CIR) model}. In both cases, we analyze the dynamics, interpret the parameters, and compute the mean, variance, and their asymptotic behavior.
+
+\subsection{The Vasicek Model}
+
+The Vasicek model describes the short-term interest rate \( r(t) \) by the linear SDE:
+\[
+dr(t) = a(b - r(t))\,dt + \sigma\,dW(t), \quad r(0) = r_0,
+\]
+where:
+\begin{itemize}
+    \item \( a > 0 \): speed of mean reversion,
+    \item \( b \in \mathbb{R} \): long-term mean level,
+    \item \( \sigma > 0 \): volatility,
+    \item \( W(t) \): standard Brownian motion.
+\end{itemize}
+
+This is an example of an \emph{Ornstein–Uhlenbeck process}.
+
+\paragraph{Solution.}
+The solution to this linear SDE is given by:
+\[
+r(t) = r_0 e^{-a t} + b(1 - e^{-a t}) + \sigma \int_0^t e^{-a(t-s)}\, dW(s).
+\]
+
+\paragraph{Mean.}
+Taking expectations:
+\[
+\mathbb{E}[r(t)] = r_0 e^{-a t} + b(1 - e^{-a t}).
+\]
+As \( t \to \infty \), we get:
+\[
+\lim_{t \to \infty} \mathbb{E}[r(t)] = b.
+\]
+
+\paragraph{Variance.}
+Using the isometry property of the Itô integral:
+\[
+\text{Var}(r(t)) = \sigma^2 \int_0^t e^{-2a(t-s)}\, ds = \frac{\sigma^2}{2a}(1 - e^{-2a t}).
+\]
+Hence,
+\[
+\lim_{t \to \infty} \text{Var}(r(t)) = \frac{\sigma^2}{2a}.
+\]
+
+\paragraph{Comments.}
+The Vasicek model is mean-reverting around \( b \), with the parameter \( a \) controlling the speed of reversion. However, it allows for negative interest rates, which is a limitation in practice.
+
+\subsection{The CIR Model}
+
+The Cox–Ingersoll–Ross model defines the interest rate \( r(t) \) through the SDE:
+\[
+dr(t) = a(b - r(t))\,dt + \sigma \sqrt{r(t)}\, dW(t), \quad r(0) = r_0 \geq 0,
+\]
+where:
+\begin{itemize}
+    \item \( a > 0 \): speed of mean reversion,
+    \item \( b > 0 \): long-term mean level,
+    \item \( \sigma > 0 \): volatility coefficient,
+    \item \( r(t) \geq 0 \): ensures non-negativity under the Feller condition \( 2ab \geq \sigma^2 \).
+\end{itemize}
+
+\paragraph{Mean.}
+The expected value satisfies the ODE:
+\[
+\frac{d}{dt} \mathbb{E}[r(t)] = a(b - \mathbb{E}[r(t)]), \quad \mathbb{E}[r(0)] = r_0,
+\]
+with solution:
+\[
+\mathbb{E}[r(t)] = r_0 e^{-a t} + b(1 - e^{-a t}).
+\]
+As in the Vasicek model, we have:
+\[
+\lim_{t \to \infty} \mathbb{E}[r(t)] = b.
+\]
+
+\paragraph{Variance.}
+The variance has the following expression (without proof):
+\[
+\text{Var}(r(t)) = \frac{\sigma^2}{2a} \left( r_0 e^{-a t} (1 - e^{-a t}) + b(1 - e^{-a t})^2 \right).
+\]
+As \( t \to \infty \):
+\[
+\lim_{t \to \infty} \text{Var}(r(t)) = \frac{b\sigma^2}{2a}.
+\]
+
+\paragraph{Comments.}
+The CIR model maintains mean reversion and guarantees non-negativity of rates, which is a major advantage over the Vasicek model. It is widely used in term structure modeling and credit risk.
+
+\subsection{Comparison}
+
+\begin{itemize}
+    \item \textbf{Mean behavior:} Both models exhibit mean reversion to the level \( b \).
+    \item \textbf{Variance:} Both models have finite long-term variance. CIR's variance depends on the square root of the state variable.
+    \item \textbf{Positivity:} CIR ensures \( r(t) \geq 0 \) under the Feller condition, whereas Vasicek does not.
+    \item \textbf{Analytical tractability:} Both models have explicit formulas for bond prices under affine term structure models.
+\end{itemize}

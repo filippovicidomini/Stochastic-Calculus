@@ -1,0 +1,250 @@
+x\argomento{The Feynman–Kac Theorem}
+
+\textbf{Statement (Feynman–Kac Theorem).}  
+Let \( u(t,x) \) be a function defined on \( [0,T] \times \mathbb{R} \), and suppose it solves the backward parabolic PDE:
+\[
+\frac{\partial u}{\partial t} + \mu(x)\frac{\partial u}{\partial x} + \frac{1}{2}\sigma(x)^2 \frac{\partial^2 u}{\partial x^2} - r(x)u = -f(t,x), \quad u(T,x) = \phi(x),
+\]
+for given functions \( \mu(x), \sigma(x), r(x), f(t,x), \phi(x) \), under suitable regularity and growth conditions.
+
+Then, the Feynman–Kac Theorem states that:
+\[
+u(t,x) = \mathbb{E}^{x} \left[ \int_t^T e^{-\int_t^s r(X_u)\,du} f(s, X_s)\,ds + e^{-\int_t^T r(X_u)\,du} \phi(X_T) \right],
+\]
+where \( (X_s)_{s\ge t} \) is the solution of the stochastic differential equation:
+\[
+dX_s = \mu(X_s)\,ds + \sigma(X_s)\,dW_s, \quad X_t = x.
+\]
+
+\textbf{Interpretation.}  
+The theorem provides a bridge between:
+- **Partial Differential Equations (PDEs)** of parabolic type
+- **Stochastic Differential Equations (SDEs)** and expectations of functionals of their solutions.
+
+Instead of solving a PDE directly, one can compute an expected value over a stochastic process (which is often easier numerically or conceptually).
+
+\vspace{1em}
+\textbf{Special case (pricing of European options).}  
+In the Black–Scholes model:
+\[
+dS_t = r S_t\,dt + \sigma S_t\,dW_t,
+\]
+a European option with terminal payoff \( \phi(S_T) \) has price at time \( t \) given by:
+\[
+V(t, S_t) = \mathbb{E}^{S_t} \left[ e^{-r(T-t)} \phi(S_T) \right].
+\]
+This is a direct application of Feynman–Kac with:
+\[
+\mu(x) = r x, \quad \sigma(x) = \sigma x, \quad r(x) = r, \quad f \equiv 0.
+\]
+
+\textbf{Example.}  
+Solve the PDE:
+\[
+\frac{\partial u}{\partial t} + \frac{1}{2} \frac{\partial^2 u}{\partial x^2} = 0, \quad u(T,x) = e^x.
+\]
+This is a heat equation (no drift, no potential, no source), and we want to find \( u(t,x) \).
+
+Here, the corresponding SDE is simply:
+\[
+dX_s = dW_s, \quad X_t = x.
+\]
+So the Feynman–Kac representation gives:
+\[
+u(t,x) = \mathbb{E}^x [e^{X_T}] = \mathbb{E} [e^{x + (W_T - W_t)}] = e^x\, \mathbb{E}[e^{W_{T-t}}].
+\]
+Since \( W_{T-t} \sim \mathcal{N}(0, T-t) \), we have:
+\[
+\mathbb{E}[e^{W_{T-t}}] = e^{\frac{1}{2}(T - t)}.
+\]
+Therefore:
+\[
+u(t,x) = e^{x + \frac{1}{2}(T - t)}.
+\]
+
+\textbf{How to Use Feynman–Kac Theorem to Solve Problems:}
+\begin{enumerate}
+    \item Identify the PDE and check that it fits the Feynman–Kac form (parabolic, final value problem).
+    \item Write down the associated SDE:
+    \[
+    dX_s = \mu(X_s)\,ds + \sigma(X_s)\,dW_s, \quad X_t = x.
+    \]
+    \item Translate the PDE solution into an expectation over the diffusion process:
+    \[
+    u(t,x) = \mathbb{E}^x \left[ \int_t^T e^{-\int_t^s r(X_u)\,du} f(s,X_s)\,ds + e^{-\int_t^T r(X_u)\,du} \phi(X_T) \right].
+    \]
+    \item Evaluate the expectation (analytically if possible, or numerically via Monte Carlo).
+\end{enumerate}
+
+\textbf{Conclusion.}  
+
+\section{Feynman–Kac Theorem and Its Applications}
+
+The Feynman–Kac Theorem provides a powerful tool to solve parabolic PDEs by probabilistic means. It is the theoretical foundation of risk-neutral pricing in financial mathematics and allows solving many problems in option pricing and stochastic control.
+
+\argomento{Feynman–Kac Application: Solving a PDE with Logarithmic Terminal Condition}
+
+Consider the backward parabolic PDE:
+\[
+F_t(t,x) + \frac{1}{2}x F_x(t,x) + 8x^2 F_{xx}(t,x) = 0, \quad x \in \mathbb{R}, \; t \in [0,10),
+\]
+with terminal condition:
+\[
+F(10,x) = \ln x.
+\]
+
+\subsection*{Step 1 – Recognize the Structure}
+
+This equation is in the form of a backward Kolmogorov equation:
+\[
+\frac{\partial F}{\partial t} + \mu(x) \frac{\partial F}{\partial x} + \frac{1}{2} \sigma^2(x) \frac{\partial^2 F}{\partial x^2} = 0,
+\]
+with:
+\[
+\mu(x) = \frac{1}{2}x, \quad \sigma(x) = 4x.
+\]
+
+\subsection*{Step 2 – Associated Stochastic Differential Equation (SDE)}
+
+To apply the Feynman–Kac theorem, we first identify the stochastic differential equation (SDE) associated with the given PDE. Comparing the PDE:
+\[
+F_t + \mu(x) F_x + \frac{1}{2} \sigma^2(x) F_{xx} = 0,
+\]
+with:
+\[
+F_t + \frac{1}{2}x F_x + 8x^2 F_{xx} = 0,
+\]
+we can read off the drift and diffusion coefficients:
+\[
+\mu(x) = \frac{1}{2}x, \quad \sigma^2(x) = 16x^2 \quad \Rightarrow \quad \sigma(x) = 4x.
+\]
+
+Thus, the associated SDE for the diffusion process \( X_t \) is:
+\[
+dX_t = \mu(X_t)\,dt + \sigma(X_t)\,dW_t = \frac{1}{2}X_t\,dt + 4X_t\,dW_t,
+\]
+with initial condition \( X_t = x \). This is a multiplicative noise SDE: both drift and diffusion are proportional to \( X_t \).
+
+\paragraph{Reduction to a Geometric Brownian Motion (GBM).}  
+We divide both sides by \( X_t \) (assuming \( X_t \neq 0 \)) to obtain the logarithmic form:
+\[
+\frac{dX_t}{X_t} = \frac{1}{2}dt + 4\,dW_t.
+\]
+This is the standard form of a geometric Brownian motion (GBM) with constant drift \( \frac{1}{2} \) and volatility \( 4 \).
+
+\paragraph{Solution of the SDE.}  
+We are given the stochastic differential equation (SDE):
+\[
+\frac{dX_t}{X_t} = \mu\,dt + \sigma\,dW_t,
+\]
+which is the standard form of a \textbf{Geometric Brownian Motion (GBM)}. The solution to this SDE, with initial condition \( X_0 = x \), is well known and given by:
+\[
+X_t = x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right).
+\]
+
+\textbf{Why this formula?}  
+We want to solve the SDE:
+\[
+\frac{dX_t}{X_t} = \mu\,dt + \sigma\,dW_t.
+\]
+This is a multiplicative equation, and a standard method to solve it is to apply a logarithmic transformation. Define:
+\[
+Y_t = \ln X_t.
+\]
+The idea is that by working with \( Y_t \) instead of \( X_t \), we convert the equation into an additive one, which is easier to integrate.
+
+Now we apply \textbf{Itô's formula} to compute \( dY_t \). Recall the general Itô formula for a function \( f(X_t) \) when \( X_t \) follows an Itô process:
+\[
+d(f(X_t)) = f'(X_t)\,dX_t + \frac{1}{2} f''(X_t)\, (dX_t)^2.
+\]
+
+In our case:
+\[
+f(x) = \ln x, \quad f'(x) = \frac{1}{x}, \quad f''(x) = -\frac{1}{x^2}.
+\]
+
+We apply Itô's formula to \( Y_t = \ln X_t \) where:
+\[
+dX_t = \mu X_t\,dt + \sigma X_t\,dW_t.
+\]
+
+So:
+\[
+\begin{aligned}
+dY_t &= \frac{1}{X_t} dX_t + \frac{1}{2} \left(-\frac{1}{X_t^2}\right) (dX_t)^2 \\
+     &= \frac{1}{X_t} (\mu X_t\,dt + \sigma X_t\,dW_t) - \frac{1}{2} \cdot \frac{1}{X_t^2} \cdot \sigma^2 X_t^2\,dt \\
+     &= \mu\,dt + \sigma\,dW_t - \frac{1}{2} \sigma^2\,dt \\
+     &= \left( \mu - \frac{1}{2} \sigma^2 \right) dt + \sigma\,dW_t.
+\end{aligned}
+\]
+
+This is now a linear SDE in \( Y_t \), which we can integrate directly:
+\[
+Y_t = Y_0 + \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t.
+\]
+
+Since \( Y_0 = \ln X_0 = \ln x \), we have:
+\[
+Y_t = \ln x + \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t.
+\]
+
+Exponentiating both sides gives:
+\[
+X_t = e^{Y_t} = x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right).
+\]
+
+\textbf{Conclusion:}  
+The term \( -\frac{1}{2} \sigma^2 \) arises from the Itô correction due to the second derivative of \( \ln x \), and it is essential for capturing the true mean behavior of the GBM.
+
+\textbf{Apply to our case.}  
+In the PDE we are solving, we found that the corresponding SDE is:
+\[
+dX_t = \frac{1}{2} X_t\,dt + 4 X_t\,dW_t.
+\]
+This matches the GBM form with:
+\[
+\mu = \frac{1}{2}, \quad \sigma = 4.
+\]
+Plugging these values into the general formula:
+\[
+X_t = x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right)
+= x \exp\left( \left( \frac{1}{2} - \frac{1}{2} \cdot 16 \right)t + 4W_t \right)
+= x \exp\left( -\frac{15}{2}t + 4W_t \right).
+\]
+
+This gives us the explicit expression for \( X_t \), which will be used to compute the expected value in the Feynman–Kac formula.
+
+We will use this explicit formula for \( X_t \) to compute expectations in the next step.
+
+\subsection*{Step 3 – Feynman–Kac Representation}
+
+The Feynman–Kac formula tells us that:
+\[
+F(t,x) = \mathbb{E}^x\left[ \ln(X_{10}) \right],
+\]
+where \( X_t \) starts at \( x \) at time \( t \). We write:
+\[
+X_{10} = x \cdot \exp\left(-\frac{15}{2}(10 - t) + 4(W_{10} - W_t)\right),
+\]
+and so:
+\[
+F(t,x) = \mathbb{E}\left[ \ln \left( x \cdot \exp\left( -\frac{15}{2}(10 - t) + 4(W_{10} - W_t) \right) \right) \right].
+\]
+
+Using the properties of logarithms and expectation:
+\[
+F(t,x) = \ln x - \frac{15}{2}(10 - t) + \mathbb{E}[4(W_{10} - W_t)].
+\]
+
+Since \( W_{10} - W_t \sim \mathcal{N}(0, 10 - t) \), we have \( \mathbb{E}[W_{10} - W_t] = 0 \), hence:
+\[
+F(t,x) = \ln x - \frac{15}{2}(10 - t).
+\]
+
+\subsection*{Final Answer}
+
+\[
+\boxed{F(t,x) = \ln x - \frac{15}{2}(10 - t)}
+\]
+
+This solution is valid for \( x > 0 \) and \( t \in [0,10) \). It illustrates a direct application of the Feynman–Kac theorem to a backward parabolic PDE with logarithmic final condition.

@@ -1,0 +1,43 @@
+\argomento{Itô Isometry and Application to the Vasicek Model}
+
+\textbf{Itô Isometry.}  
+Let \( H = (H_t)_{t \geq 0} \) be an adapted process such that:
+\[
+\mathbb{E} \left[ \int_0^T H_s^2 \, ds \right] < \infty.
+\]
+Then the Itô integral \( I(t) := \int_0^t H_s \, dB_s \) satisfies:
+\[
+\mathbb{E} \left[ \left( \int_0^t H_s \, dB_s \right)^2 \right] = \mathbb{E} \left[ \int_0^t H_s^2 \, ds \right], \quad \forall t \in [0, T].
+\]
+This is a fundamental property of the Itô integral. It means that the mapping \( H \mapsto \int H \, dB \) is an isometry from \( L^2([0,T] \times \Omega) \) into \( L^2(\Omega) \).
+
+\vspace{1em}
+\subsection{Application: Variance in the Vasicek Interest Rate Model}
+
+The Vasicek model for the short rate \( r_t \) is given by the stochastic differential equation:
+\[
+dr_t = a(b - r_t) \, dt + \sigma \, dB_t, \quad r_0 \in \mathbb{R}.
+\]
+This is a linear SDE, and its solution is:
+\[
+r_t = r_0 e^{-at} + b(1 - e^{-at}) + \sigma \int_0^t e^{-a(t - s)} \, dB_s.
+\]
+
+Let us compute the variance of \( r_t \). Since the deterministic part has zero variance, it remains to compute:
+\[
+\operatorname{Var}(r_t) = \operatorname{Var} \left( \sigma \int_0^t e^{-a(t - s)} \, dB_s \right)
+= \sigma^2 \mathbb{E} \left[ \left( \int_0^t e^{-a(t - s)} \, dB_s \right)^2 \right].
+\]
+
+Applying Itô's isometry:
+\[
+\operatorname{Var}(r_t) = \sigma^2 \int_0^t e^{-2a(t - s)} \, ds
+= \sigma^2 \int_0^t e^{-2au} \, du
+= \frac{\sigma^2}{2a} \left( 1 - e^{-2at} \right).
+\]
+
+\textbf{Interpretation:}  
+As \( t \to \infty \), the variance of \( r_t \) tends to \( \frac{\sigma^2}{2a} \), which shows the long-term stability of the Vasicek model around the mean-reverting level \( b \).
+
+\textbf{Conclusion:}  
+The Itô isometry allows one to compute second moments of stochastic integrals and is especially useful in finance, for instance, in understanding the volatility and risk of interest rate models.

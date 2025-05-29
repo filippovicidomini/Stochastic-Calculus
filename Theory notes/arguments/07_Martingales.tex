@@ -1,0 +1,58 @@
+\section{Martingales}
+
+In probability theory, a \textbf{martingale} is a stochastic process that models a ``fair game'' with no predictable trend. Formally, let \( (\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in T},\mathbb{P}) \) be a filtered probability space. A process \( (M_t)_{t\in T} \) (discrete or continuous time) is a martingale if it is adapted, integrable, and satisfies:
+\[
+\mathbb{E}[M_t \mid \mathcal{F}_s] = M_s \quad \text{a.s.}, \quad \forall\, s \le t.
+\]
+This means the expected future value of the process, given the present, equals the current value. In other words, a martingale has \emph{no drift}—knowing the past gives no advantage in predicting the future.
+
+\subsection*{Definition}
+Let \( (\Omega, \mathcal{F}, (\mathcal{F}_t), \mathbb{P}) \) be a filtered probability space. A process \( (M_t)_{t \in T} \) is a \textbf{martingale} with respect to \( (\mathcal{F}_t, \mathbb{P}) \) if:
+\begin{itemize}
+  \item \textbf{Adaptedness:} \( M_t \) is \( \mathcal{F}_t \)-measurable for each \( t \),
+  \item \textbf{Integrability:} \( \mathbb{E}[|M_t|] < \infty \) for all \( t \),
+  \item \textbf{Martingale property:} For all \( s \le t \),
+  \[
+  \mathbb{E}[M_t \mid \mathcal{F}_s] = M_s \quad \text{(almost surely)}.
+  \]
+\end{itemize}
+
+\subsection*{Intuition}
+A martingale is like a fair betting game: your expected future fortune is always equal to your current wealth. For example, in a fair coin-flipping game, a gambler’s fortune after each round (win \( +1 \), lose \( -1 \)) has zero expected change, hence forms a martingale. The key idea is that the process has no predictable trend: its expected increment is zero given the past.
+
+\subsection{Examples}
+\begin{itemize}
+  \item \textbf{Symmetric random walk:} Let \( S_n = \sum_{i=1}^n X_i \) where \( X_i \in \{-1, +1\} \) are i.i.d. with equal probability and \( S_0 = 0 \). Then \( (S_n) \) is a discrete-time martingale since:
+  \[
+  \mathbb{E}[S_{n+1} \mid \mathcal{F}_n] = S_n.
+  \]
+
+  \item \textbf{Standard Brownian motion:} The process \( (B_t)_{t \ge 0} \) with \( B_0 = 0 \) and independent, mean-zero increments satisfies:
+  \[
+  \mathbb{E}[B_t \mid \mathcal{F}_s] = B_s \quad \text{for } s \le t.
+  \]
+  Thus, \( (B_t) \) is a martingale.
+
+  \item \textbf{Discounted asset price under risk-neutral measure:} In mathematical finance, if \( S_t \) is the price of a risky asset and \( r \) the risk-free rate, then under the risk-neutral measure \( \mathbb{Q} \), the discounted price \( \tilde{S}_t = e^{-rt} S_t \) is a martingale:
+  \[
+  \mathbb{E}^{\mathbb{Q}}[\tilde{S}_t \mid \mathcal{F}_s] = \tilde{S}_s.
+  \]
+  This reflects the ``no arbitrage'' condition: the expected discounted gain is zero.
+\end{itemize}
+
+\subsection*{Generalizations}
+\begin{itemize}
+  \item A process \( (X_t) \) is a \textbf{submartingale} if:
+  \[
+  \mathbb{E}[X_t \mid \mathcal{F}_s] \ge X_s \quad \text{for all } s \le t.
+  \]
+  It tends to increase in expectation over time.
+
+  \item A process \( (X_t) \) is a \textbf{supermartingale} if:
+  \[
+  \mathbb{E}[X_t \mid \mathcal{F}_s] \le X_s \quad \text{for all } s \le t.
+  \]
+  It tends to decrease in expectation.
+\end{itemize}
+
+\textbf{Note:} Every martingale is both a submartingale and a supermartingale.

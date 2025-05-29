@@ -1,0 +1,59 @@
+\argomento{Ordinary Differential Equations (ODEs)}
+
+An \textbf{ordinary differential equation (ODE)} is an equation involving an unknown function \( x(t) \) and its derivatives with respect to an independent variable, typically time \( t \). The general form of a first-order ODE is:
+\[
+\frac{dx}{dt} = f(t, x(t)),
+\]
+where \( f \) is a given function and \( x(t) \) is the unknown function.
+
+A function \( x(t) \) is said to be a \textbf{classical solution} if it is differentiable and satisfies the equation for every \( t \) in an open interval, that is:
+\[
+\frac{dx(t)}{dt} = f(t, x(t)) \quad \text{for all } t \in I,
+\]
+where \( I \) is an open interval containing the initial point \( t_0 \), and \( x(t_0) = x_0 \).
+
+\vspace{1em}
+\noindent
+\textbf{Fundamental Theorems}
+
+\begin{enumerate}
+    \item \textbf{Existence (general)} — \emph{Peano’s Theorem}:  
+    If \( f(t, x) \) is continuous in a neighborhood of the initial point \( (t_0, x_0) \), then there exists at least one local solution to the ODE:
+    \[
+    \frac{dx}{dt} = f(t,x), \quad x(t_0) = x_0.
+    \]
+    However, uniqueness is not guaranteed.
+
+    \item \textbf{Local existence and uniqueness} — \emph{Picard–Lindelöf Theorem (also known as Cauchy–Lipschitz)}:  
+    If \( f(t,x) \) is continuous in a neighborhood of \( (t_0, x_0) \) and locally Lipschitz in \( x \), then there exists an interval \( I \ni t_0 \) and a unique solution \( x(t) \) defined on \( I \) that solves the initial value problem:
+    \[
+    \frac{dx}{dt} = f(t,x), \quad x(t_0) = x_0.
+    \]
+
+    \item \textbf{Global existence and uniqueness}:  
+    If \( f \) is globally Lipschitz in \( x \) and continuous in \( t \), and if the solution remains bounded for all \( t \), then the solution can be extended to the entire maximal interval of definition — that is, it is \emph{globally defined}.
+\end{enumerate}
+
+\vspace{1em}
+\noindent
+\textbf{Comparison and Examples}
+
+\begin{itemize}
+    \item \emph{Peano’s theorem} guarantees existence but not uniqueness. Example:
+    \[
+    \frac{dx}{dt} = \sqrt{|x|}, \quad x(0) = 0.
+    \]
+    This ODE admits multiple solutions, such as \( x(t) \equiv 0 \) or \( x(t) = \frac{1}{4}(t - c)^2 \) for \( t \geq c \).
+
+    \item \emph{Picard–Lindelöf theorem} guarantees uniqueness and continuous dependence on initial data, but only locally. Example:
+    \[
+    \frac{dx}{dt} = x, \quad x(0) = 1.
+    \]
+    The unique solution is \( x(t) = e^t \), which is also globally defined in this case.
+
+    \item \emph{Global existence} requires stronger conditions (e.g., bounded growth of \( f \)). If \( f \) grows too fast, solutions may "blow up" in finite time. Example:
+    \[
+    \frac{dx}{dt} = x^2, \quad x(0) = 1.
+    \]
+    The solution is \( x(t) = \frac{1}{1 - t} \), which diverges as \( t \to 1^- \): it is not globally defined.
+\end{itemize}

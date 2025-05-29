@@ -1,0 +1,68 @@
+\argomento{Increments and Properties of the Symmetric and Scaled Random Walk}
+
+\textbf{Symmetric Random Walk.}  
+Let \( (X_i)_{i \geq 1} \) be a sequence of i.i.d. random variables such that:
+\[
+\mathbb{P}(X_i = +1) = \mathbb{P}(X_i = -1) = \frac{1}{2}.
+\]
+Define the symmetric random walk:
+\[
+S_n = \sum_{i=1}^n X_i.
+\]
+\textit{Increments:}  
+\[
+S_{n} - S_{n-1} = X_n.
+\]
+
+\textit{Mean and Variance:}  
+\[
+\mathbb{E}[X_i] = (+1)\cdot\frac{1}{2} + (-1)\cdot\frac{1}{2} = 0, \quad \mathbb{V}ar(X_i) = \mathbb{E}[X_i^2] - (\mathbb{E}[X_i])^2 = 1 - 0 = 1.
+\]
+Then:
+\[
+\mathbb{E}[S_n] = 0, \quad \mathbb{V}ar(S_n) = n.
+\]
+
+\textit{Quadratic variation:}  
+Let \( \Delta S_i = S_i - S_{i-1} = X_i \). Then:
+\[
+[S]_n := \sum_{i=1}^n (\Delta S_i)^2 = \sum_{i=1}^n X_i^2 = n.
+\]
+
+\vspace{1em}
+\textbf{Scaled Random Walk.}  
+Define the scaled random walk:
+\[
+W_n(t) = \frac{1}{\sqrt{n}} S_{\lfloor nt \rfloor}, \quad t \in [0,1].
+\]
+
+\textit{Increments:}  
+For \( 0 \leq s < t \leq 1 \),
+\[
+W_n(t) - W_n(s) = \frac{1}{\sqrt{n}} (S_{\lfloor nt \rfloor} - S_{\lfloor ns \rfloor}) = \frac{1}{\sqrt{n}} \sum_{i=\lfloor ns \rfloor + 1}^{\lfloor nt \rfloor} X_i.
+\]
+
+\textit{Mean and Variance:}  
+The increment over \( [s, t] \) is the sum of \( k := \lfloor nt \rfloor - \lfloor ns \rfloor \) i.i.d. variables:
+\[
+\mathbb{E}[W_n(t) - W_n(s)] = 0, \quad \mathbb{V}ar(W_n(t) - W_n(s)) = \frac{1}{n} \cdot k \approx t - s.
+\]
+
+\textit{Quadratic variation:}  
+Let \( 0 = t_0 < t_1 < \cdots < t_m = 1 \) be a partition. The quadratic variation is:
+\[
+[W_n]_1 = \sum_{j=1}^m (W_n(t_j) - W_n(t_{j-1}))^2.
+\]
+Each increment is of the form:
+\[
+\left( \frac{1}{\sqrt{n}} \sum X_i \right)^2 \quad \Rightarrow \quad \mathbb{E}[(W_n(t_j) - W_n(t_{j-1}))^2] \approx t_j - t_{j-1}.
+\]
+Thus,
+\[
+\mathbb{E}[ [W_n]_1 ] \approx \sum_{j=1}^m (t_j - t_{j-1}) = 1,
+\]
+which anticipates that as \( n \to \infty \), \( [W_n]_1 \to 1 \), consistent with Brownian motion.
+
+\vspace{1em}
+\textbf{Conclusion:}  
+The symmetric random walk has linearly growing variance and discrete quadratic variation. The scaled random walk converges (in distribution) to Brownian motion, whose quadratic variation over \([0,1]\) is 1.

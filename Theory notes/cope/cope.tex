@@ -1,0 +1,39 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=0cm}
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+
+% Sfondo bianco
+\fill[white] (current page.south west) rectangle (current page.north east);
+
+% Fascia colorata laterale
+\fill[gray!20] (0,0) rectangle (4,29.7);
+
+% Titolo principale
+\node[anchor=west, align=left, text width=12cm] at (5,22) {
+    \fontsize{30pt}{36pt}\selectfont\bfseries Titolo del Libro\\[0.5cm]
+    \fontsize{16pt}{20pt}\selectfont\itshape Sottotitolo descrittivo ed elegante
+};
+
+% Nome dell'autore
+\node[anchor=west] at (5,6) {
+    \fontsize{14pt}{16pt}\selectfont\mdseries Filippo Vicidomini
+};
+
+% Linea decorativa in basso
+\draw[gray!60, thick] (0,1.5) -- (21,1.5);
+
+% Anno e casa editrice
+\node[anchor=east] at (20.5,1) {
+    \fontsize{10pt}{12pt}\selectfont 2025 --- Edizioni Vicidomini
+};
+
+\end{tikzpicture}
+\clearpage
+\end{document}

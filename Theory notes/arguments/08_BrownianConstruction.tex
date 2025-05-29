@@ -1,0 +1,43 @@
+\argomento{Construction of Brownian Motion}
+
+\textbf{Definition.}  
+A stochastic process \( (B_t)_{t \geq 0} \) is called a \textbf{(standard) Brownian motion} (or \textbf{Wiener process}) if:
+\begin{enumerate}
+  \item \( B_0 = 0 \) almost surely;
+  \item \( (B_t) \) has \textbf{independent increments};
+  \item \( B_t - B_s \sim \mathcal{N}(0, t - s) \) for all \( 0 \leq s < t \) (i.e., increments are normally distributed with mean 0 and variance \( t-s \));
+  \item \( t \mapsto B_t \) is almost surely continuous.
+\end{enumerate}
+
+\textit{Interpretation:}  
+Brownian motion models a continuous-time random walk with normally distributed steps, and is a central object in stochastic calculus and financial modeling.
+
+\vspace{1em}
+\textbf{Construction (via approximation):}
+
+One classical way to construct Brownian motion is by taking the limit of a \textbf{scaled random walk}. Let \( (X_i)_{i \geq 1} \) be i.i.d. random variables with \( \mathbb{E}[X_i] = 0 \), \( \mathbb{V}ar(X_i) = 1 \). Define the partial sums:
+\[
+S_n = \sum_{i=1}^{n} X_i.
+\]
+Now define the piecewise linear interpolation:
+\[
+W_n(t) := \frac{1}{\sqrt{n}} S_{\lfloor nt \rfloor} + \frac{1}{\sqrt{n}} (nt - \lfloor nt \rfloor)(X_{\lfloor nt \rfloor + 1}).
+\]
+
+Then, by the \textbf{Donsker invariance principle} (or \textbf{functional central limit theorem}), the process \( W_n(t) \) converges in distribution (in \( C[0,1] \)) to a Brownian motion \( B_t \) as \( n \to \infty \).
+
+\vspace{1em}
+\textbf{Alternative Construction (Karhunen–Loève expansion):}  
+One can also construct Brownian motion on \([0,1]\) as an infinite series:
+\[
+B_t = \sum_{n=1}^\infty Z_n \sqrt{\lambda_n} e_n(t),
+\]
+where \( (Z_n) \) are i.i.d. standard normal variables, \( \lambda_n \) are eigenvalues, and \( e_n(t) \) are orthonormal basis functions in \( L^2[0,1] \) (e.g., sine functions for Dirichlet boundary conditions).
+
+\vspace{1em}
+\textbf{Remarks:}
+\begin{itemize}
+  \item Brownian motion is a martingale.
+  \item Its paths are continuous but almost surely nowhere differentiable.
+  \item It is the unique (up to distribution) continuous process with independent and stationary Gaussian increments.
+\end{itemize}

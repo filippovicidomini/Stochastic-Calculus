@@ -1,0 +1,61 @@
+\argomento{Stochastic Differential Equations (SDEs)}
+
+\subsection{Definition.}  
+A \textbf{Stochastic Differential Equation (SDE)} is an equation of the form
+\[
+dX_t = \mu(t, X_t) \, dt + \sigma(t, X_t) \, dB_t,
+\]
+where:
+\begin{itemize}
+    \item \( X_t \) is the unknown stochastic process,
+    \item \( \mu(t, X_t) \) is the drift coefficient (deterministic or stochastic),
+    \item \( \sigma(t, X_t) \) is the diffusion coefficient,
+    \item \( B_t \) is a standard Brownian motion.
+\end{itemize}
+
+The solution to an SDE is defined as an Itô process that satisfies the integral version:
+\[
+X_t = X_0 + \int_0^t \mu(s, X_s) \, ds + \int_0^t \sigma(s, X_s) \, dB_s.
+\]
+
+\subsection{Examples of Financially Relevant SDEs}
+
+\begin{itemize}
+    \item \textbf{Geometric Brownian Motion (Black–Scholes Model):}
+    \[
+    dS_t = \mu S_t \, dt + \sigma S_t \, dB_t.
+    \]
+    It models the price of a risky asset under constant drift and volatility. The solution is:
+    \[
+    S_t = S_0 \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma B_t \right).
+    \]
+
+    \item \textbf{Ornstein–Uhlenbeck Process (Mean-Reverting Process):}
+    \[
+    dX_t = \theta(\mu - X_t) \, dt + \sigma \, dB_t.
+    \]
+    This process models quantities that revert to a long-term mean \( \mu \) over time. Often used for interest rates or volatility.
+
+    \item \textbf{Vasicek Interest Rate Model:}
+    \[
+    dr_t = a(b - r_t) \, dt + \sigma \, dB_t.
+    \]
+    This is an Ornstein–Uhlenbeck process applied to interest rates. It can become negative due to its Gaussian nature.
+
+    \item \textbf{Cox–Ingersoll–Ross (CIR) Model:}
+    \[
+    dr_t = a(b - r_t) \, dt + \sigma \sqrt{r_t} \, dB_t.
+    \]
+    This is a mean-reverting model that ensures interest rates remain non-negative (as long as \( 2ab \geq \sigma^2 \)).
+
+    \item \textbf{Heston Model for Stochastic Volatility:}
+    \[
+    \begin{cases}
+    dS_t = \mu S_t \, dt + \sqrt{v_t} S_t \, dB_t^S, \\
+    dv_t = \kappa(\theta - v_t) \, dt + \xi \sqrt{v_t} \, dB_t^v,
+    \end{cases}
+    \]
+    with \( \text{Cov}(dB_t^S, dB_t^v) = \rho \, dt \). This two-dimensional SDE models asset prices with stochastic volatility.
+\end{itemize}
+
+SDEs are fundamental in financial modeling for capturing the randomness inherent in asset prices, interest rates, and volatility, and are the basis for option pricing, portfolio optimization, and risk management.

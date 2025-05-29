@@ -1,0 +1,76 @@
+\argomento{Bernoulli Cauchy Problem}
+
+\textbf{Definition.} The \textbf{Bernoulli differential equation} is a first-order nonlinear ordinary differential equation of the form:
+\[
+\frac{dy}{dt} + P(t)y = Q(t)y^n,
+\]
+where:
+\begin{itemize}
+  \item \( P(t) \) and \( Q(t) \) are continuous functions on some interval \( I \subset \mathbb{R} \);
+  \item \( n \in \mathbb{R} \setminus \{0,1\} \) (so that the equation is nonlinear).
+\end{itemize}
+
+With an initial condition \( y(t_0) = y_0 \), this efines a \textbf{Cauchy problem}.
+
+\vspace{1em}
+\textbf{Reduction to a Linear Equation.}  
+We perform the change of variable:
+\[
+z(t) = y(t)^{1 - n}.
+\]
+
+Using the chain rule:
+\[
+\frac{dz}{dt} = (1 - n)y^{-n} \frac{dy}{dt}.
+\]
+
+Substitute the original ODE:
+\[
+\frac{dy}{dt} = -P(t)y + Q(t)y^n,
+\]
+into the expression for \( \frac{dz}{dt} \):
+\[
+\frac{dz}{dt} = (1 - n)\left[ -P(t)y^{1 - n} + Q(t) \right] = (1 - n)(-P(t)z + Q(t)).
+\]
+
+Thus we obtain a \\textbf{linear ODE in \\( z(t) \\)}:
+\[
+\frac{dz}{dt} + (1 - n)P(t)z = (1 - n)Q(t).
+\]
+
+\textbf{Solution.}  
+Solve the linear ODE for \( z(t) \) using the integrating factor method. Then recover \( y(t) \) from:
+\[
+y(t) = \left(z(t)\right)^{\frac{1}{1 - n}}.
+\]
+
+\textbf{Example.} Solve the Cauchy problem:
+\[
+\frac{dy}{dt} + 2y = 2y^3, \\quad y(0) = 1.
+\]
+Here, \( P(t) = 2 \), \( Q(t) = 2 \), and \( n = 3 \).
+
+Change of variable:
+\[
+z(t) = y(t)^{-2}.
+\]
+
+Then:
+\[
+\frac{dz}{dt} = -2y^{-3} \frac{dy}{dt} = -2( -2y + 2y^3 ) = 4y - 4y^3 = 4z^{-1/2} - 4z^{-3/2},
+\]
+but better to proceed via the linear method:
+\[
+\frac{dz}{dt} = -4z + 4.
+\]
+
+Solve:
+\[
+\frac{dz}{dt} + 4z = 4 \Rightarrow z(t) = 1 + Ce^{-4t},
+\]
+with \( z(0) = y(0)^{-2} = 1 \Rightarrow C = 0 \). So \( z(t) = 1 \), and:
+\[
+y(t) = z(t)^{-1/2} = 1.
+\]
+
+\textbf{Conclusion.} Bernoulli equations can be systematically reduced to linear equations and solved using standard methods. The nonlinear nature is effectively eliminated through a power substitution.
