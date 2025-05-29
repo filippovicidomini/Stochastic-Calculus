@@ -1,43 +1,61 @@
 \argomento{Construction of Brownian Motion}
 
 \textbf{Definition.}  
-A stochastic process \( (B_t)_{t \geq 0} \) is called a \textbf{(standard) Brownian motion} (or \textbf{Wiener process}) if:
+A stochastic process \( (B_t)_{t \geq 0} \) is called a \textbf{standard Brownian motion} (or \textbf{Wiener process}) if it satisfies the following properties:
 \begin{enumerate}
   \item \( B_0 = 0 \) almost surely;
-  \item \( (B_t) \) has \textbf{independent increments};
-  \item \( B_t - B_s \sim \mathcal{N}(0, t - s) \) for all \( 0 \leq s < t \) (i.e., increments are normally distributed with mean 0 and variance \( t-s \));
-  \item \( t \mapsto B_t \) is almost surely continuous.
+  \item \( (B_t) \) has \textbf{independent increments}: for any \( 0 \leq t_0 < t_1 < \dots < t_n \), the random variables \( B_{t_1} - B_{t_0}, B_{t_2} - B_{t_1}, \dots, B_{t_n} - B_{t_{n-1}} \) are independent;
+  \item The increments are \textbf{stationary and Gaussian}: for all \( 0 \leq s < t \),  
+  \[
+  B_t - B_s \sim \mathcal{N}(0, t - s);
+  \]
+  \item The sample paths \( t \mapsto B_t(\omega) \) are almost surely continuous.
 \end{enumerate}
 
 \textit{Interpretation:}  
-Brownian motion models a continuous-time random walk with normally distributed steps, and is a central object in stochastic calculus and financial modeling.
+Brownian motion models the limit of a symmetric random walk in continuous time. It is a fundamental object in probability theory and plays a central role in stochastic calculus, statistical physics, and financial mathematics.
 
 \vspace{1em}
-\textbf{Construction (via approximation):}
+\textbf{Construction via Scaled Random Walks (Donsker's Invariance Principle):}  
 
-One classical way to construct Brownian motion is by taking the limit of a \textbf{scaled random walk}. Let \( (X_i)_{i \geq 1} \) be i.i.d. random variables with \( \mathbb{E}[X_i] = 0 \), \( \mathbb{V}ar(X_i) = 1 \). Define the partial sums:
+Let \( (X_i)_{i \geq 1} \) be a sequence of i.i.d.\ real-valued random variables with zero mean and unit variance:
 \[
-S_n = \sum_{i=1}^{n} X_i.
+\mathbb{E}[X_i] = 0, \qquad \mathrm{Var}(X_i) = 1.
 \]
-Now define the piecewise linear interpolation:
+Define the partial sums:
 \[
-W_n(t) := \frac{1}{\sqrt{n}} S_{\lfloor nt \rfloor} + \frac{1}{\sqrt{n}} (nt - \lfloor nt \rfloor)(X_{\lfloor nt \rfloor + 1}).
+S_k = \sum_{i=1}^k X_i.
+\]
+For each \( n \in \mathbb{N} \), define the rescaled and interpolated process:
+\[
+W_n(t) := \frac{1}{\sqrt{n}} S_{\lfloor nt \rfloor} + \frac{1}{\sqrt{n}} (nt - \lfloor nt \rfloor) X_{\lfloor nt \rfloor + 1}, \quad t \in [0,1].
 \]
 
-Then, by the \textbf{Donsker invariance principle} (or \textbf{functional central limit theorem}), the process \( W_n(t) \) converges in distribution (in \( C[0,1] \)) to a Brownian motion \( B_t \) as \( n \to \infty \).
+Then, by the \textbf{Donsker invariance principle} (functional central limit theorem), the sequence of processes \( (W_n(t))_{t \in [0,1]} \) converges in distribution in \( C[0,1] \) (with the uniform topology) to standard Brownian motion \( (B_t)_{t \in [0,1]} \) as \( n \to \infty \).
 
 \vspace{1em}
-\textbf{Alternative Construction (Karhunen–Loève expansion):}  
-One can also construct Brownian motion on \([0,1]\) as an infinite series:
+\textbf{Alternative Construction via Karhunen–Loève Expansion:}
+
+Brownian motion on the interval \( [0,1] \) can also be constructed as an infinite series:
 \[
 B_t = \sum_{n=1}^\infty Z_n \sqrt{\lambda_n} e_n(t),
 \]
-where \( (Z_n) \) are i.i.d. standard normal variables, \( \lambda_n \) are eigenvalues, and \( e_n(t) \) are orthonormal basis functions in \( L^2[0,1] \) (e.g., sine functions for Dirichlet boundary conditions).
+where:
+\begin{itemize}
+  \item \( (Z_n) \) is a sequence of i.i.d.\ standard normal random variables;
+  \item \( (\lambda_n, e_n(t)) \) are the eigenvalues and eigenfunctions of the covariance operator of Brownian motion, typically:
+  \[
+  \lambda_n = \frac{1}{((n - 1/2)\pi)^2}, \quad e_n(t) = \sqrt{2} \sin\left( (n - 1/2)\pi t \right),
+  \]
+  for Dirichlet boundary conditions.
+\end{itemize}
+This representation highlights the Gaussian structure and regularity properties of Brownian paths.
 
 \vspace{1em}
 \textbf{Remarks:}
 \begin{itemize}
-  \item Brownian motion is a martingale.
-  \item Its paths are continuous but almost surely nowhere differentiable.
-  \item It is the unique (up to distribution) continuous process with independent and stationary Gaussian increments.
+  \item Brownian motion is a continuous-time martingale with respect to its natural filtration.
+  \item Sample paths of \( B_t \) are almost surely continuous everywhere but nowhere differentiable.
+  \item Brownian motion is the unique (in law) continuous process with independent and stationary Gaussian increments.
+  \item It satisfies the scaling property: for any \( c > 0 \), the process \( (B_{ct})_{t \geq 0} \) has the same distribution as \( (\sqrt{c} B_t)_{t \geq 0} \).
 \end{itemize}

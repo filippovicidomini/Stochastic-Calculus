@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  29 MAY 2025 10:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  29 MAY 2025 11:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Theory notes/Notes_SSFF.tex"
-(/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Theory notes/Notes_SSFF.tex
+**"/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/Notes_SSFF.tex"
+(/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/Notes_SSFF.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/book.cls
@@ -535,11 +535,16 @@ Chapter 3.
 
 [21
 
-]) (./arguments/09_RandomWalks.tex
+]
+Overfull \hbox (0.7242pt too wide) in paragraph at lines 58--59
+[]\T1/lmr/m/n/10 Sample paths of $\OML/lmm/m/it/10 B[]$ \T1/lmr/m/n/10 are al-most surely con-tin-u-ous ev-ery-where but nowhere
+ []
 
-[22]) (./arguments/10_BrownianProprietis.tex
+) (./arguments/09_RandomWalks.tex
 
-[23]
+[22]
+
+[23]) (./arguments/10_BrownianProprietis.tex
 
 [24])
 
@@ -788,14 +793,14 @@ Package rerunfilecheck Info: File `Notes_SSFF.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  12846 strings out of 473190
- 203102 string characters out of 5715800
+ 203162 string characters out of 5715800
  613761 words of memory out of 5000000
  35675 multiletter control sequences out of 15000+600000
  636133 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,760b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,780b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes_SSFF.pdf (61 pages, 429644 bytes).
+Output written on Notes_SSFF.pdf (61 pages, 431476 bytes).
 PDF statistics:
  735 PDF objects out of 1000 (max. 8388607)
  623 compressed objects within 7 object streams
