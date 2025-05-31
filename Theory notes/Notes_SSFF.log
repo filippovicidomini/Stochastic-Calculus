@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 10:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -340,39 +340,34 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip73
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 19.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 41.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 42.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count300
 \l__pdf_internal_box=\box55
-)
-
-LaTeX Warning: Unused global option(s):
-    [9pt].
-
-(./Notes_SSFF.aux)
+) (./Notes_SSFF.aux)
 \openout1 = `Notes_SSFF.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -391,7 +386,7 @@ LaTeX Font Info:    ... okay on input line 41.
 * \oddsidemargin=-29.59087pt
 * \evensidemargin=-29.59087pt
 * \topmargin=-59.65836pt
-* \headheight=12.0pt
+* \headheight=22.48878pt
 * \headsep=18.06749pt
 * \topskip=10.0pt
 * \footskip=25.29494pt
@@ -433,7 +428,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 41.
+Package hyperref Info: Link coloring ON on input line 42.
  (./Notes_SSFF.out) (./Notes_SSFF.out)
 \@outlinefile=\write3
 \openout3 = `Notes_SSFF.out'.
@@ -688,39 +683,11 @@ Overfull \hbox (4.99629pt too wide) in paragraph at lines 107--107
 
 [52]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.48878pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.48878pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.48878pt}.
-
 [53]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.48878pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.48878pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.48878pt}.
 
 [54])
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.48878pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.48878pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.48878pt}.
-
 [55]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.48878pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.48878pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.48878pt}.
 
 [56
 
@@ -798,9 +765,15 @@ Overfull \hbox (1.1971pt too wide) in paragraph at lines 184--185
 []\T1/lmr/bx/n/10 Stochastic volatil-ity and jumps: \T1/lmr/m/n/10 Real as-set prices can ex-hibit volatil-
  []
 
-)
+) (./Notes_SSFF.bbl
 
-[63] (./Notes_SSFF.aux)
+[63]
+
+[64
+
+])
+
+[65] (./Notes_SSFF.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -809,18 +782,18 @@ Package rerunfilecheck Info: File `Notes_SSFF.out' has not changed.
 (rerunfilecheck)             Checksum: 5E2CFB17146E86A941EB6192B9C4039C;13138.
  ) 
 Here is how much of TeX's memory you used:
- 12888 strings out of 473190
- 204042 string characters out of 5715800
- 614758 words of memory out of 5000000
- 35703 multiletter control sequences out of 15000+600000
+ 12902 strings out of 473190
+ 204283 string characters out of 5715800
+ 614839 words of memory out of 5000000
+ 35708 multiletter control sequences out of 15000+600000
  649084 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,780b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes_SSFF.pdf (63 pages, 510331 bytes).
+Output written on Notes_SSFF.pdf (65 pages, 512203 bytes).
 PDF statistics:
- 769 PDF objects out of 1000 (max. 8388607)
- 644 compressed objects within 7 object streams
- 150 named destinations out of 1000 (max. 500000)
+ 782 PDF objects out of 1000 (max. 8388607)
+ 655 compressed objects within 7 object streams
+ 156 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

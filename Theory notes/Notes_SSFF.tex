@@ -1,4 +1,4 @@
-\documentclass[a5paper,9pt]{book}
+\documentclass[a5paper]{book}
 
 % --- Comando argomento per sezioni nei file inclusi ---
 \newcommand{\argomento}[1]{\section{#1}}
@@ -20,6 +20,7 @@
 
 % --- Impaginazione ---
 \pagestyle{fancy}
+\setlength{\headheight}{22.48878pt} % Fix for fancyhdr warning
 \fancyhead{}
 \fancyfoot[C]{\thepage}
 %\fancyhead[LE,RO]{\nouppercase{\leftmark}}
@@ -94,4 +95,14 @@
 
 \chapter{Financial Applications}
 \input{arguments/BlackSholesModel}
+
+% bibliography in folder arguments there is a file called bibliography.bib 
+
+% Example citation to avoid "no \citation commands" error
+\nocite{*}
+
+\bibliographystyle{plain}
+\bibliography{arguments/bibliography}
+
+
 \end{document}

@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{evansPDE}
+Lawrence~C. Evans.
+\newblock {\em Partial Differential Equations}.
+\newblock American Mathematical Society, 2nd edition, 2010.
+
+\bibitem{ito1944}
+Kiyosi Itô.
+\newblock Stochastic integral.
+\newblock {\em Proceedings of the Imperial Academy}, 20:519--524, 1944.
+
+\bibitem{oksendalSDE}
+Bernt {\O}ksendal.
+\newblock {\em Stochastic Differential Equations: An Introduction with Applications}.
+\newblock Springer, 6th edition, 2003.
+
+\end{thebibliography}

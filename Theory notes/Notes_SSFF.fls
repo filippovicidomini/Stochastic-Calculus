@@ -374,6 +374,9 @@ INPUT ./arguments/BlackSholesModel.tex
 INPUT ./arguments/BlackSholesModel.tex
 INPUT ./arguments/BlackSholesModel.tex
 INPUT arguments/BlackSholesModel.tex
+INPUT ./Notes_SSFF.bbl
+INPUT ./Notes_SSFF.bbl
+INPUT Notes_SSFF.bbl
 INPUT Notes_SSFF.aux
 INPUT ./Notes_SSFF.out
 INPUT ./Notes_SSFF.out
