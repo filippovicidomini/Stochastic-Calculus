@@ -206,11 +206,11 @@ This matches the GBM form with:
 \mu = \frac{1}{2}, \quad \sigma = 4.
 \]
 Plugging these values into the general formula:
-\[
-X_t = x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right)
-= x \exp\left( \left( \frac{1}{2} - \frac{1}{2} \cdot 16 \right)t + 4W_t \right)
-= x \exp\left( -\frac{15}{2}t + 4W_t \right).
-\]
+\begin{align*}
+X_t &= x \exp\left( \left( \mu - \frac{1}{2} \sigma^2 \right)t + \sigma W_t \right) \\
+    &= x \exp\left( \left( \frac{1}{2} - \frac{1}{2} \cdot 16 \right)t + 4W_t \right) \\
+    &= x \exp\left( -\frac{15}{2}t + 4W_t \right).
+\end{align*}
 
 This gives us the explicit expression for \( X_t \), which will be used to compute the expected value in the Feynman–Kac formula.
 

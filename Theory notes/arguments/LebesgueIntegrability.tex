@@ -1,0 +1,65 @@
+\argomento{Lebesgue Integrability}
+
+A function \( f: \mathbb{R} \to \mathbb{R} \) (or more generally, \( f: X \to \mathbb{R} \) where \( (X, \mathcal{A}, \mu) \) is a measure space) is said to be \textbf{Lebesgue integrable} over a measurable set \( A \subseteq \mathbb{R} \) if
+
+\[
+\int_A |f(x)| \, d\mu(x) < \infty.
+\]
+
+That is, the absolute value of \( f \) must have a finite Lebesgue integral.
+
+\section*{Intuition}
+
+Lebesgue integrability ensures that the ``area under the curve'' of \( f \) (in a generalized sense) is finite. Unlike Riemann integration, which partitions the domain, Lebesgue integration partitions the codomain (i.e., the range of function values).
+
+This allows the Lebesgue integral to handle:
+\begin{itemize}
+    \item Functions with infinitely many discontinuities,
+    \item Functions that are not bounded,
+    \item Functions defined on sets of complicated structure.
+\end{itemize}
+
+\subsection*{Example}
+
+Define \( f: [0,1] \to \mathbb{R} \) as follows:
+
+\[
+f(x) =
+\begin{cases}
+1 & \text{if } x \in \mathbb{Q} \cap [0,1], \\
+0 & \text{if } x \in \mathbb{R} \setminus \mathbb{Q} \cap [0,1].
+\end{cases}
+\]
+
+This function is:
+\begin{itemize}
+    \item \textbf{Not Riemann integrable}, because it is discontinuous at every point of \([0,1]\).
+    \item \textbf{Lebesgue integrable}, because the set of rational numbers \( \mathbb{Q} \cap [0,1] \) has Lebesgue measure zero. Therefore,
+    \[
+    \int_0^1 f(x) \, dx = 0.
+    \]
+\end{itemize}
+
+\subsection*{Comparison: Riemann vs Lebesgue}
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Property} & \textbf{Riemann Integrable} & \textbf{Lebesgue Integrable} \\
+\hline
+Requires continuity & Almost everywhere & No \\
+\hline
+Handles discontinuities & Poorly & Very well \\
+\hline
+Based on partitions of & Domain (x-axis) & Codomain (y-axis) \\
+\hline
+Uses measure theory & No & Yes \\
+\hline
+Suitable for advanced analysis & No & Yes \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Conclusion}
+
+Lebesgue integrability is a more general and robust notion of integration, fundamental in modern analysis, probability theory, and partial differential equations. It allows integration of a wider class of functions and aligns naturally with the structure of measure spaces.

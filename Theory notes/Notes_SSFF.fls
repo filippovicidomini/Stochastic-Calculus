@@ -270,6 +270,11 @@ INPUT ./arguments/10_BrownianProprietis.tex
 INPUT ./arguments/10_BrownianProprietis.tex
 INPUT ./arguments/10_BrownianProprietis.tex
 INPUT arguments/10_BrownianProprietis.tex
+INPUT ./arguments/LebesgueIntegrability.tex
+INPUT ./arguments/LebesgueIntegrability.tex
+INPUT ./arguments/LebesgueIntegrability.tex
+INPUT ./arguments/LebesgueIntegrability.tex
+INPUT arguments/LebesgueIntegrability.tex
 INPUT ./arguments/11_DiffusionProcesses.tex
 INPUT ./arguments/11_DiffusionProcesses.tex
 INPUT ./arguments/11_DiffusionProcesses.tex

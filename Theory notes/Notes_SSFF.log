@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  29 MAY 2025 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 10:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -554,40 +554,47 @@ Overfull \hbox (0.7242pt too wide) in paragraph at lines 58--59
 
 ]
 Chapter 4.
-(./arguments/11_DiffusionProcesses.tex
+(./arguments/LebesgueIntegrability.tex
+
+[27]
+Overfull \hbox (33.37067pt too wide) in paragraph at lines 46--61
+ [] 
+ []
+
+) (./arguments/11_DiffusionProcesses.tex
 Overfull \hbox (14.03157pt too wide) in paragraph at lines 4--6
 \T1/lmr/bx/n/10 Definition (Dif-fu-sion Pro-cess). \T1/lmr/m/n/10 A \T1/lmr/bx/n/10 dif-fu-sion pro-cess $\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 X[]\OT1/lmr/m/n/10 )[]$ \T1/lmr/m/n/10 is a continuous-
  []
 
 
+
+[28]
 Overfull \hbox (14.84192pt too wide) in paragraph at lines 25--28
 \T1/lmr/m/n/10 cal tools such as dif-fer-en-tial cal-cu-lus and chain rule (i.e., $\OML/lmm/m/it/10 df\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 )) = \OML/lmm/m/it/10 f[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 dx\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 )$\T1/lmr/m/n/10 ).
  []
 
+) (./arguments/ItoIntegralConstruction.tex
 
-
-[27]) (./arguments/ItoIntegralConstruction.tex
-
-[28]
-
-[29]) (./arguments/ItoIntegralProperties.tex
+[29]
 
 [30]
 
-[31]) (./arguments/ExpectationItoIntegral.tex
+[31]) (./arguments/ItoIntegralProperties.tex
 
-[32]
+[32]) (./arguments/ExpectationItoIntegral.tex
 
 [33]
+
+[34]
+
+[35]
 Overfull \hbox (6.90921pt too wide) in paragraph at lines 118--118
 |[]\T1/lmr/bx/n/14.4 A Trans-for-ma-tion of GBM and Its Ex-pected
  []
 
 
 
-[34]
-
-[35]
+[36]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 171.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -596,9 +603,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 171.
 ) (./arguments/ItoIsometri_Verisek.tex
 
-[36]) (./arguments/Ito_Doeblin.tex
+[37]) (./arguments/Ito_Doeblin.tex
 
-[37]
+[38]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 14.
 
@@ -608,7 +615,7 @@ Overfull \hbox (21.65744pt too wide) detected at line 18
 
 
 
-[38]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 []$\OML/lmm/m/it/9 df \OT1/lmr/m/n/9 = \OML/lmm/m/it/9 f[]dt \OT1/lmr/m/n/9 + \OML/lmm/m/it/9 f[]dX \OT1/lmr/m/n/9 +
  []
@@ -623,21 +630,19 @@ Overfull \hbox (24.61911pt too wide) in paragraph at lines 78--90
  [][] 
  []
 
-) (./arguments/ItoProcess.tex
 
-[39]
 
-[40])
+[40]) (./arguments/ItoProcess.tex
 
-[41]
+[41])
 
-[42
-
-]
+[42]
 Chapter 5.
 (./arguments/SDE.tex
 
-[43]) (./arguments/ExistenceUniquenessSDE.tex
+[43
+
+]) (./arguments/ExistenceUniquenessSDE.tex
 Overfull \hbox (13.82715pt too wide) in paragraph at lines 1--1
 |[]\T1/lmr/bx/n/14.4 Existence and Unique-ness The-o-rem for SDEs| 
  []
@@ -691,11 +696,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.48878pt}.
 
 [53]
-Overfull \hbox (73.52951pt too wide) detected at line 213
-\OML/lmm/m/it/10 X[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 x [] [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 x [] [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 x [] [] :
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -806,21 +806,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Notes_SSFF.out' has not changed.
-(rerunfilecheck)             Checksum: 38BA74F372C53149256585E0C921E709;12969.
+(rerunfilecheck)             Checksum: 5E2CFB17146E86A941EB6192B9C4039C;13138.
  ) 
 Here is how much of TeX's memory you used:
- 12878 strings out of 473190
- 203706 string characters out of 5715800
- 615758 words of memory out of 5000000
- 35697 multiletter control sequences out of 15000+600000
+ 12888 strings out of 473190
+ 204042 string characters out of 5715800
+ 614758 words of memory out of 5000000
+ 35703 multiletter control sequences out of 15000+600000
  649084 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,780b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes_SSFF.pdf (63 pages, 507241 bytes).
+Output written on Notes_SSFF.pdf (63 pages, 510331 bytes).
 PDF statistics:
- 764 PDF objects out of 1000 (max. 8388607)
- 639 compressed objects within 7 object streams
- 149 named destinations out of 1000 (max. 500000)
- 449 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 769 PDF objects out of 1000 (max. 8388607)
+ 644 compressed objects within 7 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
