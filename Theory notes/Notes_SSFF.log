@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 10:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -771,9 +771,11 @@ Overfull \hbox (1.1971pt too wide) in paragraph at lines 184--185
 
 [64
 
-])
+]
 
-[65] (./Notes_SSFF.aux)
+[65])
+
+[66] (./Notes_SSFF.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -782,18 +784,18 @@ Package rerunfilecheck Info: File `Notes_SSFF.out' has not changed.
 (rerunfilecheck)             Checksum: 5E2CFB17146E86A941EB6192B9C4039C;13138.
  ) 
 Here is how much of TeX's memory you used:
- 12902 strings out of 473190
- 204283 string characters out of 5715800
- 614839 words of memory out of 5000000
- 35708 multiletter control sequences out of 15000+600000
+ 12925 strings out of 473190
+ 204583 string characters out of 5715800
+ 615194 words of memory out of 5000000
+ 35719 multiletter control sequences out of 15000+600000
  649084 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,780b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes_SSFF.pdf (65 pages, 512203 bytes).
+Output written on Notes_SSFF.pdf (66 pages, 514296 bytes).
 PDF statistics:
- 782 PDF objects out of 1000 (max. 8388607)
- 655 compressed objects within 7 object streams
- 156 named destinations out of 1000 (max. 500000)
+ 799 PDF objects out of 1000 (max. 8388607)
+ 671 compressed objects within 7 object streams
+ 168 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

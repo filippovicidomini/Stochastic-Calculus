@@ -1,18 +1,73 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{arnoldSDE}
+Ludwig Arnold.
+\newblock {\em Stochastic Differential Equations: Theory and Applications}.
+\newblock Wiley, 1974.
+
+\bibitem{billingsley}
+Patrick Billingsley.
+\newblock {\em Probability and Measure}.
+\newblock Wiley, 3rd edition, 1995.
+
+\bibitem{bjork}
+Tomas Bj{\"o}rk.
+\newblock {\em Arbitrage Theory in Continuous Time}.
+\newblock Oxford University Press, 3rd edition, 2009.
+
+\bibitem{ethierKurtz}
+Stewart~N. Ethier and Thomas~G. Kurtz.
+\newblock {\em Markov Processes: Characterization and Convergence}.
+\newblock Wiley, 1986.
 
 \bibitem{evansPDE}
 Lawrence~C. Evans.
 \newblock {\em Partial Differential Equations}.
 \newblock American Mathematical Society, 2nd edition, 2010.
 
+\bibitem{freidlin}
+Mark Freidlin.
+\newblock {\em Functional Integration and Partial Differential Equations}.
+\newblock Princeton University Press, 1985.
+
+\bibitem{glasserman}
+Paul Glasserman.
+\newblock {\em Monte Carlo Methods in Financial Engineering}.
+\newblock Springer, 2004.
+
 \bibitem{ito1944}
 Kiyosi Itô.
 \newblock Stochastic integral.
 \newblock {\em Proceedings of the Imperial Academy}, 20:519--524, 1944.
 
+\bibitem{karatzasShreve}
+Ioannis Karatzas and Steven~E. Shreve.
+\newblock {\em Brownian Motion and Stochastic Calculus}.
+\newblock Springer, 2nd edition, 1991.
+
+\bibitem{logan}
+J.~David Logan.
+\newblock {\em Applied Mathematics}.
+\newblock John Wiley \& Sons, 3rd edition, 2006.
+
 \bibitem{oksendalSDE}
 Bernt {\O}ksendal.
 \newblock {\em Stochastic Differential Equations: An Introduction with Applications}.
 \newblock Springer, 6th edition, 2003.
+
+\bibitem{ross}
+Sheldon~M. Ross.
+\newblock {\em Introduction to Probability Models}.
+\newblock Academic Press, 11th edition, 2014.
+
+\bibitem{shreveStochCalcFinance}
+Steven~E. Shreve.
+\newblock {\em Stochastic Calculus for Finance II: Continuous-Time Models}.
+\newblock Springer, 2004.
+
+\bibitem{taylorPDE}
+Michael~E. Taylor.
+\newblock {\em Partial Differential Equations I: Basic Theory}.
+\newblock Springer, 1996.
 
 \end{thebibliography}
