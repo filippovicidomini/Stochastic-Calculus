@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Notes_SSFF"] 1748680513.48889 "Notes_SSFF.aux" "Notes_SSFF.bbl" "Notes_SSFF" 1748680514.70939 0
+["bibtex Notes_SSFF"] 1748683241.96903 "Notes_SSFF.aux" "Notes_SSFF.bbl" "Notes_SSFF" 1748683243.06479 0
   "./arguments/bibliography.bib" 1748680512.08524 2569 f5f8c581160f55968134f92666bce6ed ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Notes_SSFF.aux" 1748680514.37331 10540 da3a4155c73730c64c1c4f92d68d65ed "pdflatex"
+  "Notes_SSFF.aux" 1748683242.78123 10050 e50c9e676ac061c652315a73e9e1316c "pdflatex"
   (generated)
   "Notes_SSFF.bbl"
   "Notes_SSFF.blg"
   (rewritten before read)
-["pdflatex"] 1748680513.57667 "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/Notes_SSFF.tex" "Notes_SSFF.pdf" "Notes_SSFF" 1748680514.70959 0
+["pdflatex"] 1748683242.06155 "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/Notes_SSFF.tex" "Notes_SSFF.pdf" "Notes_SSFF" 1748683243.06494 0
   "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/Notes_SSFF.tex" 1748680267.4539 2941 142b85379a312ebb8a4709fb338ef9be ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -161,11 +161,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747948829 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747948789 3345733 65cfb9a097c9fac13d618cb2cfc9e2be ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Notes_SSFF.aux" 1748680514.37331 10540 da3a4155c73730c64c1c4f92d68d65ed "pdflatex"
-  "Notes_SSFF.bbl" 1748680513.57337 2026 0b05a53f0918c3cf42dea53ba2beee5a "bibtex Notes_SSFF"
-  "Notes_SSFF.out" 1748680514.37491 13138 5e2cfb17146e86a941eb6192b9c4039c "pdflatex"
+  "Notes_SSFF.aux" 1748683242.78123 10050 e50c9e676ac061c652315a73e9e1316c "pdflatex"
+  "Notes_SSFF.bbl" 1748683242.05885 2026 0b05a53f0918c3cf42dea53ba2beee5a "bibtex Notes_SSFF"
+  "Notes_SSFF.out" 1748683242.78244 12912 dd24c72e6018081b827a1014b0109ba4 "pdflatex"
   "Notes_SSFF.tex" 1748680267.4539 2941 142b85379a312ebb8a4709fb338ef9be ""
-  "Notes_SSFF.toc" 1748680514.37531 6276 7e2f49624fdf3ee7dc1506ecf8910e10 "pdflatex"
+  "Notes_SSFF.toc" 1748683242.78268 5950 f3d7acb59eb5e82aa269623b6826d09d "pdflatex"
   "arguments/01_ODE.tex" 1748467488.96971 2858 7451118837f7a6c454c34e4c23355eb0 ""
   "arguments/02_ODE.tex" 1748269601.87234 1985 dbe034337d2d059e5f876c4f4d995c3a ""
   "arguments/03_AutonumusODE.tex" 1748269820.37334 2493 2e687f32715b0720b36dd63a9f64ea5c ""
@@ -178,7 +178,7 @@
   "arguments/10_BrownianProprietis.tex" 1748271006.95396 2747 f458bbde1cf96e28e0c31b4cfc24b3d2 ""
   "arguments/11_DiffusionProcesses.tex" 1748271144.5643 2805 c011ca42ce430df62e7c04417285e185 ""
   "arguments/BernoulliCauchyProblem.tex" 1748467092.52563 1965 5717882e73b15b2a319c1f9e356a603b ""
-  "arguments/BlackSholesModel.tex" 1748507370.8548 13723 056d7d621f886e03a974515092aab5dd ""
+  "arguments/BlackSholesModel.tex" 1748683240.63414 17125 5d405a6b54987941651d393e5c29aad8 ""
   "arguments/ExistenceUniquenessSDE.tex" 1748338302.46324 2160 2ddad7da81459ff42411b4502c2db06f ""
   "arguments/ExpectationItoIntegral.tex" 1748510913.96142 5812 900f0f8c0c0acb016757879fae7cb8cd ""
   "arguments/ExpectedExponential.tex" 1748273031.54493 1788 4881d79f6f9f6e1352c04239e973aa6c ""

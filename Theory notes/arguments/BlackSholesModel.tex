@@ -86,7 +86,7 @@ Each Greek has an intuitive financial interpretation:
 
 Using the Black--Scholes formulas above, we can write explicit expressions for the Greeks of a European call (and similarly for a put).  Let \(\phi(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}\) denote the standard normal density, and define \(d_1,d_2\) as above.  Then:
 
-\subsection{Delta (\(\Delta\))}
+\subsection*{Delta (\(\Delta\))}
 \[
 \Delta_C = \frac{\partial C}{\partial S} = \Phi(d_1), 
 \qquad
@@ -99,7 +99,7 @@ for a call and put, respectively.  Note that \(0<\Phi(d_1)<1\), so \(\Delta_C\in
     \item A \emph{delta-neutral} position has total \(\Delta = 0\), meaning its first-order sensitivity to small moves in \(S\) is zero.
 \end{itemize}
 
-\subsection{Gamma (\(\Gamma\))}
+\subsection*{Gamma (\(\Gamma\))}
 \[
 \Gamma = \frac{\partial^2 V}{\partial S^2} 
 = \frac{\phi(d_1)}{S \sigma \sqrt{T-t}},
@@ -111,7 +111,7 @@ which is the same for calls and puts.  Gamma is always positive and measures the
     \item Gamma is highest when the option is at-the-money and when time to maturity is short; it decreases for deep in/out-of-the-money options or long-dated options.
 \end{itemize}
 
-\subsection{Theta (\(\Theta\))}
+\subsection*{Theta (\(\Theta\))}
 Theta measures the sensitivity to time (how the option price decays as \(t\) increases).  For a European call,
 \[
 \Theta_C = \frac{\partial C}{\partial t}
@@ -128,7 +128,7 @@ Typically, \(\Theta\) is negative, reflecting that as time passes (with everythi
     \item Near expiration, theta can become large in magnitude for at-the-money options, meaning very rapid decay of value.
 \end{itemize}
 
-\subsection{Vega}
+\subsection*{Vega}
 Vega measures sensitivity to volatility \(\sigma\).  For both calls and puts,
 \[
 \mathrm{Vega} = \frac{\partial V}{\partial \sigma} = S\,\phi(d_1)\,\sqrt{T-t}.
@@ -140,7 +140,7 @@ Thus Vega is positive: an increase in volatility always raises the value of (Eur
     \item Traders monitor Vega because volatility is a key input; changes in implied volatility move option prices through Vega.
 \end{itemize}
 
-\subsection{Rho (\(\rho\))}
+\subsection*{Rho (\(\rho\))}
 Rho measures sensitivity to the interest rate \(r\).  For a call,
 \[
 \rho_C = \frac{\partial C}{\partial r} = K(T-t)e^{-r(T-t)}\Phi(d_2),
@@ -188,3 +188,100 @@ In practice, these assumptions are idealizations, and market behavior often depa
 \end{itemize}
 
 Despite these limitations, the Black--Scholes model serves as a fundamental benchmark. Traders often quote and interpret option prices in terms of \emph{implied volatility}: the value of \(\sigma\) that, plugged into the Black--Scholes formula, matches the market price. Observed patterns in implied volatilities then guide adjustments or the use of more advanced models.  Understanding the Black--Scholes assumptions and Greeks provides essential insight into option behavior, hedging, and risk management in financial markets.
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The Black-Scholes Model for European Options}
+
+The Black-Scholes (BS) model provides a theoretical framework for pricing European call and put options on non-dividend-paying stocks. It was introduced in 1973 by Fischer Black and Myron Scholes, and further developed by Robert Merton.
+
+\subsection*{Assumptions}
+The BS model relies on the following assumptions:
+\begin{itemize}
+  \item The underlying asset price $S_t$ follows a geometric Brownian motion:
+  \[
+  dS_t = \mu S_t\,dt + \sigma S_t\,dW_t
+  \]
+  where $\mu$ is the drift, $\sigma$ the volatility, and $W_t$ a standard Brownian motion.
+  \item The market is frictionless: no transaction costs or taxes.
+  \item Trading is continuous and the asset is perfectly liquid.
+  \item No arbitrage opportunities.
+  \item Constant risk-free interest rate $r$.
+  \item European-style option (exercisable only at maturity).
+\end{itemize}
+
+\subsection*{Derivation via Replicating Portfolio}
+Let $V(t, S)$ be the price of the option. We construct a self-financing portfolio with one short option and $\Delta$ shares of the underlying. Its value is:
+\[
+\Pi = -V(t, S) + \Delta S_t
+\]
+
+Using It\^o's Lemma:
+\[
+ dV = \left(\frac{\partial V}{\partial t} + \mu S \frac{\partial V}{\partial S} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}\right) dt + \sigma S \frac{\partial V}{\partial S} dW_t
+\]
+
+The change in portfolio value is:
+\[
+ d\Pi = -dV + \Delta dS = \left( -\frac{\partial V}{\partial t} - \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} \right) dt
+\]
+by choosing $\Delta = \frac{\partial V}{\partial S}$ to eliminate the stochastic term.
+
+Since the portfolio is risk-free, it must earn the risk-free rate $r$:
+\[
+ d\Pi = r\Pi dt
+\]
+Substituting $\Pi$ and equating gives the Black-Scholes PDE:
+\[
+\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + r S \frac{\partial V}{\partial S} - r V = 0
+\]
+
+\subsection*{Closed-form Solution}
+For a European call and put with strike $K$ and maturity $T$:
+\begin{align*}
+C(t, S) &= S \Phi(d_1) - K e^{-r(T-t)} \Phi(d_2) \\
+P(t, S) &= K e^{-r(T-t)} \Phi(-d_2) - S \Phi(-d_1)
+\end{align*}
+where:
+\[
+d_1 = \frac{\ln(S/K) + (r + \frac{1}{2}\sigma^2)(T - t)}{\sigma\sqrt{T - t}}, \quad
+d_2 = d_1 - \sigma\sqrt{T - t}
+\]
+
+\subsection*{Martingale Approach (Risk-Neutral Valuation)}
+Under the risk-neutral measure $\mathbb{Q}$, the dynamics become:
+\[
+dS_t = r S_t dt + \sigma S_t dW_t^{\mathbb{Q}}
+\]
+Using the Feynman-Kac formula, the price of a European call is:
+\[
+C(t, S) = e^{-r(T-t)} \mathbb{E}^{\mathbb{Q}}[(S_T - K)^+ | S_t = S]
+\]
+This expectation can be computed analytically and yields the same closed-form formula above.
+
+\subsection*{The Greeks}
+\begin{itemize}
+  \item \textbf{Delta} ($\Delta$): sensitivity to $S$.
+  \item \textbf{Gamma} ($\Gamma$): rate of change of delta.
+  \item \textbf{Theta} ($\Theta$): sensitivity to time.
+  \item \textbf{Vega}: sensitivity to volatility $\sigma$.
+  \item \textbf{Rho} ($\rho$): sensitivity to interest rate $r$.
+\end{itemize}
+
+\subsection*{Interpretation}
+\begin{itemize}
+  \item \textbf{Delta} informs hedging strategies.
+  \item \textbf{Gamma} indicates the risk of delta hedging.
+  \item \textbf{Theta} reflects the time value decay.
+  \item \textbf{Vega} represents exposure to volatility.
+  \item \textbf{Rho} matters in interest-sensitive markets.
+\end{itemize}

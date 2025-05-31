@@ -60,10 +60,6 @@
 \contentsline {section}{\numberline {6.1}Introduction to Geometric Brownian Motion and Risk-Neutral Pricing}{57}{section.6.1}%
 \contentsline {section}{\numberline {6.2}The Black--Scholes PDE and Terminal Condition}{58}{section.6.2}%
 \contentsline {section}{\numberline {6.3}The Greeks}{59}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Delta (\(\Delta \))}{59}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Gamma (\(\Gamma \))}{60}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Theta (\(\Theta \))}{60}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Vega}{61}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Rho (\(\rho \))}{61}{subsection.6.3.5}%
 \contentsline {section}{\numberline {6.4}Delta-Neutral and Long-Gamma Strategies}{61}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Model Assumptions and Practical Behavior}{62}{section.6.5}%
+\contentsline {section}{\numberline {6.6}The Black-Scholes Model for European Options}{63}{section.6.6}%

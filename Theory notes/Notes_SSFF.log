@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  31 MAY 2025 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,13 +480,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+[4]
 Chapter 1.
 (./arguments/01_ODE.tex
 
 [5
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 42.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -709,44 +709,9 @@ Overfull \hbox (9.4751pt too wide) detected at line 60
 
 [58]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 102.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Gamma' on input line 102.
-
-
-
 [59]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 114.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Theta' on input line 114.
-
-
-
 [60]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 143.
-
-
 Overfull \hbox (1.74731pt too wide) in paragraph at lines 159--159
 |[]\T1/lmr/bx/n/14.4 Delta-Neutral and Long-Gamma Strate-gies| 
  []
@@ -765,37 +730,46 @@ Overfull \hbox (1.1971pt too wide) in paragraph at lines 184--185
 []\T1/lmr/bx/n/10 Stochastic volatil-ity and jumps: \T1/lmr/m/n/10 Real as-set prices can ex-hibit volatil-
  []
 
-) (./Notes_SSFF.bbl
+
+Overfull \hbox (1.64899pt too wide) in paragraph at lines 203--203
+|[]\T1/lmr/bx/n/14.4 The Black-Scholes Model for Eu-ro-pean Op-
+ []
+
+
 
 [63]
 
-[64
+[64]) (./Notes_SSFF.bbl
+
+[65]
+
+[66
 
 ]
 
-[65])
+[67])
 
-[66] (./Notes_SSFF.aux)
+[68] (./Notes_SSFF.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Notes_SSFF.out' has not changed.
-(rerunfilecheck)             Checksum: 5E2CFB17146E86A941EB6192B9C4039C;13138.
+(rerunfilecheck)             Checksum: DD24C72E6018081B827A1014B0109BA4;12912.
  ) 
 Here is how much of TeX's memory you used:
- 12925 strings out of 473190
- 204583 string characters out of 5715800
- 615194 words of memory out of 5000000
- 35719 multiletter control sequences out of 15000+600000
+ 12919 strings out of 473190
+ 204451 string characters out of 5715800
+ 615191 words of memory out of 5000000
+ 35715 multiletter control sequences out of 15000+600000
  649084 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,780b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes_SSFF.pdf (66 pages, 514296 bytes).
+Output written on Notes_SSFF.pdf (68 pages, 519004 bytes).
 PDF statistics:
- 799 PDF objects out of 1000 (max. 8388607)
- 671 compressed objects within 7 object streams
- 168 named destinations out of 1000 (max. 500000)
- 457 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 658 compressed objects within 7 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 
