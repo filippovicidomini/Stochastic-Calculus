@@ -1,0 +1,81 @@
+
+
+\section{Random Walk Exercise}
+
+Given an infinite sequence of coin tosses
+\[
+\omega = H, T, T, H, H, \ldots
+\]
+and a scaled random walk \( W^{(n)}(t) \), compute the values:
+\[
+W^{(16)}\left(\frac{1}{16}\right), \quad W^{(16)}\left(\frac{2}{16}\right), \quad W^{(16)}\left(\frac{1.5}{16}\right)
+\]
+
+\section*{Step-by-Step Resolution}
+
+\subsection*{1. Define the random variables \( X_i \)}
+
+For each toss:
+\[
+X_i =
+\begin{cases}
++1 & \text{if the $i$-th toss is Head (H)} \\
+-1 & \text{if the $i$-th toss is Tail (T)}
+\end{cases}
+\]
+
+For the given sequence:
+\[
+X_1 = +1, \quad X_2 = -1, \quad X_3 = -1, \quad X_4 = +1, \quad X_5 = +1, \ldots
+\]
+
+\subsection*{2. Compute the partial sums \( S_k \)}
+
+Define the random walk:
+\[
+S_k = X_1 + X_2 + \cdots + X_k
+\]
+
+For the first few terms:
+\[
+\begin{aligned}
+S_0 &= 0 \\
+S_1 &= +1 \\
+S_2 &= +1 -1 = 0 \\
+S_3 &= +1 -1 -1 = -1 \\
+S_4 &= -1 +1 = 0 \\
+S_5 &= 0 +1 = +1 \\
+\end{aligned}
+\]
+
+\subsection*{3. Use the formula for the scaled random walk (with interpolation)}
+
+The scaled random walk is defined as:
+\[
+W^{(n)}(t) = \frac{1}{\sqrt{n}} \cdot S_{\lfloor nt \rfloor}
+\quad \text{(if $t$ is a multiple of $1/n$)}
+\]
+
+If \( t \) is not a multiple of \( 1/n \), we use **linear interpolation**:
+\[
+W^{(n)}(t) = \frac{1}{\sqrt{n}} \left[ (1 - (nt - \lfloor nt \rfloor)) \cdot S_{\lfloor nt \rfloor} + (nt - \lfloor nt \rfloor) \cdot S_{\lfloor nt \rfloor + 1} \right]
+\]
+
+\paragraph{Examples:}
+\begin{itemize}
+\item \( \displaystyle W^{(16)}\left(\frac{1}{16}\right) = \frac{1}{\sqrt{16}} \cdot S_1 = \frac{1}{4} \cdot 1 = 0.25 \)
+\item \( \displaystyle W^{(16)}\left(\frac{2}{16}\right) = \frac{1}{\sqrt{16}} \cdot S_2 = \frac{1}{4} \cdot 0 = 0 \)
+\item \( \displaystyle W^{(16)}\left(\frac{1.5}{16}\right) = \frac{1}{\sqrt{16}} \left[ 0.5 \cdot S_1 + 0.5 \cdot S_2 \right] = \frac{1}{4} \cdot (0.5 \cdot 1 + 0.5 \cdot 0) = 0.125 \)
+\end{itemize}
+
+\section*{Conclusion}
+
+To solve this type of exercise:
+
+\begin{enumerate}
+    \item Translate each toss into \( X_i = \pm 1 \)
+    \item Compute the partial sums \( S_k \)
+    \item Use the formula \( W^{(n)}(t) = \frac{1}{\sqrt{n}} \cdot S_{\lfloor nt \rfloor} \)
+\end{enumerate}
+
+This procedure approximates the trajectory of Brownian motion using a discrete random walk derived from coin tosses.

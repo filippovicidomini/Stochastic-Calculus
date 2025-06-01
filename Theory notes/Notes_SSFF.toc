@@ -13,53 +13,55 @@
 \contentsline {chapter}{\numberline {3}Brownian Motion and Random Walks}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Construction of Brownian Motion}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Increments and Properties of the Symmetric and Scaled Random Walk}{23}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Properties of Brownian Motion}{24}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Itô Calculus}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Lebesgue Integrability}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Diffusion Processes and the Need for Itô Calculus}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Construction of the Itô Integral}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Properties of the Itô Integral}{32}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Expectation of an Itô Integral and Application}{34}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Expected Value of a Stochastic Process – Worked Example}{35}{section.4.6}%
-\contentsline {section}{\numberline {4.7}A Transformation of GBM and Its Expected Value}{36}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Itô Isometry and Application to the Vasicek Model}{38}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Application: Variance in the Vasicek Interest Rate Model}{38}{subsection.4.8.1}%
-\contentsline {section}{\numberline {4.9}It\^o--Doeblin Formula}{39}{section.4.9}%
-\contentsline {paragraph}{Example 1: $f(x)=x^2$.}{39}{paragraph*.2}%
-\contentsline {paragraph}{Example 2: $f(x)=\ln x$ for Geometric Brownian Motion.}{39}{paragraph*.3}%
-\contentsline {section}{\numberline {4.10}Comparison of Classical and It\^o Calculus}{40}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Why the It\^o Integral is Different}{40}{section.4.11}%
-\contentsline {section}{\numberline {4.12}Itô Process and Itô–Doeblin Formula}{41}{section.4.12}%
-\contentsline {subsection}{\numberline {4.12.1}Definition of an Itô Process.}{41}{subsection.4.12.1}%
-\contentsline {chapter}{\numberline {5}Stochastic Differential Equations}{43}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Stochastic Differential Equations (SDEs)}{43}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Definition.}{43}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Examples of Financially Relevant SDEs}{43}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Existence and Uniqueness Theorem for SDEs}{44}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Theorem (Existence and Uniqueness of Strong Solutions).}{44}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Applications of the Theorem}{45}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Geometric Brownian Motion}{46}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Expected Value of the Exponential of an Itô Process}{47}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Applications of Linear SDEs: Interest Rate Models}{48}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}The Vasicek Model}{48}{subsection.5.5.1}%
-\contentsline {paragraph}{Solution.}{48}{paragraph*.4}%
-\contentsline {paragraph}{Mean.}{48}{paragraph*.5}%
-\contentsline {paragraph}{Variance.}{49}{paragraph*.6}%
-\contentsline {paragraph}{Comments.}{49}{paragraph*.7}%
-\contentsline {subsection}{\numberline {5.5.2}The CIR Model}{49}{subsection.5.5.2}%
-\contentsline {paragraph}{Mean.}{49}{paragraph*.8}%
-\contentsline {paragraph}{Variance.}{49}{paragraph*.9}%
-\contentsline {paragraph}{Comments.}{50}{paragraph*.10}%
-\contentsline {subsection}{\numberline {5.5.3}Comparison}{50}{subsection.5.5.3}%
-\contentsline {section}{\numberline {5.6}The Feynman–Kac Theorem}{50}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Feynman–Kac Theorem and Its Applications}{52}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Feynman–Kac Application: Solving a PDE with Logarithmic Terminal Condition}{52}{section.5.8}%
-\contentsline {paragraph}{Reduction to a Geometric Brownian Motion (GBM).}{53}{paragraph*.11}%
-\contentsline {paragraph}{Solution of the SDE.}{53}{paragraph*.12}%
-\contentsline {chapter}{\numberline {6}Financial Applications}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction to Geometric Brownian Motion and Risk-Neutral Pricing}{57}{section.6.1}%
-\contentsline {section}{\numberline {6.2}The Black--Scholes PDE and Terminal Condition}{58}{section.6.2}%
-\contentsline {section}{\numberline {6.3}The Greeks}{59}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Delta-Neutral and Long-Gamma Strategies}{61}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Model Assumptions and Practical Behavior}{62}{section.6.5}%
-\contentsline {section}{\numberline {6.6}The Black-Scholes Model for European Options}{63}{section.6.6}%
+\contentsline {section}{\numberline {3.3}Random Walk Exercise}{24}{section.3.3}%
+\contentsline {paragraph}{Examples:}{25}{paragraph*.2}%
+\contentsline {section}{\numberline {3.4}Properties of Brownian Motion}{26}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Itô Calculus}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lebesgue Integrability}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Diffusion Processes and the Need for Itô Calculus}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Construction of the Itô Integral}{32}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Properties of the Itô Integral}{34}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Expectation of an Itô Integral and Application}{36}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Expected Value of a Stochastic Process – Worked Example}{37}{section.4.6}%
+\contentsline {section}{\numberline {4.7}A Transformation of GBM and Its Expected Value}{38}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Itô Isometry and Application to the Vasicek Model}{40}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Application: Variance in the Vasicek Interest Rate Model}{40}{subsection.4.8.1}%
+\contentsline {section}{\numberline {4.9}It\^o--Doeblin Formula}{41}{section.4.9}%
+\contentsline {paragraph}{Example 1: $f(x)=x^2$.}{41}{paragraph*.3}%
+\contentsline {paragraph}{Example 2: $f(x)=\ln x$ for Geometric Brownian Motion.}{41}{paragraph*.4}%
+\contentsline {section}{\numberline {4.10}Comparison of Classical and It\^o Calculus}{42}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Why the It\^o Integral is Different}{42}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Itô Process and Itô–Doeblin Formula}{43}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Definition of an Itô Process.}{43}{subsection.4.12.1}%
+\contentsline {chapter}{\numberline {5}Stochastic Differential Equations}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Stochastic Differential Equations (SDEs)}{45}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Definition.}{45}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Examples of Financially Relevant SDEs}{45}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Existence and Uniqueness Theorem for SDEs}{46}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Theorem (Existence and Uniqueness of Strong Solutions).}{46}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Applications of the Theorem}{47}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Geometric Brownian Motion}{48}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Expected Value of the Exponential of an Itô Process}{49}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Applications of Linear SDEs: Interest Rate Models}{50}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}The Vasicek Model}{50}{subsection.5.5.1}%
+\contentsline {paragraph}{Solution.}{50}{paragraph*.5}%
+\contentsline {paragraph}{Mean.}{50}{paragraph*.6}%
+\contentsline {paragraph}{Variance.}{51}{paragraph*.7}%
+\contentsline {paragraph}{Comments.}{51}{paragraph*.8}%
+\contentsline {subsection}{\numberline {5.5.2}The CIR Model}{51}{subsection.5.5.2}%
+\contentsline {paragraph}{Mean.}{51}{paragraph*.9}%
+\contentsline {paragraph}{Variance.}{51}{paragraph*.10}%
+\contentsline {paragraph}{Comments.}{52}{paragraph*.11}%
+\contentsline {subsection}{\numberline {5.5.3}Comparison}{52}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}The Feynman–Kac Theorem}{52}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Feynman–Kac Theorem and Its Applications}{54}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Feynman–Kac Application: Solving a PDE with Logarithmic Terminal Condition}{54}{section.5.8}%
+\contentsline {paragraph}{Reduction to a Geometric Brownian Motion (GBM).}{55}{paragraph*.12}%
+\contentsline {paragraph}{Solution of the SDE.}{55}{paragraph*.13}%
+\contentsline {chapter}{\numberline {6}Financial Applications}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction to Geometric Brownian Motion and Risk-Neutral Pricing}{59}{section.6.1}%
+\contentsline {section}{\numberline {6.2}The Black--Scholes PDE and Terminal Condition}{60}{section.6.2}%
+\contentsline {section}{\numberline {6.3}The Greeks}{61}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Delta-Neutral and Long-Gamma Strategies}{63}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Model Assumptions and Practical Behavior}{64}{section.6.5}%
+\contentsline {section}{\numberline {6.6}The Black-Scholes Model for European Options}{65}{section.6.6}%
