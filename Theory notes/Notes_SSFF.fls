@@ -244,6 +244,12 @@ INPUT ./arguments/05_SolowModel.tex
 INPUT ./arguments/05_SolowModel.tex
 INPUT ./arguments/05_SolowModel.tex
 INPUT arguments/05_SolowModel.tex
+INPUT ./arguments/ode_analyzing.tex
+INPUT ./arguments/ode_analyzing.tex
+INPUT ./arguments/ode_analyzing.tex
+INPUT ./arguments/ode_analyzing.tex
+INPUT arguments/ode_analyzing.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./arguments/06_BasicDefinition.tex
 INPUT ./arguments/06_BasicDefinition.tex
 INPUT ./arguments/06_BasicDefinition.tex
@@ -254,7 +260,6 @@ INPUT ./arguments/07_Martingales.tex
 INPUT ./arguments/07_Martingales.tex
 INPUT ./arguments/07_Martingales.tex
 INPUT arguments/07_Martingales.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./arguments/08_BrownianConstruction.tex
 INPUT ./arguments/08_BrownianConstruction.tex
 INPUT ./arguments/08_BrownianConstruction.tex

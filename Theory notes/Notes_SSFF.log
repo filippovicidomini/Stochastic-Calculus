@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  1 JUN 2025 19:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  5 JUN 2025 12:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,29 +506,33 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [12]
 
-[13])
+[13]) (./arguments/ode_analyzing.tex
 
 [14]
 
 [15]
 
-[16
+[16]
 
-]
+[17])
+
+[18]
 Chapter 2.
 (./arguments/06_BasicDefinition.tex
 
-[17]) (./arguments/07_Martingales.tex
+[19
 
-[18]
-
-[19])
+]) (./arguments/07_Martingales.tex
 
 [20]
+
+[21])
+
+[22]
 Chapter 3.
 (./arguments/08_BrownianConstruction.tex
 
-[21
+[23
 
 ]
 Overfull \hbox (0.7242pt too wide) in paragraph at lines 58--59
@@ -537,9 +541,9 @@ Overfull \hbox (0.7242pt too wide) in paragraph at lines 58--59
 
 ) (./arguments/09_RandomWalks.tex
 
-[22]
+[24]
 
-[23]) (./arguments/RandomWalkExercize.tex
+[25]) (./arguments/RandomWalkExercize.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 16.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -548,21 +552,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 16.
 
 
-[24]
+[26]
 
-[25]) (./arguments/10_BrownianProprietis.tex
+[27]) (./arguments/10_BrownianProprietis.tex
 
-[26])
+[28])
 
-[27]
+[29]
 
-[28
+[30
 
 ]
 Chapter 4.
 (./arguments/LebesgueIntegrability.tex
 
-[29]
+[31]
 Overfull \hbox (33.37067pt too wide) in paragraph at lines 46--61
  [] 
  []
@@ -574,37 +578,37 @@ Overfull \hbox (14.03157pt too wide) in paragraph at lines 4--6
 
 
 
-[30]
+[32]
 Overfull \hbox (14.84192pt too wide) in paragraph at lines 25--28
 \T1/lmr/m/n/10 cal tools such as dif-fer-en-tial cal-cu-lus and chain rule (i.e., $\OML/lmm/m/it/10 df\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 )) = \OML/lmm/m/it/10 f[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 dx\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 )$\T1/lmr/m/n/10 ).
  []
 
 ) (./arguments/ItoIntegralConstruction.tex
 
-[31]
+[33]
 
-[32]
+[34]
 
-[33]) (./arguments/ItoIntegralProperties.tex
+[35]) (./arguments/ItoIntegralProperties.tex
 
-[34]) (./arguments/ExpectationItoIntegral.tex
-
-[35]
-
-[36]
+[36]) (./arguments/ExpectationItoIntegral.tex
 
 [37]
+
+[38]
+
+[39]
 Overfull \hbox (6.90921pt too wide) in paragraph at lines 118--118
 |[]\T1/lmr/bx/n/14.4 A Trans-for-ma-tion of GBM and Its Ex-pected
  []
 
 
 
-[38]) (./arguments/ItoIsometri_Verisek.tex
+[40]) (./arguments/ItoIsometri_Verisek.tex
 
-[39]) (./arguments/Ito_Doeblin.tex
+[41]) (./arguments/Ito_Doeblin.tex
 
-[40]
+[42]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 14.
 
@@ -614,7 +618,7 @@ Overfull \hbox (21.65744pt too wide) detected at line 18
 
 
 
-[41]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 []$\OML/lmm/m/it/9 df \OT1/lmr/m/n/9 = \OML/lmm/m/it/9 f[]dt \OT1/lmr/m/n/9 + \OML/lmm/m/it/9 f[]dX \OT1/lmr/m/n/9 +
  []
@@ -631,15 +635,15 @@ Overfull \hbox (24.61911pt too wide) in paragraph at lines 78--90
 
 
 
-[42]) (./arguments/ItoProcess.tex
+[44]) (./arguments/ItoProcess.tex
 
-[43])
+[45])
 
-[44]
+[46]
 Chapter 5.
 (./arguments/SDE.tex
 
-[45
+[47
 
 ]) (./arguments/ExistenceUniquenessSDE.tex
 Overfull \hbox (13.82715pt too wide) in paragraph at lines 1--1
@@ -648,7 +652,7 @@ Overfull \hbox (13.82715pt too wide) in paragraph at lines 1--1
 
 
 
-[46]
+[48]
 Overfull \hbox (41.98656pt too wide) in paragraph at lines 18--20
 \T1/lmr/m/n/10 has a unique strong so-lu-tion de-fined on some fil-tered prob-a-bil-ity space $\OT1/lmr/m/n/10 (
 \OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 F\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10 F[]\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 ; \U/msb/m/n/10 P\OT1/lmr/m/n/10 )$\T1/lmr/m/n/10 ,
@@ -656,50 +660,50 @@ Overfull \hbox (41.98656pt too wide) in paragraph at lines 18--20
 
 ) (./arguments/GeometricBrownianMotion.tex
 
-[47]) (./arguments/ExpectedExponential.tex
+[49]) (./arguments/ExpectedExponential.tex
 
-[48]
+[50]
 
-[49]) (./arguments/interestRateModel.tex
+[51]) (./arguments/interestRateModel.tex
 Overfull \hbox (0.1867pt too wide) in paragraph at lines 2--2
 |[]\T1/lmr/bx/n/14.4 Applications of Lin-ear SDEs: In-ter-est Rate
  []
 
 
 
-[50]
-
-[51]) (./arguments/FeynmanKac.tex
-
 [52]
+
+[53]) (./arguments/FeynmanKac.tex
+
+[54]
 Overfull \hbox (4.09038pt too wide) in paragraph at lines 67--68
 []\T1/lmr/m/n/10 Identify the PDE and check that it fits the Feyn-man^^UKac form (parabolic,
  []
 
 
 
-[53]
+[55]
 Overfull \hbox (4.99629pt too wide) in paragraph at lines 107--107
 |\T1/lmr/bx/n/12 Step 2 ^^U As-so-ci-ated Stochas-tic Dif-fer-en-tial Equa-tion (SDE)| 
  []
 
 
 
-[54]
-
-[55]
-
-[56])
+[56]
 
 [57]
 
-[58
+[58])
+
+[59]
+
+[60
 
 ]
 Chapter 6.
 (./arguments/BlackSholesModel.tex
 
-[59]
+[61]
 Overfull \hbox (2.72899pt too wide) in paragraph at lines 22--22
 |[]\T1/lmr/bx/n/14.4 The Black--Scholes PDE and Ter-mi-nal Con-
  []
@@ -711,25 +715,25 @@ Overfull \hbox (9.4751pt too wide) detected at line 60
 
 
 
-[60]
-
-[61]
-
 [62]
+
+[63]
+
+[64]
 Overfull \hbox (1.74731pt too wide) in paragraph at lines 159--159
 |[]\T1/lmr/bx/n/14.4 Delta-Neutral and Long-Gamma Strate-gies| 
  []
 
 
 
-[63]
+[65]
 Overfull \hbox (5.65945pt too wide) in paragraph at lines 163--164
 []\T1/lmr/bx/n/10 Long gamma: \T1/lmr/m/n/10 Hold-ing op-tions (long calls or puts) gives pos-i-tive gamma.
  []
 
 
 
-[64]
+[66]
 Overfull \hbox (1.1971pt too wide) in paragraph at lines 184--185
 []\T1/lmr/bx/n/10 Stochastic volatil-ity and jumps: \T1/lmr/m/n/10 Real as-set prices can ex-hibit volatil-
  []
@@ -741,39 +745,39 @@ Overfull \hbox (1.64899pt too wide) in paragraph at lines 203--203
 
 
 
-[65]
-
-[66]) (./Notes_SSFF.bbl
-
 [67]
 
-[68
+[68]) (./Notes_SSFF.bbl
+
+[69]
+
+[70
 
 ]
 
-[69])
+[71])
 
-[70] (./Notes_SSFF.aux)
+[72] (./Notes_SSFF.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Notes_SSFF.out' has not changed.
-(rerunfilecheck)             Checksum: A44FFBF041557CDA86756B663CDDBEBB;13073.
+(rerunfilecheck)             Checksum: 3D3A17D08657EEAB050328F8485D9E87;13488.
  ) 
 Here is how much of TeX's memory you used:
- 12935 strings out of 473190
- 204809 string characters out of 5715800
- 615191 words of memory out of 5000000
- 35721 multiletter control sequences out of 15000+600000
+ 12953 strings out of 473190
+ 205207 string characters out of 5715800
+ 615223 words of memory out of 5000000
+ 35731 multiletter control sequences out of 15000+600000
  649084 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,780b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,780b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes_SSFF.pdf (70 pages, 525300 bytes).
+Output written on Notes_SSFF.pdf (72 pages, 534782 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
- 674 compressed objects within 7 object streams
- 173 named destinations out of 1000 (max. 500000)
- 433 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 693 compressed objects within 7 object streams
+ 178 named destinations out of 1000 (max. 500000)
+ 449 words of extra memory for PDF output out of 10000 (max. 10000000)
 

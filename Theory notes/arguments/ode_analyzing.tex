@@ -1,0 +1,133 @@
+\argomento{Analyzing Ordinary Differential Equations (ODEs)}
+
+This chapter introduces basic techniques for analyzing first-order ordinary differential equations (ODEs), focusing on existence and uniqueness theorems, and the effect of varying initial conditions.
+
+\subsection*{Local and Global Existence and Uniqueness}
+Consider the Cauchy problem:
+\begin{equation} \label{eq:IVP}
+\begin{cases}
+\displaystyle \frac{dx}{dt} = f(t, x), \\
+x(t_0) = x_0,
+\end{cases}
+\end{equation}
+where $f: \mathbb{R} \times \mathbb{R} \to \mathbb{R}$ is a continuous function.
+
+\subsubsection*{Local Existence and Uniqueness Theorem (Picard-Lindel\"of)}
+If $f(t, x)$ is continuous and Lipschitz continuous in $x$ in a neighborhood of $(t_0, x_0)$, then there exists a unique local solution $x(t)$ defined on some interval containing $t_0$.
+
+\textbf{Lipschitz condition in $x$:}
+\[|f(t, x_1) - f(t, x_2)| \leq L |x_1 - x_2| \text{ for all } x_1, x_2 \text{ in a neighborhood.}\]
+
+\subsubsection*{Global Existence}
+If the solution remains bounded and $f(t,x)$ remains continuous and satisfies a global Lipschitz condition in $x$, the solution can be extended to all $t$ in $\mathbb{R}$. Otherwise, the solution may blow up in finite time.
+
+\textbf{Criterion:} If $|f(t,x)| \leq \alpha(|x|)$ for a continuous, non-decreasing function $\alpha$ such that:
+\[\int^\infty \frac{1}{\alpha(s)}\, ds = \infty,\]
+then blow-up is avoided, and global existence is ensured.
+
+\subsection*{Monotonicity with Respect to Initial Data}
+Let $x_1(t)$ and $x_2(t)$ be solutions to the same ODE \eqref{eq:IVP} with initial conditions $x_1(t_0) = x_1^0 < x_2^0 = x_2(t_0)$. Then:
+
+\subsubsection*{Order-Preserving Property}
+If $f(t, x)$ is non-decreasing in $x$ (i.e., $\frac{\partial f}{\partial x} \geq 0$), then:
+\[x_1(t) < x_2(t) \quad \text{for all } t \text{ where the solutions exist.}\]
+
+This property allows us to analyze how the solution responds to variations in the initial value. This is particularly useful for ODEs arising in population dynamics, chemical reactions, or economics.
+
+\subsection{Examples}
+
+\subsubsection*{Example 1: Logistic Equation}
+\begin{equation*}
+\frac{dx}{dt} = rx(1 - x/K), \quad x(0) = x_0,
+\end{equation*}
+where $r, K > 0$.
+
+\begin{itemize}
+  \item $f(t,x) = rx(1 - x/K)$ is locally Lipschitz in $x$ $\Rightarrow$ local existence.
+  \item The RHS is a polynomial in $x$ $\Rightarrow$ global existence.
+  \item $\frac{\partial f}{\partial x} = r(1 - 2x/K)$, so the monotonicity depends on the value of $x$.
+  \item For $x_0 < K$, $x(t)$ increases and asymptotically approaches $K$.
+\end{itemize}
+
+\subsubsection*{Example 2: Linear ODE}
+\begin{equation*}
+\frac{dx}{dt} = ax + b, \quad x(0) = x_0,
+\end{equation*}
+with constants $a, b \in \mathbb{R}$.
+
+\begin{itemize}
+  \item Solution: $x(t) = (x_0 + \frac{b}{a})e^{at} - \frac{b}{a}$ if $a \neq 0$, or $x(t) = x_0 + bt$ if $a = 0$.
+  \item $f(t,x)$ is linear and globally Lipschitz $\Rightarrow$ global existence and uniqueness.
+  \item $\frac{\partial f}{\partial x} = a$, so monotonicity depends on the sign of $a$.
+\end{itemize}
+
+\subsubsection*{Example 3: Nonlinear Explosive ODE}
+\begin{equation*}
+\frac{dx}{dt} = x^2, \quad x(0) = x_0 > 0.
+\end{equation*}
+
+\begin{itemize}
+  \item Solution: $x(t) = \frac{x_0}{1 - x_0 t}$.
+  \item Solution blows up in finite time $t = 1/x_0$ $\Rightarrow$ no global existence.
+  \item $f(t,x)$ is increasing in $x$, so order-preserving with respect to initial conditions.
+\end{itemize}
+
+\subsubsection*{Example 4: Time-dependent Coefficient}
+\begin{equation*}
+\frac{dx}{dt} = t x, \quad x(0) = x_0.
+\end{equation*}
+
+\begin{itemize}
+  \item Solution: $x(t) = x_0 e^{t^2/2}$.
+  \item $f(t,x) = t x$ is locally Lipschitz in $x$, smooth in $t$ $\Rightarrow$ global existence.
+  \item $\frac{\partial f}{\partial x} = t$, so monotonicity in initial condition holds when $t \geq 0$.
+\end{itemize}
+
+\subsubsection*{Example 5: Nonlinear ODE with Exponential and Logarithmic Terms}
+Consider the ODE:
+\begin{equation*}
+\frac{dx}{dt} = x(\ln^2(x)) e^{\ln(x)}, \quad t > 0,
+\end{equation*}
+coupled with the initial condition $x(0) = x_0 > 0$.
+
+Let us define:
+\[ f(x) = x (\ln^2(x)) e^{\ln(x)} = x (\ln^2(x)) x = x^2 \ln^2(x). \]
+
+\subsubsection*{(a) Stationary Solutions and Monotonicity}
+Stationary solutions satisfy $f(x) = 0$. Since $x^2 > 0$ for $x > 0$, we need:
+\[ \ln(x) = 0 \Rightarrow x = 1. \]
+So, the only stationary solution is $x \equiv 1$.
+
+Now, analyze the sign of $f(x) = x^2 \ln^2(x)$ for different values of $x_0$:
+\begin{itemize}
+  \item If $x_0 = 1$, then $\ln(x) = 0 \Rightarrow \dot{x} = 0$ (stationary).
+  \item If $0 < x_0 < 1$, then $\ln(x) < 0$, so $\ln^2(x) > 0 \Rightarrow \dot{x} > 0$.
+  \item If $x_0 > 1$, then $\ln(x) > 0 \Rightarrow \dot{x} > 0$.
+\end{itemize}
+Thus, for all $x_0 \neq 1$, the solution is strictly increasing.
+
+\subsubsection*{(b) Existence and Uniqueness for $x_0 = 1/3$}
+Define $f(x) = x^2 \ln^2(x)$. This function is continuous for $x > 0$ and differentiable. Let's compute the derivative:
+\[ f'(x) = 2x \ln^2(x) + 2x \ln(x), \]
+which is continuous for $x > 0$ $\Rightarrow$ $f$ is locally Lipschitz on $(0, \infty)$.
+
+Hence, by the Picard–Lindel"of theorem, there exists a unique local solution for any $x_0 > 0$, including $x_0 = 1/3$.
+
+Global existence: since $f(x) = x^2 \ln^2(x)$ grows polynomially for $x \to \infty$ and goes to $0$ as $x \to 0^+$, there is no blow-up in finite time, and the solution exists globally.
+
+\subsubsection*{(c) Compute the Solution for $x_0 = 1/3$}
+We separate variables:
+\begin{align*}
+\frac{dx}{x^2 \ln^2(x)} &= dt.
+\end{align*}
+Let $u = \ln(x) \Rightarrow du = \frac{1}{x} dx \Rightarrow dx = x du = e^u du$.
+Then:
+\begin{align*}
+\frac{dx}{x^2 \ln^2(x)} &= \frac{e^u du}{e^{2u} u^2} = \frac{du}{e^u u^2}.
+\end{align*}
+Thus,
+\[ \int \frac{du}{e^u u^2} = t + C. \]
+This integral does not have an elementary closed-form, but defines $u(t) = \ln(x(t))$ implicitly. Numerical or special function techniques are needed to write $x(t)$ explicitly.
+
+Therefore, the solution can be expressed implicitly via:
+\[ \int_{\ln(x_0)}^{\ln(x(t))} \frac{du}{e^u u^2} = t. \]
