@@ -1,0 +1,100 @@
+\argomento{Lebesgue Integral}
+
+This chapter introduces the construction of the Lebesgue integral, starting from measure theory, and explains the main convergence theorems and examples that highlight the differences with the Riemann approach.
+
+\subsection*{From Outer Measure to Lebesgue Measure}
+Consider a subset $E \subseteq \mathbb{R}$. Define the Lebesgue outer measure as:
+
+\subsection*{Stepwise Construction of the Integral}
+
+\subsubsection*{Step 0: Indicator Functions}
+For $E \in \mathcal{L}$,
+\[
+\int \mathbf{1}_E \, dm = m(E).
+\]
+
+\subsubsection*{Step 1: Simple Functions}
+For $s = \sum_{i=1}^n a_i \mathbf{1}_{E_i}$ with $a_i \ge 0$ and $E_i \in \mathcal{L}$ disjoint,
+\[
+\int s \, dm = \sum_{i=1}^n a_i m(E_i).
+\]
+
+\subsubsection*{Step 2: Nonnegative Measurable Functions}
+For $f \ge 0$ measurable,
+\[
+\int f \, dm = \sup\Big\{ \int s \, dm : 0 \le s \le f,\ s \text{ simple}\Big\}.
+\]
+Equivalently, take $s_n \uparrow f$, then $\int f = \lim_n \int s_n$.
+
+\subsubsection*{Step 3: Integrable Functions}
+For any real $f$, write $f = f^+ - f^-$ with $f^\pm = \max\{\pm f,0\}$. If
+\[
+\int |f|\,dm = \int f^+\,dm + \int f^-\,dm < \infty,
+\]
+then $f$ is integrable and
+\[
+\int f\,dm = \int f^+\,dm - \int f^-\,dm.
+\]
+
+\subsection*{Convergence Theorems}
+
+\subsubsection*{Monotone Convergence (Beppo Levi)}
+If $0 \le f_n \uparrow f$ a.e., then
+\[
+\int f_n \, dm \uparrow \int f \, dm.
+\]
+
+\subsubsection*{Fatou's Lemma}
+If $f_n \ge 0$, then
+\[
+\int \liminf_n f_n \, dm \le \liminf_n \int f_n \, dm.
+\]
+
+\subsubsection*{Dominated Convergence (DCT)}
+If $f_n \to f$ a.e. and $|f_n| \le g \in L^1$, then $f \in L^1$ and
+\[
+\int f_n \, dm \to \int f \, dm.
+\]
+
+\subsubsection*{Tonelli and Fubini}
+For $f \ge 0$ measurable on $X \times Y$,
+\[
+\int f \, d(\mu \otimes \nu) = \int \!\Big(\int f(x,y)\,d\nu(y)\Big)d\mu(x).
+\]
+If $f \in L^1(\mu \otimes \nu)$, the same formula holds and the integrals are finite.
+
+\subsection*{Comparison with Riemann Integration}
+\subsubsection*{Lebesgue's Criterion}
+A function $f:[a,b]\to \mathbb{R}$ is Riemann integrable iff the set of discontinuities has Lebesgue measure zero.
+
+\textbf{Example: Dirichlet Function.} 
+$f(x) = \mathbf{1}_{\mathbb{Q} \cap [0,1]}$ is not Riemann integrable (every interval contains both rationals and irrationals), but it is Lebesgue integrable with
+\[
+\int_0^1 f(x)\,dx = m(\mathbb{Q} \cap [0,1]) = 0.
+\]
+
+\subsection{Examples}
+
+\subsubsection*{Example 1: Approximation by Simple Functions}
+For $f \ge 0$, define
+\[
+s_n(x) = \sum_{k=0}^{2^n-1} \frac{k}{2^n}\, \mathbf{1}_{\{k/2^n \le f(x) < (k+1)/2^n\}}.
+\]
+Then $s_n \uparrow f$ and $\int f = \lim_n \int s_n$.
+
+\subsubsection*{Example 2: Dominated Convergence}
+On $[0,1]$, $f_n(x) = x^n$. Then $\int_0^1 f_n = \tfrac{1}{n+1} \to 0$. Since $|f_n| \le 1$, the DCT applies and confirms convergence.
+
+\subsubsection*{Example 3: Tonelli/Fubini}
+Compute
+\[
+I = \int_0^1 \int_0^1 \mathbf{1}_{\{x<y\}} \, dx \, dy.
+\]
+Fixing $y$, the inner integral is $y$. Thus $I = \int_0^1 y\,dy = \tfrac{1}{2}$.
+
+\subsubsection*{Example 4: Layer-Cake Representation}
+For $f(x) = x^p$ on $[0,1]$, with $p>0$,
+\[
+\int_0^1 f(x)\,dx = \int_0^1 \int_0^\infty \mathbf{1}_{\{x^p>t\}}\,dt\,dx = \int_0^\infty m(\{x: x^p>t\})\,dt.
+\]
+This reproduces $\int_0^1 x^p\,dx = \frac{1}{p+1}$.

@@ -1,0 +1,29 @@
+PWD /Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments
+INPUT /usr/local/texlive/2025/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex
+OUTPUT Lebesque20.log
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+OUTPUT Lebesque20.aux
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+OUTPUT Lebesque20.pdf
+INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT Lebesque20.aux
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb

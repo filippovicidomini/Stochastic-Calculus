@@ -1,0 +1,900 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  29 AUG 2025 17:18
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex"
+(/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:2: Undefined control sequence.
+l.2 \theoremstyle
+                 {definition}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:2: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \theoremstyle{d
+                   efinition}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+\c@definition=\count196
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:3: LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \newtheorem{definition}{Definizione}[section]
+                                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:6: LaTeX Error: Command \* already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \newtheorem*{solution}{
+                           Soluzione}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no S in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--7
+[]
+ []
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:8: Undefined control sequence.
+l.8 \theoremstyle
+                 {plain}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:8: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \theoremstyle{p
+                   lain}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--13
+[]
+ []
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:14: Undefined control sequence.
+l.14 \theoremstyle
+                  {remark}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:14: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \theoremstyle{r
+                    emark}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--16
+[]
+ []
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box52
+)
+No file Lebesque20.aux.
+\openout1 = `Lebesque20.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:32: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \begin{document}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:33: Undefined control sequence.
+l.33 \maketitle
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:35: Undefined control sequence.
+l.35 \tableofcontents
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:37: Undefined control sequence.
+l.37 \section
+             {Misura esterna e insiemi misurabili}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 38.
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:38: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.38 ...ition}[Misura esterna di Lebesgue su $\R$]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:39: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.39 Per $E\subseteq \R
+                       $, la misura esterna è
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:41: Missing { inserted.
+<to be read again> 
+                   \discretionary 
+l.41 m^\*
+         (E)=\inf\Big\{\sum_{k=1}^\infty |I_k|:\ E\subseteq \textstyle\bigcu...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:41: Undefined control sequence.
+l.41 ...tstyle\bigcup_{k=1}^\infty I_k,\ I_k \text
+                                                  { intervalli}\Big\},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:42: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \]
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:43: Missing } inserted.
+<inserted text> 
+                }
+l.43 dove $
+           |I_k|$ è la lunghezza dell'intervallo $I_k$.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:43: Display math should end with $$.
+<to be read again> 
+                   |
+l.43 dove $|
+            I_k|$ è la lunghezza dell'intervallo $I_k$.
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 dove $|I_
+              k|$ è la lunghezza dell'intervallo $I_k$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:47: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.47 Un insieme $E\subseteq \R
+                              $ è \emph{Lebesgue-misurabile} se, per ogni $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:47: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.47 ...ue-misurabile} se, per ogni $A\subseteq \R
+                                                  $,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:49: Missing { inserted.
+<to be read again> 
+                   \discretionary 
+l.49 m^\*
+         (A)=m^\*(A\cap E)+m^\*(A\cap E^c).
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:49: Missing { inserted.
+<to be read again> 
+                   \discretionary 
+l.49 m^\*(A)=m^\*
+                 (A\cap E)+m^\*(A\cap E^c).
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:49: Missing { inserted.
+<to be read again> 
+                   \discretionary 
+l.49 m^\*(A)=m^\*(A\cap E)+m^\*
+                               (A\cap E^c).
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:50: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \]
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Missing } inserted.
+<inserted text> 
+                }
+l.51 Gli insiemi misurabili formano una $
+                                         \sigma$-algebra $\cL$; la restrizio...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Missing } inserted.
+<inserted text> 
+                }
+l.51 Gli insiemi misurabili formano una $
+                                         \sigma$-algebra $\cL$; la restrizio...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Missing } inserted.
+<inserted text> 
+                }
+l.51 Gli insiemi misurabili formano una $
+                                         \sigma$-algebra $\cL$; la restrizio...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Display math should end with $$.
+<to be read again> 
+                   \sigma 
+l.51 Gli insiemi misurabili formano una $\sigma
+                                               $-algebra $\cL$; la restrizio...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 Gli insiemi misurabili formano una $\sigma
+                                               $-algebra $\cL$; la restrizio...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Missing { inserted.
+<to be read again> 
+                   \discretionary 
+l.51 ...ma$-algebra $\cL$; la restrizione di $m^\*
+                                                  $ a $\cL$ è la \emph{misu...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:51: Missing } inserted.
+<inserted text> 
+                }
+l.51 ...a$-algebra $\cL$; la restrizione di $m^\*$
+                                                   a $\cL$ è la \emph{misur...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:55: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.55 La $\sigma$-algebra di Borel $\cB(\R
+                                         )=\sigma(\text{aperti})$ è contenu...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:55: Undefined control sequence.
+l.55 ...ma$-algebra di Borel $\cB(\R)=\sigma(\text
+                                                  {aperti})$ è contenuta in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:58: Undefined control sequence.
+l.58 \section
+             {Funzioni misurabili}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:60: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.60 ...F,\mu)$, una funzione $f:X\to \overline{\R
+                                                  }$ è \emph{misurabile} se
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:61: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.61 $\{x\in X:f(x)<a\}\in\cF$ per ogni $a\in\R
+                                               $ (equivalentemente: le contr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:68: Undefined control sequence.
+l.68 \section
+             {Costruzione dell'integrale di Lebesgue}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:71: Undefined control sequence.
+l.71 \subsection
+                *{Step 0: indicatori}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:74: Undefined control sequence.
+l.74 \subsection
+                *{Step 1: funzioni semplici non negative}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:80: Undefined control sequence.
+l.80 \subsection
+                *{Step 2: funzioni misurabili non negative}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:83: Undefined control sequence.
+l.83 ...\Big\{\int s\,d\mu:\ 0\le s\le f,\ s \text
+                                                  { semplice}\Big\}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:87: Undefined control sequence.
+l.87 \subsection
+                *{Step 3: funzioni a valori reali}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:98: Undefined control sequence.
+l.98 \section
+             {Teoremi di convergenza}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:108: Undefined control sequence.
+<recently read> \lvert 
+                       
+l.108 Se $f_n\to f$ a.e. e $\lvert
+                                   f_n\rvert\le g\in L^1$, allora $f\in L^1$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:108: Undefined control sequence.
+l.108 Se $f_n\to f$ a.e. e $\lvert f_n\rvert
+                                            \le g\in L^1$, allora $f\in L^1$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:120: Undefined control sequence.
+l.120 \section
+              {Strumenti utili}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:138: Undefined control sequence.
+l.138 \section
+              {Riemann vs Lebesgue}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:140: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.140 $f:[a,b]\to\R
+                   $ è Riemann-integrabile se e solo se l'insieme dei punti...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:144: Undefined control sequence.
+\Q ->\mathbb 
+             {Q}
+l.144 $\1_{\Q
+             \cap[0,1]}$ non è Riemann-integrabile ma è Lebesgue-integrabi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:148: Undefined control sequence.
+l.148 \section
+              {Esercizi svolti}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:157: LaTeX Error: Environment solution undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 \begin{solution}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:160: Undefined control sequence.
+l.160 \(\int f=\sup\{\int s:0\le s\le f,\ s\ \text
+                                                  {semplice}\}=\lim_n \int s...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:161: LaTeX Error: \begin{document} ended by \end{solution}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 \end{solution}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:166: LaTeX Error: Environment solution undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 \begin{solution}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:168: LaTeX Error: \begin{document} ended by \end{solution}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 \end{solution}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:171: Undefined control sequence.
+\Q ->\mathbb 
+             {Q}
+l.171 Mostra che $\int_0^1 \1_{\Q
+                                 }\,dx=0$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:173: LaTeX Error: Environment solution undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \begin{solution}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:174: Undefined control sequence.
+\Q ->\mathbb 
+             {Q}
+l.174 $\Q
+         \cap[0,1]$ è numerabile, quindi di misura nulla. Per definizione d...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:175: LaTeX Error: \begin{document} ended by \end{solution}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 \end{solution}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:180: LaTeX Error: Environment solution undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180 \begin{solution}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:182: LaTeX Error: \begin{document} ended by \end{solution}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.182 \end{solution}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:185: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.185 Su $\R
+            $, per $\alpha>0$ considera $f_\alpha(x)=\min\{1,|x|^{-\alpha}\}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:185: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.185 ...na per quali $\alpha$ $f_\alpha\in L^1(\R
+                                                  )$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:187: LaTeX Error: Environment solution undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 \begin{solution}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:188: Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.188 ...i entrambe: quindi $f_\alpha\notin L^1(\R
+                                                  )$ per ogni $\alpha>0$. (S...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:189: LaTeX Error: \begin{document} ended by \end{solution}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 \end{solution}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:192: Undefined control sequence.
+\Q ->\mathbb 
+             {Q}
+l.192 Sia $f=\1_{\Q
+                   \cap[0,1]}$. Spiega perché non è Riemann-integrabile ma...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:194: LaTeX Error: Environment solution undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 \begin{solution}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:195: Undefined control sequence.
+\Q ->\mathbb 
+             {Q}
+l.195 ...tegrabile. È tuttavia misurabile e $m(\Q
+                                                  \cap[0,1])=0$, dunque $\in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:196: LaTeX Error: \begin{document} ended by \end{solution}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196 \end{solution}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:198: Undefined control sequence.
+l.198 \section
+              {Checklist d’esame}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+
+
+/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/Theory notes/arguments/Lebesque20.tex:207: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.207 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Lebesque20.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 284 strings out of 473190
+ 7272 string characters out of 5715800
+ 425670 words of memory out of 5000000
+ 23624 multiletter control sequences out of 15000+600000
+ 560110 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,8n,50p,665b,172s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Lebesque20.pdf (1 page, 167742 bytes).
+PDF statistics:
+ 68 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

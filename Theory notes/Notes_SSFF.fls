@@ -300,6 +300,14 @@ INPUT ./arguments/LebesgueIntegrability.tex
 INPUT ./arguments/LebesgueIntegrability.tex
 INPUT ./arguments/LebesgueIntegrability.tex
 INPUT arguments/LebesgueIntegrability.tex
+INPUT ./arguments/Lebesque20.tex
+INPUT ./arguments/Lebesque20.tex
+INPUT ./arguments/Lebesque20.tex
+INPUT ./arguments/Lebesque20.tex
+INPUT arguments/Lebesque20.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT ./arguments/11_DiffusionProcesses.tex
 INPUT ./arguments/11_DiffusionProcesses.tex
 INPUT ./arguments/11_DiffusionProcesses.tex
@@ -310,9 +318,6 @@ INPUT ./arguments/ItoIntegralConstruction.tex
 INPUT ./arguments/ItoIntegralConstruction.tex
 INPUT ./arguments/ItoIntegralConstruction.tex
 INPUT arguments/ItoIntegralConstruction.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT ./arguments/ItoIntegralProperties.tex
 INPUT ./arguments/ItoIntegralProperties.tex
 INPUT ./arguments/ItoIntegralProperties.tex
