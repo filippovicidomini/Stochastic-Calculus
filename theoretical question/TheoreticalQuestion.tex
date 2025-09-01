@@ -1,0 +1,191 @@
+\documentclass[12pt,a4paper]{book}
+
+% Pacchetti utili
+\usepackage[utf8]{inputenc}  % Per la codifica in UTF-8
+\usepackage[T1]{fontenc}     % Font encoding
+\usepackage{lmodern}         % Font Latin Modern
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm}
+\usepackage{hyperref}        % Collegamenti ipertestuali
+\usepackage{enumitem}        % Miglior gestione degli elenchi
+\usepackage{geometry}        % Controllo margini
+%fancy
+\usepackage{fancyhdr}        % Intestazioni e piè di pagina
+\geometry{a4paper, margin=2.5cm}
+
+% Intestazioni e piè di pagina
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Theoretical Questions Stochastic Calculus}
+\fancyhead[R]{\thepage}
+%\fancyfoot[C]{\textit{Confidential - Do Not Distribute}}
+
+% Ambienti per teoremi e definizioni
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+
+% Comandi personalizzati per probabilità e processi stocastici
+\newcommand{\PP}{\mathbb{P}}          % probabilità
+\newcommand{\EE}{\mathbb{E}}          % valore atteso
+\newcommand{\QQ}{\mathbb{Q}}          % misura risk-neutral
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\F}{\mathcal{F}}          % sigma-algebra
+\newcommand{\Filtr}[1]{\{\mathcal{F}_{#1}\}} % filtrazione
+\newcommand{\Var}{\mathrm{Var}}       % varianza
+\newcommand{\Cov}{\mathrm{Cov}}       % covarianza
+\newcommand{\indic}{\mathds{1}}       % funzione indicatrice
+
+% Altri comandi utili
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\ang}{\langle}{\rangle}
+\newcommand{\law}{\stackrel{d}{=}}    % uguaglianza in distribuzione
+\newcommand{\given}{\,\middle|\,} % condizionamento
+
+% Differenziali e calcolo stocastico
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dt}{\,\mathrm{d}t}
+\newcommand{\dx}{\,\mathrm{d}x}
+\newcommand{\dW}{\,\mathrm{d}W_t}
+\newcommand{\Ito}{It\^o}
+\newcommand{\BM}{Brownian motion}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    % Logo dell'università (se vuoi inserirlo, basta caricare l'immagine)
+    % \includegraphics[width=0.25\textwidth]{logo.png}\par\vspace{1cm}
+    
+    {\scshape Università Ca' Foscari Venezia \par}
+ 
+    \vspace{2cm}
+    \vfill
+    {\Huge\bfseries Theoretical Questions on Stochastic Calculus \par}
+    \vspace{1.5cm}
+    {\Large\itshape Exam Preparation Booklet\par}
+    
+    \vspace{2cm}
+    {\Large Course: Stochastic Calculus for Finance \par}
+    \vspace{0.5cm}
+ 
+    
+    \vfill
+    
+    {\large Student: Filippo Vicidomini \par}
+    {\large Master’s Degree in Engineering Physics\par}
+    
+    \vfill
+    
+    % Data
+    {\large Academic Year 2024--2025 \par}
+    
+\end{titlepage}
+
+
+
+\section{Question 7}
+\textbf{Give the definition of the martingale property for a stochastic process and interpret it. Give suitable examples of stochastic processes with this property.}
+
+\subsection*{Answer}
+Let $(\Omega, \F, \PP)$ be a probability space and $\Filtr{t}$ a filtration. A stochastic process $X(t)$ adapted to $\Filtr{t}$ is called a \textbf{martingale} if:
+
+\begin{enumerate}[label=\roman*)]
+    \item $\EE[\abs{X(t)}] < \infty$ for all $t$;
+    \item For all $s < t$, 
+    \[
+        \EE[X(t) \mid \F_s] = X(s).
+    \]
+\end{enumerate}
+
+\subsection*{Interpretation}
+A martingale represents a \textbf{fair game}: given the information available up to time $s$, the best prediction of the value at time $t$ is exactly the current value $X(s)$. This means the process has no drift: it does not systematically increase or decrease.
+
+Consequently, $\EE[X(t)] = \EE[X(0)]$ for all $t$.
+
+\subsection*{Examples}
+\begin{itemize}
+    \item \textbf{Symmetric random walk}: $M_n = \sum_{j=1}^n X_j$ with $X_j = \pm 1$ with equal probability, is a martingale with respect to the natural filtration.
+    \item \textbf{Brownian motion} $W(t)$: is a martingale with respect to its natural filtration.
+    \item \textbf{It\^o integrals}: if $\Delta(t)$ is adapted and square-integrable, then 
+    \[
+    I(t) = \int_0^t \Delta(s)\,\dd W(s)
+    \]
+    is a martingale with zero mean.
+\end{itemize}
+
+\subsection*{Counterexample}
+A Geometric Brownian Motion 
+\[
+S(t) = S(0) e^{(\alpha - \tfrac{1}{2}\sigma^2)t + \sigma W(t)}
+\]
+is not a martingale if $\alpha \neq 0$, since it has exponential drift. However, under the risk-neutral measure $\QQ$, the discounted price $e^{-rt}S(t)$ is a martingale. This property is fundamental in financial mathematics (e.g., Black--Scholes model).
+
+
+\newpage
+\section{Question 8}
+\textbf{Describe the construction of a Brownian motion.}
+
+\subsection*{Answer}
+A Brownian motion, also known as a Wiener process, is a stochastic process $W(t)$ defined on a probability space $(\Omega, \F, \PP)$ that satisfies the following properties:
+
+\begin{enumerate}[label=\roman*)]
+    \item $W(0) = 0$ almost surely;
+    \item $W(t)$ has independent increments: for $0 \leq t_0 < t_1 < \cdots < t_n$, the increments 
+    \[
+        W(t_1) - W(t_0), \; W(t_2) - W(t_1), \ldots, W(t_n) - W(t_{n-1})
+    \]
+    are independent random variables;
+    \item $W(t)$ has Gaussian increments: for $s < t$, the increment $W(t) - W(s)$ is normally distributed with mean $0$ and variance $t-s$;
+    \item $W(t)$ has continuous trajectories almost surely.
+\end{enumerate}
+
+\subsection*{Construction via Random Walks}
+One can construct a Brownian motion as the limit of suitably rescaled symmetric random walks:
+
+\begin{itemize}
+    \item Consider a sequence $(X_j)_{j\geq 1}$ of i.i.d. random variables with
+    \[
+        \PP(X_j = 1) = \PP(X_j = -1) = \tfrac{1}{2}.
+    \]
+    \item Define the partial sums (a symmetric random walk):
+    \[
+        M_k = \sum_{j=1}^k X_j, \quad M_0 = 0.
+    \]
+    Then $\EE[M_k] = 0$, $\Var(M_k) = k$.
+    \item Define the scaled random walk:
+    \[
+        W^{(n)}(t) = \frac{1}{\sqrt{n}} M_{\lfloor nt \rfloor}, \quad t \geq 0.
+    \]
+    \item As $n \to \infty$, the processes $W^{(n)}(t)$ converge in distribution to a process $W(t)$ that satisfies the above four properties.
+\end{itemize}
+
+The limit process $W(t)$ is called a \textbf{Brownian motion}.
+
+\subsection*{Properties}
+From this construction, Brownian motion inherits:
+\begin{itemize}
+    \item Mean zero: $\EE[W(t)] = 0$;
+    \item Variance linear in time: $\Var(W(t)) = t$;
+    \item Independent, Gaussian increments;
+    \item Quadratic variation: $[W,W]_t = t$;
+    \item Martingale property: $\EE[W(t) \mid \F_s] = W(s)$ for $s < t$.
+\end{itemize}
+
+\subsection*{Interpretation}
+Brownian motion models continuous-time randomness:
+\begin{itemize}
+    \item In physics, it describes the irregular motion of particles suspended in a fluid.
+    \item In finance, it underlies models of asset price fluctuations (e.g., geometric Brownian motion in the Black--Scholes framework).
+\end{itemize}
+
+
+
+
+
+\end{document}
