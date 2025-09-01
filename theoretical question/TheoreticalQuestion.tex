@@ -5,11 +5,12 @@
 \usepackage[T1]{fontenc}     % Font encoding
 \usepackage{lmodern}         % Font Latin Modern
 \usepackage{amsmath, amssymb, amsthm, mathtools, bm}
-\usepackage{hyperref}        % Collegamenti ipertestuali
+%\usepackage{hyperref}        % Collegamenti ipertestuali ma con rettangolo rosso
 \usepackage{enumitem}        % Miglior gestione degli elenchi
 \usepackage{geometry}        % Controllo margini
 %fancy
 \usepackage{fancyhdr}        % Intestazioni e piè di pagina
+\usepackage[hidelinks]{hyperref}% togli il contorno rosso nell'indice
 \geometry{a4paper, margin=2.5cm}
 
 % Intestazioni e piè di pagina
@@ -39,6 +40,8 @@
 \newcommand{\Var}{\mathrm{Var}}       % varianza
 \newcommand{\Cov}{\mathrm{Cov}}       % covarianza
 \newcommand{\indic}{\mathds{1}}       % funzione indicatrice
+% comando Normal for normal distribution
+\newcommand{\Normal}{\mathcal{N}}
 
 % Altri comandi utili
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
@@ -87,8 +90,268 @@
     
 \end{titlepage}
 
+%indice
+\tableofcontents
 
 
+
+\newpage
+\section{Question 1}
+\textbf{Explain what an ODE is, and what it means for a function $x(t)$ to be a (classical) solution. 
+State the theorems that you know and that establish: (a) existence of a solution; (b) local existence and uniqueness of a solution; (c) global existence and uniqueness of a solution. 
+Compare them and explain, give suitable examples.}
+
+\subsection*{Answer}
+
+\subsubsection*{Definition of ODE}
+An \textbf{ordinary differential equation (ODE)} is an equation where the unknown is a function $x(t)$ of one real variable (often time $t$), and the function appears together with its derivatives.  
+A general first–order ODE can be written in normal form as
+\[
+x'(t) = f(t,x(t)), \quad t \geq t_0.
+\]
+
+\subsubsection*{Classical Solution}
+A function $x:[t_0,T]\to\RR$ is a \textbf{classical solution} to the Cauchy problem
+\[
+\begin{cases}
+x'(t) = f(t,x(t)), \quad t \geq t_0, \\
+x(t_0) = x_0,
+\end{cases}
+\]
+if:
+\begin{enumerate}[label=\roman*)]
+    \item $x$ is differentiable on $[t_0,T]$;
+    \item it satisfies $x'(t) = f(t,x(t))$ for all $t \in [t_0,T]$;
+    \item it satisfies the initial condition $x(t_0) = x_0$.
+\end{enumerate}
+
+\subsubsection*{Theorems of Existence and Uniqueness}
+\begin{itemize}
+    \item \textbf{Peano’s Existence Theorem:} If $f(t,x)$ is continuous in a neighborhood of $(t_0,x_0)$, then there exists at least one solution $x(t)$ to the Cauchy problem on some interval around $t_0$. (Existence, but not uniqueness).
+    
+    \item \textbf{Picard–Lindelöf (Cauchy–Lipschitz) Theorem:} If $f(t,x)$ is continuous in $t$ and \emph{Lipschitz} continuous in $x$, then there exists a \emph{unique} local solution to the Cauchy problem. 
+    
+    \item \textbf{Global Existence and Uniqueness:} If the assumptions above hold on the entire domain (e.g. $f$ is globally Lipschitz or satisfies suitable growth conditions preventing blow–up), then the solution can be extended uniquely to all $t \geq t_0$.
+\end{itemize}
+
+\subsubsection*{Comparison}
+\begin{itemize}
+    \item Peano theorem ensures existence but possibly many solutions.
+    \item Picard–Lindelöf ensures both existence and uniqueness, but only locally in time.
+    \item Global results require additional conditions to extend the solution to all times.
+\end{itemize}
+
+\subsubsection*{Examples}
+\begin{itemize}
+    \item \textbf{Non-uniqueness (Peano):} 
+    \[
+    x'(t) = \sqrt{x(t)}, \quad x(0)=0.
+    \] 
+    Both $x(t)\equiv 0$ and $x(t) = \tfrac{t^2}{4}$ are solutions, showing non-uniqueness since $f(x)=\sqrt{x}$ is not Lipschitz at $0$.
+
+    \item \textbf{Unique local (and global) solution (Picard–Lindelöf):} 
+    \[
+    x'(t) = t+x, \quad x(0)=1.
+    \]
+    Here $f(t,x)=t+x$ is Lipschitz in $x$. The unique solution is
+    \[
+    x(t) = Ce^t - t - 1.
+    \]
+
+    \item \textbf{Global existence:} 
+    \[
+    x'(t) = -x(t), \quad x(0)=x_0.
+    \]
+    Solution: $x(t)=x_0e^{-t}$, which exists uniquely for all $t\geq 0$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Question 2}
+\textbf{Say what a linear ODE is. Show that, under suitable assumptions on the coefficients (exemplify), a Cauchy problem for a linear ODE has a unique solution. Prove that such solution is given by the known solution formula.}
+
+\subsection*{Answer}
+
+\subsubsection*{Definition}
+A \textbf{first–order linear ODE} is an equation of the form
+\[
+x'(t) = a(t)x(t) + b(t), \quad t \ge t_0,
+\]
+where $a,b:I\to\RR$ are given real functions on an interval $I\ni t_0$. The associated \textbf{Cauchy problem} is
+\[
+\begin{cases}
+x'(t) = a(t)x(t) + b(t),\\
+x(t_0)=x_0.
+\end{cases}
+\]
+
+\subsubsection*{Existence and Uniqueness (Picard–Lindel\"of)}
+If $a(\cdot)$ and $b(\cdot)$ are continuous on $I$, then $f(t,x)=a(t)x+b(t)$ is continuous and Lipschitz in $x$ on compatti: 
+\[
+|f(t,x)-f(t,y)|=|a(t)||x-y| \le L|x-y| \quad (t\in K\Subset I).
+\]
+Hence the Cauchy problem admits a \textbf{unique local} solution; if $a,b$ are continuous on all of $I$ and no blow-up occurs, the solution extends \textbf{uniquely} on $I$.
+
+\subsubsection*{Derivation (Proof via integrating factor)}
+Consider
+\[
+x'(t)-a(t)x(t)=b(t).
+\]
+Let the integrating factor be
+\[
+\mu(t)=\exp\!\Big(\int_{t_0}^t a(s)\,\dd s\Big),\qquad \mu(t)>0,\;\mu'(t)=a(t)\mu(t).
+\]
+Multiply the ODE by $\mu(t)$:
+\[
+\mu(t)x'(t)-\mu(t)a(t)x(t)=\mu(t)b(t).
+\]
+By the product rule,
+\[
+\frac{\dd}{\dd t}\big(\mu(t)x(t)\big)=\mu(t)b(t).
+\]
+Integrate from $t_0$ to $t$:
+\[
+\mu(t)x(t)-\mu(t_0)x(t_0)=\int_{t_0}^t \mu(r)b(r)\,\dd r.
+\]
+Since $\mu(t_0)=1$, $x(t_0)=x_0$, we obtain the \textbf{solution formula}
+\[
+\boxed{\;
+x(t)=\exp\!\Big(\int_{t_0}^t a(s)\,\dd s\Big)\left[
+x_0+\int_{t_0}^t \exp\!\Big(-\int_{t_0}^r a(u)\,\dd u\Big)\,b(r)\,\dd r
+\right].\;}
+\]
+
+\subsubsection*{Verification (Plug-in)}
+Set $\mu(t)=\exp\!\big(\int_{t_0}^t a\big)$ and write
+\[
+x(t)=\mu(t)\Big(x_0+\int_{t_0}^t \mu(r)^{-1}b(r)\,\dd r\Big).
+\]
+Differentiate:
+\[
+x'(t)=\mu'(t)\Big(x_0+\int_{t_0}^t \mu(r)^{-1}b(r)\,\dd r\Big)+\mu(t)\cdot \mu(t)^{-1}b(t).
+\]
+Since $\mu'(t)=a(t)\mu(t)$, we get
+\[
+x'(t)=a(t)\mu(t)\Big(\cdots\Big)+b(t)=a(t)x(t)+b(t),
+\]
+quindi $x$ soddisfa l’ODE. Inoltre $x(t_0)=\mu(t_0)\big(x_0+0\big)=x_0$. Per unicità (Picard–Lindel\"of), questa è \emph{la} soluzione del problema di Cauchy.
+
+\subsubsection*{Example}
+Let
+\[
+x'(t)=2x(t)+t,\qquad x(0)=1.
+\]
+Here $a(t)=2$, $b(t)=t$, $\mu(t)=e^{2t}$. Thus
+\[
+x(t)=e^{2t}\left(1+\int_0^t e^{-2r}\,r\,\dd r\right)
+= e^{2t}\left(1-\tfrac12 t e^{-2t}-\tfrac14 e^{-2t}+\tfrac14\right).
+\]
+This (unique) solution is defined for all $t\in\RR$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Question 6}
+\textbf{State and interpret the definition of:  
+a) sigma algebra;  
+b) sigma algebra generated by a random variable;  
+c) filtration;  
+d) stochastic process;  
+e) stochastic process adapted to a filtration.}
+
+\subsection*{Answer}
+
+\subsubsection*{a) Sigma algebra}
+Let $\Omega$ be a sample space. A \textbf{$\sigma$-algebra} $\F$ on $\Omega$ is a collection of subsets of $\Omega$ such that:
+\begin{enumerate}[label=\roman*)]
+    \item $\Omega \in \F$;
+    \item If $A \in \F$, then $A^c \in \F$ (closed under complementation);
+    \item If $\{A_n\}_{n=1}^\infty \subseteq \F$, then $\bigcup_{n=1}^\infty A_n \in \F$ (closed under countable unions).
+\end{enumerate}
+By De Morgan’s laws, $\F$ is also closed under countable intersections.  
+
+\textbf{Interpretation:} a $\sigma$-algebra represents the collection of events that can be “observed” or “measured” in a probabilistic experiment.  
+
+\textbf{Example:} On $\RR$, the Borel $\sigma$-algebra $\mathcal{B}(\RR)$ is generated by all open intervals $(a,b)$.
+
+---
+
+\subsubsection*{b) Sigma algebra generated by a random variable}
+Given a random variable $X:\Omega \to \RR$, the \textbf{$\sigma$-algebra generated by $X$}, denoted $\sigma(X)$, is the smallest $\sigma$-algebra such that $X$ is measurable. Formally,
+\[
+\sigma(X) = \{ X^{-1}(B) : B \in \mathcal{B}(\RR)\}.
+\]
+
+\textbf{Interpretation:} $\sigma(X)$ contains exactly the events that can be described in terms of the knowledge of $X$.
+
+\textbf{Example:} If $X(\omega)=1$ when a coin toss is Head and $0$ otherwise, then $\sigma(X)=\{\emptyset, \Omega, \{X=1\}, \{X=0\}\}$.
+
+---
+
+\subsubsection*{c) Filtration}
+A \textbf{filtration} $\{\F_t\}_{t\ge0}$ is an increasing family of $\sigma$-algebras:
+\[
+\F_s \subseteq \F_t \quad \text{for all } 0 \leq s \leq t.
+\]
+
+\textbf{Interpretation:} $\F_t$ represents the information available up to time $t$. As time progresses, information increases.  
+
+\textbf{Example:} For a Brownian motion $W(t)$, the \emph{natural filtration} is $\F_t=\sigma(W(s):0\leq s \leq t)$, i.e. all events determined by the past trajectory of $W$ up to time $t$.
+
+---
+
+\subsubsection*{d) Stochastic process}
+A \textbf{stochastic process} is a family $\{X(t)\}_{t\ge0}$ of random variables defined on a common probability space $(\Omega, \F, \PP)$.  
+
+\textbf{Interpretation:} $X(t)$ describes the random evolution of a system in time.  
+- Fixing $t$, $X(t)$ is a random variable on $\Omega$.  
+- Fixing $\omega \in \Omega$, $t \mapsto X(t,\omega)$ is a trajectory (sample path).
+
+\textbf{Example:} A random walk $M_n=\sum_{j=1}^n X_j$ with i.i.d. $\pm1$ steps is a stochastic process indexed by $n\in\NN$.
+
+---
+
+\subsubsection*{e) Adapted stochastic process}
+A stochastic process $\{X(t)\}_{t\ge0}$ is \textbf{adapted} to a filtration $\{\F_t\}$ if, for each $t$, $X(t)$ is $\F_t$-measurable.
+
+\textbf{Interpretation:} At time $t$, the value $X(t)$ depends only on the information available up to $t$, not on the future.  
+
+\textbf{Example:} The Brownian motion $W(t)$ is adapted to its natural filtration $\{\F_t\}$, since $W(t)$ is $\F_t$-measurable by construction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 \section{Question 7}
 \textbf{Give the definition of the martingale property for a stochastic process and interpret it. Give suitable examples of stochastic processes with this property.}
 
@@ -184,6 +447,75 @@ Brownian motion models continuous-time randomness:
     \item In finance, it underlies models of asset price fluctuations (e.g., geometric Brownian motion in the Black--Scholes framework).
 \end{itemize}
 
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Question 9}
+\textbf{Describe the construction of a random walk and of a scaled random walk. Show that a Brownian motion can be obtained as a limit of scaled random walks.}
+
+\subsection*{Answer}
+
+\subsubsection*{Random Walk}
+Let $\{X_j\}_{j\geq 1}$ be a sequence of i.i.d. random variables with
+\[
+\PP(X_j = 1) = \PP(X_j = -1) = \tfrac{1}{2}.
+\]
+Define the partial sums
+\[
+M_k = \sum_{j=1}^k X_j, \quad M_0=0.
+\]
+The process $\{M_k\}_{k\in\NN}$ is called a \textbf{symmetric random walk}.  
+Properties:
+\begin{itemize}
+    \item $\EE[M_k] = 0$, $\Var(M_k) = k$.
+    \item Increments are independent and stationary: $M_{n+m}-M_n \sim \Normal(0,m)$.
+    \item $M_k$ is a martingale with respect to the natural filtration.
+\end{itemize}
+
+\subsubsection*{Scaled Random Walk}
+To approach a continuous-time process, rescale both time and space:
+\[
+W^{(n)}(t) = \frac{1}{\sqrt{n}} M_{\lfloor nt \rfloor}, \quad t \ge 0.
+\]
+Interpretation:
+\begin{itemize}
+    \item Time is accelerated by factor $n$ (steps of size $1/n$).
+    \item Space is scaled down by $1/\sqrt{n}$ (variance normalisation).
+\end{itemize}
+Thus $W^{(n)}(t)$ is a piecewise constant, right–continuous process with jumps $\pm 1/\sqrt{n}$ at times $k/n$.
+
+\subsubsection*{Limit Process: Brownian Motion}
+By Donsker’s invariance principle (or functional Central Limit Theorem),
+\[
+W^{(n)}(t) \;\; \xrightarrow{d}\;\; W(t), \quad \text{as } n\to\infty,
+\]
+where $W(t)$ is a \textbf{Brownian motion}.  
+
+\textbf{Proof idea:}
+\begin{itemize}
+    \item Finite-dimensional distributions: by the Central Limit Theorem, for fixed $t$, 
+    \[
+    W^{(n)}(t) = \frac{1}{\sqrt{n}}M_{\lfloor nt \rfloor} \;\law\; \Normal(0,t).
+    \]
+    \item Independence of increments: inherited from independence of $X_j$.
+    \item Continuous trajectories: obtained in the limit (the $W^{(n)}$ are piecewise constant, but converge in distribution to a continuous process).
+\end{itemize}
+
+\subsubsection*{Conclusion}
+A Brownian motion $W(t)$ is obtained as the scaling limit of a symmetric random walk.  
+\[
+W(t) = \lim_{n\to\infty} W^{(n)}(t) \quad \text{in distribution}.
+\]
+
+\subsection*{Example}
+Simulating many paths of a scaled random walk with large $n$, the trajectories approximate continuous Brownian paths with variance $t$ and independent Gaussian increments.
 
 
 
