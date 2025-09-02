@@ -21,3 +21,14 @@
 \contentsline {paragraph}{Esempio A (catena su $f(x)=x^2$).}{24}{section*.75}%
 \contentsline {paragraph}{Esempio B (inesistenza del Riemann--Stieltjes con integratore $W$).}{25}{section*.76}%
 \contentsline {paragraph}{Esempio C (It\^o vs Lebesgue nel tempo).}{25}{section*.77}%
+\contentsline {section}{\numberline {0.14}Question 19}{26}{section.0.14}%
+\contentsline {section}{\numberline {0.15}Question 20}{28}{section.0.15}%
+\contentsline {section}{\numberline {0.16}Question 21}{29}{section.0.16}%
+\contentsline {paragraph}{(a) Applicazione al Geometric Brownian Motion (GBM).}{29}{section*.83}%
+\contentsline {paragraph}{(b) Applicazione alle SDE lineari.}{29}{section*.84}%
+\contentsline {section}{\numberline {0.17}Question 22}{30}{section.0.17}%
+\contentsline {paragraph}{Definizione (SDE del GBM).}{30}{section*.86}%
+\contentsline {paragraph}{Proposizione (Soluzione esplicita).}{30}{section*.87}%
+\contentsline {paragraph}{Valore atteso (non so se sia il metodo giusto sorry).}{30}{section*.88}%
+\contentsline {paragraph}{Varianza.}{31}{section*.89}%
+\contentsline {paragraph}{Osservazioni.}{31}{section*.90}%
