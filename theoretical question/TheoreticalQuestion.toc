@@ -1,34 +1,48 @@
-\contentsline {section}{\numberline {0.1}Question 1}{4}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Question 2}{6}{section.0.2}%
-\contentsline {section}{\numberline {0.3}Question 6}{8}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Question 7}{10}{section.0.4}%
-\contentsline {section}{\numberline {0.5}Question 8}{11}{section.0.5}%
-\contentsline {section}{\numberline {0.6}Question 9}{13}{section.0.6}%
-\contentsline {section}{\numberline {0.7}Question 10}{15}{section.0.7}%
-\contentsline {paragraph}{1. Independent and Gaussian increments.}{15}{section*.37}%
-\contentsline {paragraph}{2. Continuity and nowhere differentiability.}{15}{section*.38}%
-\contentsline {paragraph}{3. Quadratic variation $[W]_t = t$.}{15}{section*.39}%
-\contentsline {paragraph}{4. Martingale property.}{15}{section*.40}%
-\contentsline {section}{\numberline {0.8}Question 12}{17}{section.0.8}%
-\contentsline {section}{\numberline {0.9}Question 13}{19}{section.0.9}%
-\contentsline {section}{\numberline {0.10}Question 14}{21}{section.0.10}%
-\contentsline {section}{\numberline {0.11}Question 15}{22}{section.0.11}%
-\contentsline {section}{\numberline {0.12}Question 16}{23}{section.0.12}%
-\contentsline {section}{\numberline {0.13}Question 18}{24}{section.0.13}%
-\contentsline {paragraph}{Differential form (time-homogeneous)}{24}{section*.70}%
-\contentsline {paragraph}{Integral form}{24}{section*.71}%
-\contentsline {paragraph}{Versione dipendente dal tempo $f\in C^{1,2}([0,T]\times \mathbb {R})$}{24}{section*.72}%
-\contentsline {paragraph}{Esempio A (catena su $f(x)=x^2$).}{24}{section*.75}%
-\contentsline {paragraph}{Esempio B (inesistenza del Riemann--Stieltjes con integratore $W$).}{25}{section*.76}%
-\contentsline {paragraph}{Esempio C (It\^o vs Lebesgue nel tempo).}{25}{section*.77}%
-\contentsline {section}{\numberline {0.14}Question 19}{26}{section.0.14}%
-\contentsline {section}{\numberline {0.15}Question 20}{28}{section.0.15}%
-\contentsline {section}{\numberline {0.16}Question 21}{29}{section.0.16}%
-\contentsline {paragraph}{(a) Applicazione al Geometric Brownian Motion (GBM).}{29}{section*.83}%
-\contentsline {paragraph}{(b) Applicazione alle SDE lineari.}{29}{section*.84}%
-\contentsline {section}{\numberline {0.17}Question 22}{30}{section.0.17}%
-\contentsline {paragraph}{Definizione (SDE del GBM).}{30}{section*.86}%
-\contentsline {paragraph}{Proposizione (Soluzione esplicita).}{30}{section*.87}%
-\contentsline {paragraph}{Valore atteso (non so se sia il metodo giusto sorry).}{30}{section*.88}%
-\contentsline {paragraph}{Varianza.}{31}{section*.89}%
-\contentsline {paragraph}{Osservazioni.}{31}{section*.90}%
+\contentsline {section}{\numberline {0.1}Question 1}{1}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Question 2}{3}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Question 6}{5}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Question 7}{7}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Question 8}{8}{section.0.5}%
+\contentsline {section}{\numberline {0.6}Question 9}{10}{section.0.6}%
+\contentsline {section}{\numberline {0.7}Question 10}{12}{section.0.7}%
+\contentsline {paragraph}{1. Independent and Gaussian increments.}{12}{section*.36}%
+\contentsline {paragraph}{2. Continuity and nowhere differentiability.}{12}{section*.37}%
+\contentsline {paragraph}{3. Quadratic variation $[W]_t = t$.}{12}{section*.38}%
+\contentsline {paragraph}{4. Martingale property.}{12}{section*.39}%
+\contentsline {section}{\numberline {0.8}Question 12}{14}{section.0.8}%
+\contentsline {section}{\numberline {0.9}Question 13}{16}{section.0.9}%
+\contentsline {section}{\numberline {0.10}Question 14}{18}{section.0.10}%
+\contentsline {section}{\numberline {0.11}Question 15}{19}{section.0.11}%
+\contentsline {section}{\numberline {0.12}Question 16}{20}{section.0.12}%
+\contentsline {section}{\numberline {0.13}Question 18}{21}{section.0.13}%
+\contentsline {paragraph}{Differential form (time-homogeneous)}{21}{section*.69}%
+\contentsline {paragraph}{Integral form}{21}{section*.70}%
+\contentsline {paragraph}{Versione dipendente dal tempo $f\in C^{1,2}([0,T]\times \mathbb {R})$}{21}{section*.71}%
+\contentsline {paragraph}{Esempio A (catena su $f(x)=x^2$).}{21}{section*.74}%
+\contentsline {paragraph}{Esempio B (inesistenza del Riemann--Stieltjes con integratore $W$).}{22}{section*.75}%
+\contentsline {paragraph}{Esempio C (It\^o vs Lebesgue nel tempo).}{22}{section*.76}%
+\contentsline {section}{\numberline {0.14}Question 19}{23}{section.0.14}%
+\contentsline {section}{\numberline {0.15}Question 20}{25}{section.0.15}%
+\contentsline {section}{\numberline {0.16}Question 21}{26}{section.0.16}%
+\contentsline {paragraph}{(a) Applicazione al Geometric Brownian Motion (GBM).}{26}{section*.82}%
+\contentsline {paragraph}{(b) Applicazione alle SDE lineari.}{26}{section*.83}%
+\contentsline {section}{\numberline {0.17}Question 22}{27}{section.0.17}%
+\contentsline {paragraph}{Definizione (SDE del GBM).}{27}{section*.85}%
+\contentsline {paragraph}{Proposizione (Soluzione esplicita).}{27}{section*.86}%
+\contentsline {paragraph}{Valore atteso (non so se sia il metodo giusto sorry).}{27}{section*.87}%
+\contentsline {paragraph}{Varianza.}{28}{section*.88}%
+\contentsline {paragraph}{Osservazioni.}{28}{section*.89}%
+\contentsline {section}{\numberline {0.18}Question 23. + explanation of the Expectation Value of an It\^o Process}{29}{section.0.18}%
+\contentsline {section}{\numberline {0.19}Question 24}{31}{section.0.19}%
+\contentsline {paragraph}{Model.}{31}{section*.98}%
+\contentsline {paragraph}{Economic meaning of parameters.}{31}{section*.99}%
+\contentsline {paragraph}{Explicit solution (linear SDE integrating factor).}{31}{section*.100}%
+\contentsline {paragraph}{Mean and variance.}{31}{section*.101}%
+\contentsline {paragraph}{Long–run limits ($t\to \infty $).}{31}{section*.102}%
+\contentsline {paragraph}{Model.}{31}{section*.104}%
+\contentsline {paragraph}{Economic meaning of parameters.}{32}{section*.105}%
+\contentsline {paragraph}{Positivity (Feller condition).}{32}{section*.106}%
+\contentsline {paragraph}{Solution representation.}{32}{section*.107}%
+\contentsline {paragraph}{Mean and variance.}{32}{section*.108}%
+\contentsline {paragraph}{Long–run limits ($t\to \infty $).}{32}{section*.109}%
+\contentsline {paragraph}{Key takeaways.}{32}{section*.111}%

@@ -11,6 +11,7 @@
 %fancy
 \usepackage{fancyhdr}        % Intestazioni e piè di pagina
 \usepackage[hidelinks]{hyperref}% togli il contorno rosso nell'indice
+\usepackage{tocloft} % per controllo indice
 \geometry{a4paper, margin=2.5cm}
 
 % Intestazioni e piè di pagina
@@ -44,9 +45,9 @@
 \newcommand{\Normal}{\mathcal{N}}
 
 % Altri comandi utili
-\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
-\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
-\DeclarePairedDelimiter{\ang}{\langle}{\rangle}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % 
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % 
+\DeclarePairedDelimiter{\ang}{\langle}{\rangle} %
 \newcommand{\law}{\stackrel{d}{=}}    % uguaglianza in distribuzione
 \newcommand{\given}{\,\middle|\,} % condizionamento
 
@@ -90,10 +91,15 @@
     
 \end{titlepage}
 
-%indice
+% Pagine iniziali senza numeri o con numeri romani
+\pagenumbering{roman}
+
 \tableofcontents
+\clearpage
 
-
+% Riparti la numerazione da 1, in arabi
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \newpage
 \section{Question 1}
@@ -1241,5 +1247,207 @@ Infine
 (2) La formula del valore atteso discende essenzialmente dall’MGF della normale e dalla tecnica del completamento del quadrato, come mostrato sopra.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Question 23. + explanation of the Expectation Value of an It\^o Process}
+
+\textbf{Given the It\^o process}
+\[
+dY(t) = \left(\alpha - \tfrac{1}{2}\sigma^2\right)dt + \sigma\,dW(t), 
+\qquad Y(0)=0,
+\]
+\textbf{define $X(t)=e^{Y(t)}$. Is $X(t)$ an It\^o process? Compute its expected value.}
+
+\subsection*{Answer}
+
+\subsubsection*{Step 1: Identification}
+By It\^o’s formula applied to $f(y)=e^y$, one finds
+\[
+dX(t) = \alpha X(t)\,dt + \sigma X(t)\,dW(t), \qquad X(0)=1.
+\]
+Therefore $X(t)$ is a \textbf{Geometric Brownian Motion (GBM)} with drift $\alpha$ and volatility $\sigma$.
+
+\subsubsection*{Step 2: Expectation via SDE (exam method)}
+We take expectation on both sides:
+\[
+\mathbb{E}[dX(t)] 
+= \mathbb{E}[\alpha X(t)\,dt] + \mathbb{E}[\sigma X(t)\,dW(t)].
+\]
+Since $\mathbb{E}[X(t)\,dW(t)] = 0$ (property of It\^o integral), we obtain
+\[
+\mathbb{E}[dX(t)] = \alpha \,\mathbb{E}[X(t)]\,dt.
+\]
+Defining $m(t) := \mathbb{E}[X(t)]$, this is the ODE
+\[
+m'(t) = \alpha m(t), \qquad m(0) = 1.
+\]
+The solution is
+\[
+m(t) = e^{\alpha t}.
+\]
+
+\subsubsection*{Final Result}
+\[
+\boxed{\;\mathbb{E}[X(t)] = e^{\alpha t}\;}
+\]
+
+\subsection*{Additional Example}
+Consider the additive SDE
+\[
+dZ(t) = \mu\,dt + \sigma\,dW(t), \qquad Z(0)=z_0.
+\]
+Taking expectations:
+\[
+\mathbb{E}[dZ(t)] = \mu\,dt + \mathbb{E}[\sigma dW(t)] = \mu\,dt.
+\]
+Hence, with $m(t):=\mathbb{E}[Z(t)]$,
+\[
+m'(t) = \mu, \qquad m(0)=z_0,
+\]
+so that
+\[
+\boxed{\;\mathbb{E}[Z(t)] = z_0 + \mu t.\;}
+\]
+
+\subsection*{Comparison}
+\begin{itemize}
+    \item GBM ($dX=\alpha X dt + \sigma X dW$): exponential growth in expectation, $E[X(t)] = e^{\alpha t}$.
+    \item Brownian motion with drift ($dZ=\mu dt + \sigma dW$): linear growth in expectation, $E[Z(t)] = z_0 + \mu t$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Question 24}
+\textbf{Describe in full detail the following application of linear SDEs:
+(i) Vasicek model for interest rate; (ii) CIR model for interest rate.
+In both cases explain the meaning of the parameters and compute mean, variance, and their long–run limits.}
+
+\subsection*{Answer}
+
+\subsection*{(i) Vasicek model}
+\paragraph{Model.}
+\[
+dr(t)=a\bigl(b-r(t)\bigr)\,dt+\sigma\,dW(t),\qquad r(0)=r_0,\quad a>0,\ \sigma>0,\ b\in\mathbb{R}.
+\]
+
+\paragraph{Economic meaning of parameters.}
+\begin{itemize}
+  \item $a$ (\emph{speed of mean reversion}): how fast $r(t)$ is pulled back to $b$; larger $a$ $\Rightarrow$ faster reversion.
+  \item $b$ (\emph{long–run mean/level}): equilibrium level toward which $r(t)$ reverts.
+  \item $\sigma$ (\emph{volatility}): instantaneous magnitude of random shocks.
+\end{itemize}
+
+\paragraph{Explicit solution (linear SDE integrating factor).}
+Let $\phi(t)=e^{at}$. Then
+\[
+\frac{d}{dt}\bigl(e^{at}r(t)\bigr)=ab\,e^{at}+\sigma e^{at}\dot W(t)
+\quad\Longrightarrow\quad
+r(t)=r_0e^{-at}+b(1-e^{-at})+\sigma\!\int_0^t e^{-a(t-s)}\,dW(s).
+\]
+
+\paragraph{Mean and variance.}
+Using $\mathbb{E}\!\left[\int_0^t\! \cdots dW\right]=0$ and Itô isometry,
+\[
+\boxed{\ \mathbb{E}[r(t)]=r_0e^{-at}+b(1-e^{-at})\ }
+\]
+\[
+\boxed{\ \operatorname{Var}(r(t))=\sigma^2\int_0^t e^{-2a(t-s)}\,ds
+=\frac{\sigma^2}{2a}\bigl(1-e^{-2at}\bigr)\ }.
+\]
+
+\paragraph{Long–run limits ($t\to\infty$).}
+\[
+\boxed{\ \lim_{t\to\infty}\mathbb{E}[r(t)]=b,\qquad
+\lim_{t\to\infty}\operatorname{Var}(r(t))=\frac{\sigma^2}{2a}\ }.
+\]
+Hence $r(t)$ is stationary Gaussian in the limit (Ornstein–Uhlenbeck), but it may become negative (drawback for pre-crisis rates modeling).
+
+\medskip
+
+\subsection*{(ii) CIR (Cox–Ingersoll–Ross) model}
+\paragraph{Model.}
+\[
+dr(t)=a\bigl(b-r(t)\bigr)\,dt+\sigma\sqrt{r(t)}\,dW(t),\qquad r(0)=r_0,\quad a>0,\ b>0,\ \sigma>0.
+\]
+
+\paragraph{Economic meaning of parameters.}
+\begin{itemize}
+  \item $a$ (\emph{speed of mean reversion}) and $b$ (\emph{long–run mean}) as in Vasicek.
+  \item $\sigma$ (\emph{volatility scale}) now acts through $\sqrt{r(t)}$: volatility is state-dependent, smaller near zero.
+\end{itemize}
+
+\paragraph{Positivity (Feller condition).}
+If
+\[
+\boxed{\ 2ab\ \ge\ \sigma^2\ },
+\]
+then $r(t)$ stays strictly positive (no boundary hitting at $0$). Even when $2ab<\sigma^2$, the square-root term greatly reduces the probability of negative rates versus Vasicek.
+
+\paragraph{Solution representation.}
+Although not affine in $r$ (due to $\sqrt{r}$), one can write the variation-of-constants form:
+\[
+r(t)=r_0 e^{-at}+b(1-e^{-at})+\sigma\int_{0}^{t} e^{-a(t-s)}\sqrt{r(s)}\,dW(s).
+\]
+
+\paragraph{Mean and variance.}
+A standard computation (taking expectations; Itô isometry with state-dependent diffusion) yields:
+\[
+\boxed{\ \mathbb{E}[r(t)]=r_0e^{-at}+b(1-e^{-at})\ }
+\]
+\[
+\boxed{\ \operatorname{Var}(r(t))=
+\frac{\sigma^2}{a}\,r_0\bigl(e^{-at}-e^{-2at}\bigr)
++\frac{b\,\sigma^2}{2a}\bigl(1-e^{-at}\bigr)^2\ }.
+\]
+
+\paragraph{Long–run limits ($t\to\infty$).}
+\[
+\boxed{\ \lim_{t\to\infty}\mathbb{E}[r(t)]=b,\qquad
+\lim_{t\to\infty}\operatorname{Var}(r(t))=\frac{b\,\sigma^2}{2a}\ }.
+\]
+In the stationary regime (under $2ab>\sigma^2$), $r(t)$ has a Gamma distribution; at finite $t$, $r(t)$ is non-central chi-square—both are positive, matching interest-rate non-negativity.
+
+\medskip
+
+\subsection*{Comparison summary}
+\begin{center}
+\begin{tabular}{lccc}
+
+Model & SDE & $\ \mathbb{E}[r(t)]\ $ & $\ \operatorname{Var}(r(t))\ $ (long–run)\\
+
+Vasicek & $dr=a(b-r)\,dt+\sigma\,dW$ 
+& $r_0e^{-at}+b(1-e^{-at})$ 
+& $\dfrac{\sigma^2}{2a}$ \\
+CIR & $dr=a(b-r)\,dt+\sigma\sqrt{r}\,dW$ 
+& $r_0e^{-at}+b(1-e^{-at})$ 
+& $\dfrac{b\,\sigma^2}{2a}$ \\
+
+\end{tabular}
+\end{center}
+
+\paragraph{Key takeaways.}
+Both models are mean-reverting with the \emph{same} mean function; the variance dynamics differ. Vasicek is Gaussian (may go negative); CIR enforces state-dependent volatility and (under Feller) strict positivity, a desirable feature for short rates.
 
 \end{document}
