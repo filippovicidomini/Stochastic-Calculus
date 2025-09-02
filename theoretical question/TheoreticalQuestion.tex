@@ -20,6 +20,8 @@
 \fancyhead[L]{Theoretical Questions Stochastic Calculus}
 \fancyhead[R]{\thepage}
 %\fancyfoot[C]{\textit{Confidential - Do Not Distribute}}
+% add a link on the botton right to the page with the table of contents
+\fancyfoot[R]{\hyperref[sec:Contents]{Table of Contents}}
 
 % Ambienti per teoremi e definizioni
 \newtheorem{definition}{Definition}[chapter]
@@ -95,8 +97,9 @@
 \pagenumbering{roman}
 
 \tableofcontents
-\clearpage
 
+\clearpage
+\label{sec:Contents}
 % Riparti la numerazione da 1, in arabi
 \pagenumbering{arabic}
 \setcounter{page}{1}
