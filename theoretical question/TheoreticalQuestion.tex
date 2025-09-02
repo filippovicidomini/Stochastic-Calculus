@@ -629,48 +629,6 @@ Ordinary calculus is not sufficient to study stochastic processes like diffusion
 \subsubsection*{Conclusion}
 Diffusion processes generalize deterministic dynamical systems by adding stochastic noise. Their study requires Itô calculus, since classical tools of analysis are not valid for processes driven by Brownian motion.
 
-A \textbf{diffusion process} $\{X(t)\}_{t\ge 0}$ is a continuous-time stochastic process defined as the solution of a stochastic differential equation (SDE) of the form
-\[
-dX(t) = \mu(t,X(t))\,dt + \sigma(t,X(t))\,dW(t), \quad X(0)=x_0,
-\]
-where:
-\begin{itemize}
-    \item $W(t)$ is a Brownian motion;
-    \item $\mu(t,x)$ is the \emph{drift coefficient}, governing the deterministic trend;
-    \item $\sigma(t,x)$ is the \emph{diffusion coefficient}, scaling the random noise.
-\end{itemize}
-Thus, a diffusion is a continuous Markov process whose local dynamics are described by a drift and a diffusion term.
-
-\subsubsection*{Necessity of Itô Calculus}
-Ordinary calculus is not sufficient to study stochastic processes like diffusions because:
-\begin{enumerate}[label=\roman*)]
-    \item Paths of Brownian motion are almost surely continuous but nowhere differentiable, so $W'(t)$ does not exist in the classical sense;
-    \item Quadratic variation of Brownian motion is nonzero: $[W]_t = t$. This breaks the rules of standard calculus (where higher-order terms vanish).
-\end{enumerate}
-
-\textbf{Itô Calculus} provides:
-\begin{itemize}
-    \item A rigorous definition of the stochastic integral
-    \[
-    \int_0^t \sigma(s,X(s))\,dW(s),
-    \]
-    for adapted, square-integrable processes $\sigma$;
-    \item The \textbf{Itô formula}, a stochastic analogue of the chain rule, which includes an extra term due to quadratic variation:
-    \[
-    df(X(t)) = f_x(X(t))\,dX(t) + \tfrac{1}{2} f_{xx}(X(t))\,\sigma^2(t,X(t))\,dt.
-    \]
-\end{itemize}
-
-\subsubsection*{Applications}
-\begin{itemize}
-    \item In \textbf{physics}, diffusions describe random particle motion (Einstein’s model of molecular diffusion).
-    \item In \textbf{finance}, asset prices are modeled as diffusions (e.g. geometric Brownian motion), and Itô calculus underpins the derivation of option pricing models like Black–Scholes.
-\end{itemize}
-
-\subsubsection*{Conclusion}
-Diffusion processes generalize deterministic dynamical systems by adding stochastic noise. Their study requires Itô calculus, since classical tools of analysis are not valid for processes driven by Brownian motion.
-
-
 \newpage
 \section{Question 13}
 \textbf{Describe the construction of the Itô integral for a stochastic process.}

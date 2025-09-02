@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  2 SEP 2025 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  2 SEP 2025 22:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -669,11 +669,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14]
-Overfull \hbox (0.16174pt too wide) in paragraph at lines 667--668
-\T1/lmr/m/n/12 and Itô cal-cu-lus un-der-pins the deriva-tion of op-tion pric-ing mod-els like Black^^UScholes. 
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -728,7 +723,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [20]
-Overfull \hbox (3.20035pt too wide) in paragraph at lines 922--923
+Overfull \hbox (3.20035pt too wide) in paragraph at lines 880--881
 \T1/lmr/m/n/12 l'integrale di Riemann--Stieltjes $[][] \OML/lmm/m/it/12 W[] \OT1/lmr/m/n/12 d\OML/lmm/m/it/12 W[]$ \T1/lmr/m/it/12 non es-iste \T1/lmr/m/n/12 path-wise (fal-lisce il cri-te-rio di Young).
  []
 
@@ -751,7 +746,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
-Overfull \hbox (30.01807pt too wide) detected at line 1008
+Overfull \hbox (30.01807pt too wide) detected at line 966
 \OML/lmm/m/it/12 f\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t; X\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )) = \OML/lmm/m/it/12 f\OT1/lmr/m/n/12 (0\OML/lmm/m/it/12 ; X\OT1/lmr/m/n/12 (0)) + [][] [](\OML/lmm/m/it/12 s; X\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 )) \OML/lmm/m/it/12 ds \OT1/lmr/m/n/12 + [][] [](\OML/lmm/m/it/12 s; X\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 )) \OML/lmm/m/it/12 dX\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 ) + [] [][] [](\OML/lmm/m/it/12 s; X\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 )) \OML/lmm/m/it/12 ^^[[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 ) \OML/lmm/m/it/12 ds:
  []
 
@@ -783,7 +778,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-Overfull \hbox (0.75645pt too wide) detected at line 1110
+Overfull \hbox (0.75645pt too wide) detected at line 1068
 []
  []
 
@@ -797,7 +792,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
-Overfull \hbox (6.24716pt too wide) in paragraph at lines 1159--1160
+Overfull \hbox (6.24716pt too wide) in paragraph at lines 1117--1118
  []\T1/lmr/bx/n/12 Definizione (SDE del GBM).[] \T1/lmr/m/n/12 Un \T1/lmr/m/it/12 Ge-o-met-ric Brow-n-ian Mo-tion \T1/lmr/m/n/12 (GBM) $\OML/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 è soluzione
  []
 
@@ -864,18 +859,18 @@ Package rerunfilecheck Info: File `TheoreticalQuestion.out' has not changed.
 (rerunfilecheck)             Checksum: D31B5E08A0ECEE72C8BE3EEB96B88CCC;2270.
  ) 
 Here is how much of TeX's memory you used:
- 12708 strings out of 473190
- 196517 string characters out of 5715800
+ 12703 strings out of 473190
+ 196467 string characters out of 5715800
  609055 words of memory out of 5000000
  35553 multiletter control sequences out of 15000+600000
  645043 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,745b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TheoreticalQuestion.pdf (34 pages, 347713 bytes).
+Output written on TheoreticalQuestion.pdf (34 pages, 345676 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 207 named destinations out of 1000 (max. 500000)
+ 568 PDF objects out of 1000 (max. 8388607)
+ 492 compressed objects within 5 object streams
+ 202 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,34 +15,34 @@
 \contentsline {section}{\numberline {0.11}Question 15}{19}{section.0.11}%
 \contentsline {section}{\numberline {0.12}Question 16}{20}{section.0.12}%
 \contentsline {section}{\numberline {0.13}Question 18}{21}{section.0.13}%
-\contentsline {paragraph}{Differential form (time-homogeneous)}{21}{section*.69}%
-\contentsline {paragraph}{Integral form}{21}{section*.70}%
-\contentsline {paragraph}{Versione dipendente dal tempo $f\in C^{1,2}([0,T]\times \mathbb {R})$}{21}{section*.71}%
-\contentsline {paragraph}{Esempio A (catena su $f(x)=x^2$).}{21}{section*.74}%
-\contentsline {paragraph}{Esempio B (inesistenza del Riemann--Stieltjes con integratore $W$).}{22}{section*.75}%
-\contentsline {paragraph}{Esempio C (It\^o vs Lebesgue nel tempo).}{22}{section*.76}%
+\contentsline {paragraph}{Differential form (time-homogeneous)}{21}{section*.66}%
+\contentsline {paragraph}{Integral form}{21}{section*.67}%
+\contentsline {paragraph}{Versione dipendente dal tempo $f\in C^{1,2}([0,T]\times \mathbb {R})$}{21}{section*.68}%
+\contentsline {paragraph}{Esempio A (catena su $f(x)=x^2$).}{21}{section*.71}%
+\contentsline {paragraph}{Esempio B (inesistenza del Riemann--Stieltjes con integratore $W$).}{22}{section*.72}%
+\contentsline {paragraph}{Esempio C (It\^o vs Lebesgue nel tempo).}{22}{section*.73}%
 \contentsline {section}{\numberline {0.14}Question 19}{23}{section.0.14}%
 \contentsline {section}{\numberline {0.15}Question 20}{25}{section.0.15}%
 \contentsline {section}{\numberline {0.16}Question 21}{26}{section.0.16}%
-\contentsline {paragraph}{(a) Applicazione al Geometric Brownian Motion (GBM).}{26}{section*.82}%
-\contentsline {paragraph}{(b) Applicazione alle SDE lineari.}{26}{section*.83}%
+\contentsline {paragraph}{(a) Applicazione al Geometric Brownian Motion (GBM).}{26}{section*.79}%
+\contentsline {paragraph}{(b) Applicazione alle SDE lineari.}{26}{section*.80}%
 \contentsline {section}{\numberline {0.17}Question 22}{27}{section.0.17}%
-\contentsline {paragraph}{Definizione (SDE del GBM).}{27}{section*.85}%
-\contentsline {paragraph}{Proposizione (Soluzione esplicita).}{27}{section*.86}%
-\contentsline {paragraph}{Valore atteso (non so se sia il metodo giusto sorry).}{27}{section*.87}%
-\contentsline {paragraph}{Varianza.}{28}{section*.88}%
-\contentsline {paragraph}{Osservazioni.}{28}{section*.89}%
+\contentsline {paragraph}{Definizione (SDE del GBM).}{27}{section*.82}%
+\contentsline {paragraph}{Proposizione (Soluzione esplicita).}{27}{section*.83}%
+\contentsline {paragraph}{Valore atteso (non so se sia il metodo giusto sorry).}{27}{section*.84}%
+\contentsline {paragraph}{Varianza.}{28}{section*.85}%
+\contentsline {paragraph}{Osservazioni.}{28}{section*.86}%
 \contentsline {section}{\numberline {0.18}Question 23. + explanation of the Expectation Value of an It\^o Process}{29}{section.0.18}%
 \contentsline {section}{\numberline {0.19}Question 24}{31}{section.0.19}%
-\contentsline {paragraph}{Model.}{31}{section*.98}%
-\contentsline {paragraph}{Economic meaning of parameters.}{31}{section*.99}%
-\contentsline {paragraph}{Explicit solution (linear SDE integrating factor).}{31}{section*.100}%
-\contentsline {paragraph}{Mean and variance.}{31}{section*.101}%
-\contentsline {paragraph}{Long–run limits ($t\to \infty $).}{31}{section*.102}%
-\contentsline {paragraph}{Model.}{31}{section*.104}%
-\contentsline {paragraph}{Economic meaning of parameters.}{32}{section*.105}%
-\contentsline {paragraph}{Positivity (Feller condition).}{32}{section*.106}%
-\contentsline {paragraph}{Solution representation.}{32}{section*.107}%
-\contentsline {paragraph}{Mean and variance.}{32}{section*.108}%
-\contentsline {paragraph}{Long–run limits ($t\to \infty $).}{32}{section*.109}%
-\contentsline {paragraph}{Key takeaways.}{32}{section*.111}%
+\contentsline {paragraph}{Model.}{31}{section*.95}%
+\contentsline {paragraph}{Economic meaning of parameters.}{31}{section*.96}%
+\contentsline {paragraph}{Explicit solution (linear SDE integrating factor).}{31}{section*.97}%
+\contentsline {paragraph}{Mean and variance.}{31}{section*.98}%
+\contentsline {paragraph}{Long–run limits ($t\to \infty $).}{31}{section*.99}%
+\contentsline {paragraph}{Model.}{31}{section*.101}%
+\contentsline {paragraph}{Economic meaning of parameters.}{32}{section*.102}%
+\contentsline {paragraph}{Positivity (Feller condition).}{32}{section*.103}%
+\contentsline {paragraph}{Solution representation.}{32}{section*.104}%
+\contentsline {paragraph}{Mean and variance.}{32}{section*.105}%
+\contentsline {paragraph}{Long–run limits ($t\to \infty $).}{32}{section*.106}%
+\contentsline {paragraph}{Key takeaways.}{32}{section*.108}%
