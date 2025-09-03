@@ -23,17 +23,17 @@
 \contentsline {paragraph}{Esempio C (It\^o vs Lebesgue nel tempo).}{22}{section*.73}%
 \contentsline {section}{\numberline {0.14}Question 19 -- Itô Processes}{23}{section.0.14}%
 \contentsline {section}{\numberline {0.15}Question 20 -- Stochastic Differential Equations}{25}{section.0.15}%
-\contentsline {section}{\numberline {0.16}Question 21}{26}{section.0.16}%
+\contentsline {section}{\numberline {0.16}Question 21 -- Existence and Uniqueness for SDEs}{26}{section.0.16}%
 \contentsline {paragraph}{(a) Applicazione al Geometric Brownian Motion (GBM).}{26}{section*.79}%
 \contentsline {paragraph}{(b) Applicazione alle SDE lineari.}{26}{section*.80}%
-\contentsline {section}{\numberline {0.17}Question 22}{27}{section.0.17}%
+\contentsline {section}{\numberline {0.17}Question 22 -- Geometric Brownian Motion}{27}{section.0.17}%
 \contentsline {paragraph}{Definizione (SDE del GBM).}{27}{section*.82}%
 \contentsline {paragraph}{Proposizione (Soluzione esplicita).}{27}{section*.83}%
 \contentsline {paragraph}{Valore atteso (non so se sia il metodo giusto sorry).}{27}{section*.84}%
 \contentsline {paragraph}{Varianza.}{28}{section*.85}%
 \contentsline {paragraph}{Osservazioni.}{28}{section*.86}%
 \contentsline {section}{\numberline {0.18}Question 23. + explanation of the Expectation Value of an It\^o Process}{29}{section.0.18}%
-\contentsline {section}{\numberline {0.19}Question 24}{31}{section.0.19}%
+\contentsline {section}{\numberline {0.19}Question 24 -- Applications of Linear SDEs}{31}{section.0.19}%
 \contentsline {paragraph}{Model.}{31}{section*.95}%
 \contentsline {paragraph}{Economic meaning of parameters.}{31}{section*.96}%
 \contentsline {paragraph}{Explicit solution (linear SDE integrating factor).}{31}{section*.97}%
@@ -46,3 +46,8 @@
 \contentsline {paragraph}{Mean and variance.}{32}{section*.105}%
 \contentsline {paragraph}{Long–run limits ($t\to \infty $).}{32}{section*.106}%
 \contentsline {paragraph}{Key takeaways.}{32}{section*.108}%
+\contentsline {section}{\numberline {0.20}Question: Lebesgue Integral *non credo richiesta}{33}{section.0.20}%
+\contentsline {section}{\numberline {0.21}Il modello di Black--Scholes--Merton e l'equazione di Black--Scholes}{36}{section.0.21}%
+\contentsline {subsection}{\numberline {0.21.1}Setup di mercato e ipotesi}{36}{subsection.0.21.1}%
+\contentsline {subsection}{\numberline {0.21.2}Condizioni al contorno: enunciato e interpretazione}{37}{subsection.0.21.2}%
+\contentsline {subsection}{\numberline {0.21.3}Le principali Greeks}{38}{subsection.0.21.3}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  2 SEP 2025 23:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.22)  3 SEP 2025 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -778,6 +778,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
+Overfull \hbox (11.25713pt too wide) in paragraph at lines 1060--1060
+[]\T1/lmr/bx/n/17.28 Question 21 -- Ex-is-tence and Unique-ness for SDEs 
+ []
+
+
 Overfull \hbox (0.75645pt too wide) detected at line 1068
 []
  []
@@ -850,27 +855,145 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32] (./TheoreticalQuestion.aux)
+[32]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
+Underfull \hbox (badness 3229) in paragraph at lines 1508--1508
+[]\T1/lmr/bx/n/12 Idea of con-struc-
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 1509--1509
+[]\T1/lmr/m/n/12 Partition of the \T1/lmr/m/it/12 do-main
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1513--1513
+[]\T1/lmr/m/n/12 Not de-fined sep-a-rately
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 1514--1515
+\T1/lmr/m/n/12 then to mea-sur-able func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1516--1516
+[]\T1/lmr/bx/n/12 Integrable func-
+ []
+
+
+Underfull \hbox (badness 4739) in paragraph at lines 1517--1517
+[]\T1/lmr/m/n/12 Continuous (or piece-wise
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 1517--1517
+\T1/lmr/m/n/12 con-tin-u-ous) func-tions on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1522--1523
+\T1/lmr/m/n/12 Con-ver-gence The-o-rem
+ []
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 1522--1523
+\T1/lmr/m/n/12 (MCT), Fa-tou's Lemma,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1522--1523
+\T1/lmr/m/n/12 Dom-i-nated Con-ver-gence
+ []
+
+
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+Overfull \hbox (9.48668pt too wide) in paragraph at lines 1542--1542
+[]\T1/lmr/bx/n/17.28 Il mod-ello di Black--Scholes--Merton e l'equazione
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 1556.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 1556.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 1556.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38] (./TheoreticalQuestion.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `TheoreticalQuestion.out' has not changed.
-(rerunfilecheck)             Checksum: D1EAA0738FABAA8B21B76F29F7AEAF1A;4069.
+(rerunfilecheck)             Checksum: 89B50F5BC4FC2AB4F3FC359EC8D92EC4;6007.
  ) 
 Here is how much of TeX's memory you used:
- 12703 strings out of 473190
- 196467 string characters out of 5715800
- 609055 words of memory out of 5000000
- 35553 multiletter control sequences out of 15000+600000
- 645043 words of font info for 88 fonts, out of 8000000 for 9000
+ 12783 strings out of 473190
+ 197504 string characters out of 5715800
+ 609246 words of memory out of 5000000
+ 35591 multiletter control sequences out of 15000+600000
+ 667900 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,745b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TheoreticalQuestion.pdf (34 pages, 346500 bytes).
+Output written on TheoreticalQuestion.pdf (40 pages, 365985 bytes).
 PDF statistics:
- 568 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
- 202 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 662 PDF objects out of 1000 (max. 8388607)
+ 579 compressed objects within 6 object streams
+ 237 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

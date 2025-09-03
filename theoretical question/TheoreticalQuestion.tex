@@ -1057,7 +1057,7 @@ They are the building blocks of continuous-time models in finance.
 
 
 \newpage
-\section{Question 21}
+\section{Question 21 -- Existence and Uniqueness for SDEs}
 \subsection*{21.\;Existence and Uniqueness for SDEs; applications to GBM and linear SDEs}
 
 \begin{theorem}[Esistenza e Unicità per SDE]\label{thm:EU-SDE}
@@ -1110,7 +1110,7 @@ Quindi le ipotesi del Teorema~\ref{thm:EU-SDE} sono soddisfatte e l'SDE lineare 
 
 
 \newpage
-\section{Question 22}
+\section{Question 22 -- Geometric Brownian Motion}
 \subsection*{Geometric Brownian Motion: SDE, soluzione esplicita, valore atteso e varianza}
 
 \paragraph{Definizione (SDE del GBM).}
@@ -1300,7 +1300,7 @@ so that
 
 
 \newpage
-\section{Question 24}
+\section{Question 24 -- Applications of Linear SDEs}
 \textbf{Describe in full detail the following application of linear SDEs:
 (i) Vasicek model for interest rate; (ii) CIR model for interest rate.
 In both cases explain the meaning of the parameters and compute mean, variance, and their long–run limits.}
@@ -1410,5 +1410,261 @@ CIR & $dr=a(b-r)\,dt+\sigma\sqrt{r}\,dW$
 
 \paragraph{Key takeaways.}
 Both models are mean-reverting with the \emph{same} mean function; the variance dynamics differ. Vasicek is Gaussian (may go negative); CIR enforces state-dependent volatility and (under Feller) strict positivity, a desirable feature for short rates.
+
+
+
+
+
+
+\newpage
+\section{Question: Lebesgue Integral *non credo richiesta}
+\textbf{Explain what the Lebesgue integral is, and describe all the main concepts connected with it: 
+definition, construction, properties, relation to probability and expected value, 
+comparison with the Riemann integral.}
+
+\subsection*{Answer}
+
+\subsubsection*{Motivation}
+The Riemann integral is based on partitioning the \emph{domain} of a function and summing rectangles 
+under the curve. While powerful, this approach is not suitable for many functions that appear 
+in probability and stochastic calculus, especially when random variables are involved.  
+The \textbf{Lebesgue integral} generalizes integration by partitioning the \emph{range} of a function 
+instead, allowing for much greater flexibility.
+
+\subsubsection*{Measure space setup}
+A \textbf{measure space} is a triple $(\Omega,\mathcal{F},\mu)$, where
+\begin{itemize}
+    \item $\Omega$ is the sample space;
+    \item $\mathcal{F}$ is a $\sigma$-algebra of subsets of $\Omega$;
+    \item $\mu:\mathcal{F}\to [0,+\infty]$ is a measure, i.e. a countably additive set function.
+\end{itemize}
+In probability, the measure $\mu$ is the probability measure $P$.
+
+\subsubsection*{Construction of the Lebesgue integral}
+The construction proceeds step by step:
+\begin{enumerate}[label=\roman*)]
+    \item For an \textbf{indicator function} $\chi_A(\omega)$ we define
+    \[
+    \int_\Omega \chi_A \, d\mu := \mu(A).
+    \]
+    \item For a \textbf{simple function} $X(\omega)=\sum_{j=1}^n b_j \chi_{A_j}(\omega)$, with $b_j \in \mathbb{R}$ and disjoint $A_j\in\mathcal{F}$,
+    \[
+    \int_\Omega X\,d\mu := \sum_{j=1}^n b_j \,\mu(A_j).
+    \]
+    \item For a \textbf{positive measurable function} $X:\Omega\to [0,+\infty]$, we approximate it from below with simple functions $X_n$ and set
+    \[
+    \int_\Omega X\,d\mu := \sup_n \int_\Omega X_n\,d\mu.
+    \]
+    \item For a \textbf{general real function} $X$, define the positive and negative parts
+    \[
+    X^+ = \max\{X,0\}, \qquad X^- = \max\{-X,0\}, \qquad X=X^+-X^-,
+    \]
+    and declare $X$ integrable if $\int X^+ d\mu < \infty$ and $\int X^- d\mu < \infty$, setting
+    \[
+    \int_\Omega X\,d\mu := \int_\Omega X^+\,d\mu - \int_\Omega X^-\,d\mu.
+    \]
+\end{enumerate}
+
+\subsubsection*{Properties of the Lebesgue integral}
+\begin{itemize}
+    \item \textbf{Linearity:} $\int (aX+bY)\,d\mu = a\int X\,d\mu + b\int Y\,d\mu$.
+    \item \textbf{Monotonicity:} If $X\leq Y$ almost surely, then $\int X\,d\mu \leq \int Y\,d\mu$.
+    \item \textbf{Fatou’s Lemma:} $\int \liminf X_n \,d\mu \leq \liminf \int X_n \,d\mu$.
+    \item \textbf{Monotone Convergence Theorem (MCT):} If $X_n\uparrow X$, then $\int X_n\,d\mu \to \int X\,d\mu$.
+    \item \textbf{Dominated Convergence Theorem (DCT):} If $X_n\to X$ and $|X_n|\leq Y$ with $Y$ integrable, then $\int X_n\,d\mu \to \int X\,d\mu$.
+\end{itemize}
+
+\subsubsection*{Connection to probability theory}
+On a probability space $(\Omega,\mathcal{F},P)$, the expected value of a random variable $X$ is precisely
+the Lebesgue integral:
+\[
+\mathbb{E}[X] = \int_\Omega X(\omega)\,dP(\omega).
+\]
+
+\subsubsection*{Comparison with the Riemann integral}
+\begin{itemize}
+    \item If $f:[a,b]\to\mathbb{R}$ is Riemann-integrable, then it is also Lebesgue-integrable and the two integrals coincide.
+    \item The Lebesgue integral extends integration to a much larger class of functions (e.g. discontinuous or non–Riemann integrable functions).
+    \item Example: the indicator $\chi_\mathbb{Q}$ of rationals in $[0,1]$ is \emph{not} Riemann integrable but it is Lebesgue integrable with value $0$.
+\end{itemize}
+
+\subsubsection*{Why it matters}
+The Lebesgue integral is the foundation of modern probability and stochastic calculus.  
+It allows us to rigorously define expectations, variances, conditional expectations, and the Itô integral.
+
+\subsection*{Final Summary}
+
+The Lebesgue integral generalizes integration by measuring sets where the function takes values.
+It coincides with the expectation in probability theory, and is strictly more powerful than the Riemann integral.
+
+\subsection*{Comparison: Riemann vs Lebesgue Integral}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Aspect} & \textbf{Riemann Integral} & \textbf{Lebesgue Integral} \\
+\hline
+\textbf{Idea of construction} & 
+Partition of the \emph{domain} $[a,b]$ into subintervals; approximate area with rectangles of width $\Delta x$ and height $f(\xi_i)$. &
+Partition of the \emph{range} of the function; measure the size of preimages $f^{-1}([y_j,y_{j+1}))$ and weight by the value. \\
+\hline
+\textbf{Definition for simple functions} &
+Not defined separately (works directly with sums over intervals). &
+Starts from indicator functions $\chi_A$, extends to simple functions $X=\sum b_j \chi_{A_j}$, then to measurable functions by limits. \\
+\hline
+\textbf{Integrable functions} &
+Continuous (or piecewise continuous) functions on compact intervals; bounded functions with a small set of discontinuities. &
+All measurable functions $f$ such that $\int |f|\, d\mu < \infty$. Much larger class (e.g. $\chi_\mathbb{Q}$ is Lebesgue integrable but not Riemann). \\
+\hline
+\textbf{Convergence theorems} &
+No general convergence results (limit of integrals $\neq$ integral of limit in general). &
+Powerful tools: Monotone Convergence Theorem (MCT), Fatou’s Lemma, Dominated Convergence Theorem (DCT). \\
+\hline
+\textbf{Relation to probability} &
+Cannot be directly used for expectations of general r.v.s (too restrictive). &
+\(\mathbb{E}[X]=\int_\Omega X\,dP\): expectation is a Lebesgue integral. Basis of modern probability and stochastic calculus. \\
+\hline
+\textbf{Coincidence} &
+If $f$ is Riemann integrable, the Riemann and Lebesgue integrals coincide. &
+Extends Riemann integral; strictly more general. \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+
+
+
+\newpage
+\section{Il modello di Black--Scholes--Merton e l'equazione di Black--Scholes}
+\label{sec:bsm-bs}
+
+\subsection{Setup di mercato e ipotesi}
+Lavoriamo in un mercato frictionless con scambio continuo, possibilità di short/borrowing illimitati al tasso privo di rischio $r$ costante.
+\begin{itemize}
+  \item \textbf{Bond (money market):} \ $dB(t)=r\,B(t)\,dt$, $B(0)=1$.
+  \item \textbf{Azione (GBM):} \ $dS(t)=\alpha\,S(t)\,dt+\sigma\,S(t)\,dW(t)$, con $\alpha\in\mathbb{R}$, $\sigma>0$ costanti e $W$ moto browniano.
+\end{itemize}
+Consideriamo una call europea di strike $K$ e scadenza $T$. Il suo prezzo a tempo $t$ quando $S(t)=x$ è una funzione deterministica $c(t,x)$ con condizione terminale
+\[
+c(T,x) = [x-K]^+.
+\]
+
+\subsection*{Passo 1: It\^o su $c(t,S(t))$}
+Applicando la formula di It\^o alla composizione $t\mapsto c\big(t,S(t)\big)$:
+\[
+dc(t,S(t))
+= \Big( c_t + \alpha S\,c_x + \tfrac12 \sigma^2 S^2 c_{xx} \Big) dt
+\;+\; \sigma S\,c_x\, dW(t),
+\]
+dove $c_t=\partial c/\partial t$, $c_x=\partial c/\partial x$, $c_{xx}=\partial^2 c/\partial x^2$.
+
+\subsection*{Passo 2: Portafoglio auto-finanziante che replica l'opzione}
+Sia $X(t)$ un portafoglio che detiene $\Delta(t)$ azioni e investe il resto nel bond. Essendo auto-finanziante,
+\[
+dX(t)=\Delta(t)\,dS(t) + r\big(X(t)-\Delta(t)S(t)\big)\,dt,
+\]
+ossia
+\[
+dX(t) = \big[rX(t)+\Delta(t)(\alpha-r)S(t)\big]dt \;+\; \Delta(t)\sigma S(t)\,dW(t).
+\]
+Richiediamo \emph{replica esatta}: $X(t)=c\big(t,S(t)\big)$ per ogni $t\in[0,T]$.
+
+\subsection*{Passo 3: Sconto al tasso privo di rischio}
+Passiamo alle quantità scontate (per eliminare il drift risk-free):
+\[
+\begin{aligned}
+d\!\big(e^{-rt}X(t)\big) &= e^{-rt}\big[(\alpha-r)\Delta S\,dt + \sigma \Delta S\,dW\big],\\
+d\!\big(e^{-rt}c(t,S(t))\big) &= e^{-rt}\Big[\big(c_t+\alpha S c_x+\tfrac12\sigma^2 S^2 c_{xx}-r c\big)dt
++ \sigma S c_x\,dW\Big].
+\end{aligned}
+\]
+Poich\'e $e^{-rt}X(t)\equiv e^{-rt}c(t,S(t))$, i coefficienti di $dW$ e $dt$ devono coincidere identicamente.
+
+\subsection*{Passo 4: Matching dei coefficienti e PDE di Black--Scholes}
+Dal matching del termine casuale ($dW$) si ottiene la \emph{delta-hedge rule}
+\[
+\Delta(t)=c_x\big(t,S(t)\big).
+\]
+Sostituendo nel matching dei termini deterministici ($dt$):
+\[
+c_t + \alpha S c_x + \tfrac12 \sigma^2 S^2 c_{xx} - r c \;=\; (\alpha - r) S c_x,
+\]
+da cui si semplifica il drift $\alpha S c_x$ e si ottiene la \textbf{PDE di Black--Scholes}
+\begin{equation}
+\label{eq:BS-PDE}
+c_t(t,x) \;+\; r\,x\,c_x(t,x) \;+\; \tfrac12\,\sigma^2 x^2\,c_{xx}(t,x) \;-\; r\,c(t,x) \;=\; 0,
+\qquad 0\le t<T,\; x>0.
+\end{equation}
+
+\subsection{Condizioni al contorno: enunciato e interpretazione}
+Per rendere ben posto il problema su $\{(t,x):\,0\le t\le T,\,x\ge 0\}$ imponiamo:
+\begin{enumerate}
+  \item \textbf{Condizione terminale (payoff):} \ $c(T,x)=[x-K]^+$. \\
+  \emph{Interpretazione:} a scadenza il derivato vale esattamente il payoff contrattuale.
+  \item \textbf{Valore a sottostante nullo:} \ $c(t,0)=0$ per $0\le t\le T$. \\
+  \emph{Interpretazione:} se il titolo vale zero, una call è priva di valore (coerente anche con \eqref{eq:BS-PDE} in $x=0$).
+  \item \textbf{Condizione asintotica (crescita lineare corretta):}
+  \[
+  \lim_{x\to\infty}\Big(c(t,x)-\big(x-e^{-r(T-t)}K\big)\Big)=0 \quad \text{per ogni } 0\le t<T.
+  \]
+  \emph{Interpretazione:} per $x\gg K$, l'esercizio è (quasi) certo: la call si comporta come ``azione meno valore attuale dello strike''.
+\end{enumerate}
+
+\subsection*{Osservazioni}
+\begin{itemize}
+  \item La scelta $\Delta=c_x$ elimina il rischio diffusivo (termini in $dW$) del replicante; il portafoglio risultante è privo di rischio e deve rendere $r$, da cui \eqref{eq:BS-PDE}.
+  \item In misura risk--neutral il drift dell'azione diventa $r$; per Feynman--Kac
+  \[
+  c(t,x)=e^{-r(T-t)}\,\mathbb{E}^{\!*}\!\big[(S(T)-K)^+\mid S(t)=x\big],
+  \]
+  che soddisfa la stessa PDE con le condizioni sopra, portando alla formula chiusa classica.
+\end{itemize}
+
+\subsection*{Formula sheet (richiamo rapido)}
+\noindent\textbf{PDE di Black--Scholes:}\quad
+$c_t + r x c_x + \tfrac12 \sigma^2 x^2 c_{xx} - r c = 0$,
+con
+$c(T,x)=[x-K]^+$,
+$c(t,0)=0$,
+$\;\lim_{x\to\infty}\!\big(c-(x-e^{-r(T-t)}K)\big)=0$.
+
+\medskip
+\noindent\textbf{Delta-hedge:}\quad $\Delta(t)=c_x\big(t,S(t)\big)$.
+
+\subsection{Le principali Greeks}
+
+Una volta nota la formula di Black--Scholes per la call europea, si possono calcolare le derivate parziali del prezzo rispetto alle variabili principali. Queste sensibilità sono dette \emph{Greeks}. Le più importanti sono:
+
+\begin{itemize}
+  \item \textbf{Delta ($\Delta$):}
+  \[
+  \Delta(t,x) = \frac{\partial c}{\partial x}(t,x) = N(d_+).
+  \]
+  Misura la sensibilità del prezzo dell’opzione rispetto al prezzo del sottostante. È sempre positiva, quindi il prezzo della call cresce al crescere di $x$.
+
+  \item \textbf{Gamma ($\Gamma$):}
+  \[
+  \Gamma(t,x) = \frac{\partial^2 c}{\partial x^2}(t,x)
+  = \frac{1}{x\sigma\sqrt{T-t}}\,N'(d_+).
+  \]
+  Indica come varia la Delta al variare del sottostante. È sempre positiva, quindi la funzione prezzo è convessa in $x$.
+
+  \item \textbf{Theta ($\Theta$):}
+  \[
+  \Theta(t,x) = \frac{\partial c}{\partial t}(t,x)
+  = -rK e^{-r(T-t)}N(d_-) - \frac{\sigma x}{2\sqrt{T-t}}\,N'(d_+).
+  \]
+  Misura la sensibilità del prezzo rispetto al passare del tempo. È generalmente negativa, descrivendo il decadimento temporale del valore della call.
+\end{itemize}
+
+
+
+
+
+
 
 \end{document}
