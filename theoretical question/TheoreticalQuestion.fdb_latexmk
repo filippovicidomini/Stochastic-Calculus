@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1756846413.29257 "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/theoretical question/TheoreticalQuestion.tex" "TheoreticalQuestion.pdf" "TheoreticalQuestion" 1756846414.08619 0
-  "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/theoretical question/TheoreticalQuestion.tex" 1756846412.2638 51651 068a526513f2207ebb38d4944003df97 ""
+["pdflatex"] 1756847492.85219 "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/theoretical question/TheoreticalQuestion.tex" "TheoreticalQuestion.pdf" "TheoreticalQuestion" 1756847493.60291 0
+  "/Users/filippovicidomini/Library/CloudStorage/GoogleDrive-filippo.vicidomini@alumni.unive.it/My Drive/University /Stochastic Calcolus for Finance/Stochastic-Calculus/theoretical question/TheoreticalQuestion.tex" 1756847491.81517 51989 62186fca4b2d32d7f6722e7537f35533 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -138,10 +138,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747948829 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747948789 3345733 65cfb9a097c9fac13d618cb2cfc9e2be ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "TheoreticalQuestion.aux" 1756846413.96005 5953 0439b279f30893c4edf7cfa20726c89e "pdflatex"
-  "TheoreticalQuestion.out" 1756846413.96143 2270 d31b5e08a0ecee72c8be3eeb96b88ccc "pdflatex"
-  "TheoreticalQuestion.tex" 1756846412.2638 51651 068a526513f2207ebb38d4944003df97 ""
-  "TheoreticalQuestion.toc" 1756846413.96182 3697 9ee902ce99e11e3fead59c251b66f71e "pdflatex"
+  "TheoreticalQuestion.aux" 1756847493.50455 6291 3d9e5bb54295f85188d2a90554c52007 "pdflatex"
+  "TheoreticalQuestion.out" 1756847493.50543 4069 d1eaa0738fabaa8b21b76f29f7aeaf1a "pdflatex"
+  "TheoreticalQuestion.tex" 1756847491.81517 51989 62186fca4b2d32d7f6722e7537f35533 ""
+  "TheoreticalQuestion.toc" 1756847493.50563 4035 2edbeb6f0c156167ab5ecda940cb31b1 "pdflatex"
   (generated)
   "TheoreticalQuestion.aux"
   "TheoreticalQuestion.log"
