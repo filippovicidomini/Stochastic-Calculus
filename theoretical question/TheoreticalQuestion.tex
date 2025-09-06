@@ -1662,7 +1662,83 @@ Una volta nota la formula di Black--Scholes per la call europea, si possono calc
 \end{itemize}
 
 
+\section{Setting e significato del modello di Black--Scholes--Merton}
 
+\subsection{Il modello di mercato}
+Consideriamo un mercato frictionless, senza costi di transazione e con possibilità di trading continuo.
+Due sono gli asset fondamentali:
+\begin{itemize}
+  \item \textbf{Bond (money market account)}: 
+  \[
+  dB(t) = r B(t)\,dt, \quad B(0)=1,
+  \]
+  dove $r \geq 0$ è il tasso di interesse privo di rischio.
+  \item \textbf{Azione (stock)}: segue un moto browniano geometrico (GBM)
+  \[
+  dS(t) = \alpha S(t)\,dt + \sigma S(t)\,dW(t),
+  \]
+  con $\alpha \in \mathbb R$ (drift), $\sigma > 0$ (volatilità) e $W(t)$ moto browniano.
+\end{itemize}
+
+\subsection{Il contratto: Call Europea}
+Una call europea con strike $K$ e scadenza $T$ ha payoff
+\[
+c(T,S(T)) = [S(T) - K]^+.
+\]
+Definiamo $c(t,x)$ il prezzo al tempo $t$ quando $S(t)=x$.
+
+\subsection{Derivazione dell'equazione di Black--Scholes}
+Applicando It\^o alla funzione $c(t,S(t))$:
+\[
+dc = \big(c_t + \alpha x c_x + \tfrac12 \sigma^2 x^2 c_{xx}\big)\,dt + \sigma x c_x\, dW.
+\]
+
+Consideriamo ora un portafoglio replicante $X(t)$ con $\Delta(t)$ azioni e resto in bond:
+\[
+dX = \Delta\,dS + r(X-\Delta S)\,dt.
+\]
+
+La condizione di \emph{replica} impone $X(t)=c(t,S(t))$ per ogni $t$.  
+Confrontando le dinamiche (dopo sconto al tasso $r$) si ottiene:
+\[
+\Delta(t) = c_x(t,S(t)), \quad\quad
+c_t + r x c_x + \tfrac12 \sigma^2 x^2 c_{xx} - r c = 0.
+\]
+
+\begin{equation}
+\label{eq:BS}
+\boxed{ \; c_t(t,x) + r x c_x(t,x) + \tfrac12 \sigma^2 x^2 c_{xx}(t,x) - r c(t,x) = 0, \quad 0 \leq t < T, \; x > 0. \;}
+\end{equation}
+
+\subsection{Condizioni al contorno}
+Affinché il problema sia ben posto imponiamo:
+\begin{enumerate}
+  \item \textbf{Condizione terminale (payoff)}:
+  \[
+  c(T,x) = [x-K]^+.
+  \]
+  \emph{Interpretazione:} a scadenza l'opzione vale esattamente il payoff contrattuale.
+  
+  \item \textbf{Valore a sottostante nullo}:
+  \[
+  c(t,0)=0 \quad \forall t \in [0,T].
+  \]
+  \emph{Interpretazione:} se l'azione vale zero, la call non ha valore.
+  
+  \item \textbf{Condizione asintotica (transversalità)}:
+  \[
+  \lim_{x\to\infty} \Big( c(t,x) - \big(x - e^{-r(T-t)}K\big)\Big)=0.
+  \]
+  \emph{Interpretazione:} per $x \gg K$ la call equivale a possedere l'azione meno il valore attuale dello strike.
+\end{enumerate}
+
+\subsection{Significato economico}
+\begin{itemize}
+  \item La \emph{delta hedge rule} $\Delta=c_x$ elimina il rischio stocastico: il portafoglio replicante diventa privo di rischio.
+  \item L'equazione \eqref{eq:BS} rappresenta la condizione di assenza di arbitraggio: un portafoglio privo di rischio deve crescere al tasso $r$.
+  \item La valutazione non dipende da $\alpha$, ma solo da $r,\sigma,K,T$: è il principio di \emph{risk-neutral pricing}.
+  \item Con le condizioni al contorno, la PDE ha un'unica soluzione: la formula di Black--Scholes per la call.
+\end{itemize}
 
 
 
