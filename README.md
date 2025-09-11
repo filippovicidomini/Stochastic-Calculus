@@ -1,6 +1,6 @@
 # Notes of Stochastic Calculus
 
-[📄 Open the PDF (first page is the cover)](theoretical-question/TheoreticalQuestion.pdf)
+[📄 Open the PDF (first page is the cover)](theoretical question/TheoreticalQuestion.pdf)
 
 in this repository, I will write some notes about stochastic calculus, which is a branch of mathematics that deals with stochastic processes and their applications in various fields such as finance, physics, and engineering.
 # Contents
