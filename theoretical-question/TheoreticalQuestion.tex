@@ -400,6 +400,42 @@ is not a martingale if $\alpha \neq 0$, since it has exponential drift. However,
 
 
 \newpage
+\section{Definizione di Processo Stocastico}
+
+Un \textbf{processo stocastico} è una famiglia di variabili aleatorie
+\[
+\{X(t) \; : \; t \in T\}
+\]
+definite su uno stesso spazio di probabilità $(\Omega, \mathcal{F}, \mathbb{P})$, 
+dove $T \subseteq \mathbb{R}_+$ è l’insieme dei tempi. 
+Per ogni $t \in T$, $X(t)$ è una variabile aleatoria a valori in $\mathbb{R}$ (o in $\mathbb{R}^d$). 
+
+\begin{itemize}
+  \item \textbf{Prospettiva per tempo fissato}: fissato $t$, $X(t)$ descrive lo stato del sistema al tempo $t$. 
+  \item \textbf{Prospettiva per esito fissato}: fissato $\omega \in \Omega$, la mappa
+  \[
+  t \mapsto X(t,\omega)
+  \]
+  è detta \emph{cammino campione} (sample path o traiettoria), ed è una funzione deterministica di $t$. 
+\end{itemize}
+
+Per descrivere l’evoluzione temporale si introduce una \textbf{filtrazione} 
+$\{\mathcal{F}_t\}_{t \geq 0}$, cioè una famiglia crescente di $\sigma$-algebre
+($\mathcal{F}_s \subseteq \mathcal{F}_t$ se $s \le t$). 
+Un processo $X(t)$ si dice \emph{adattato} se, per ogni $t$, la variabile $X(t)$ 
+è $\mathcal{F}_t$-misurabile, ossia determinabile sulla base delle informazioni disponibili fino a $t$.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 \section{Question 8 -- Brownian Motion}
 \textbf{Describe the construction of a Brownian motion.}
 
